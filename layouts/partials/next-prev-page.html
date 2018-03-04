@@ -1,0 +1,46 @@
+<div class="navigation">
+<!-- Next prev page -->
+{{- $currentNode := . -}}
+
+{{- template "menu-nextprev" dict "menu" .Site.Home "currentnode" $currentNode -}}
+
+{{- define "menu-nextprev" -}}
+    {{- $currentNode := .currentnode -}}
+    {{- if hasPrefix $currentNode.URL .menu.URL -}}
+        {{- $currentNode.Scratch.Set "NextPageOK" "OK" -}}
+        {{- $currentNode.Scratch.Set "prevPage" ($currentNode.Scratch.Get "prevPageTmp") -}}
+    {{- else -}}
+        {{- if eq .menu.Section "blog" -}}
+        {{- else if eq .menu.Section "archives" -}}
+        {{- else if eq .menu.Section "entry" -}}
+        {{- else if eq .menu.Section "posts" -}}
+        {{- else -}}
+            {{- if eq ($currentNode.Scratch.Get "NextPageOK") "OK" -}}
+                {{- $currentNode.Scratch.Set "NextPageOK" nil -}}
+                {{- $currentNode.Scratch.Set "nextPage" .menu -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+    {{- $currentNode.Scratch.Set "prevPageTmp" .menu -}}
+    {{- $currentNode.Scratch.Set "pages" .menu.Pages -}}
+    {{- if .menu.IsHome -}}
+        {{- $currentNode.Scratch.Set "pages" .menu.Sections -}}
+    {{- else if .menu.Sections -}}
+        {{- $currentNode.Scratch.Set "pages" (.menu.Pages | union .menu.Sections) -}}
+    {{- end -}}
+    {{- $pages := ($currentNode.Scratch.Get "pages") -}}
+
+    {{- range $pages.ByWeight -}}
+        {{- template "menu-nextprev" dict "menu" . "currentnode" $currentNode -}}
+    {{- end -}}
+{{- end -}}
+
+{{- if not $.Site.Params.disableNavChevron -}}
+    {{- with ($.Scratch.Get "prevPage") -}}
+<a class="nav nav-prev" href="{{ .URL | absURL }}" title="{{ .Title }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - {{ .Title }}</a>
+    {{ end -}}
+    {{- with ($.Scratch.Get "nextPage") -}}
+<a class="nav nav-next" href="{{ .URL | absURL }}" title="{{ .Title }}">Next - {{ .Title }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    {{- end }}
+{{- end -}}
+</div>

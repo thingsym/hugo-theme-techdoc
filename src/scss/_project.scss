@@ -1,0 +1,135 @@
+header {
+  background: #000;
+  padding: .2rem 1.2rem;
+
+  h1 {
+    color: #fff;
+    font-size: 140%;
+    display: inline-block;
+    margin: 0;
+  }
+
+  .version {
+    color: #fff;
+    font-size: 80%;
+  }
+
+  .github {
+    margin-left: .4rem;
+    color: #ddd;
+    font-size: 180%;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+.description {
+  color: #ddd;
+  margin: 0;
+}
+
+.menu {
+  background: #000;
+  padding: 0 1.2rem .4rem;
+  color: #ddd;
+  border-top: 1px solid #333;
+
+  nav {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      display: inline-block;
+      margin-right: 2.4rem;
+    }
+
+    @media screen and (max-width: #{map-get($default-breakpoints, xs )} ) {
+      li {
+        display: block;
+        margin-right: 0;
+        border-bottom: 1px solid #333;
+      }
+    }
+
+    a {
+      display: block;
+      color: #ddd;
+      text-decoration: none;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+main {
+  padding: 1rem 3rem 3rem;
+}
+
+@media screen and (max-width: #{map-get($default-breakpoints, xs )} ) {
+  main {
+    padding: 1rem;
+  }
+}
+
+.sidebar {
+  font-size: 90%;
+  background: $sidebar-background-color;
+  border-right: 1px solid $sidebar-active-color;
+
+  nav {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      li a {
+        padding-left: 2rem;
+      }
+    }
+    a {
+      display: block;
+      color: #404040;
+      text-decoration: none;
+      padding: .2rem 1.2rem;
+      &:hover {
+        color: #404040;
+        background: $sidebar-hover-color;
+        border-left: solid 4px #ccc;
+      }
+      border-left: solid 4px $sidebar-background-color;
+      border-bottom: solid 1px $sidebar-active-color;
+    }
+    .active > a {
+      background: $sidebar-active-color;
+      border-left: solid 4px #ccc;
+    }
+  }
+}
+
+.sidebar-footer {
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+.edit-meta {
+  font-size: 80%;
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.edit-page {
+  font-weight: bold;
+}
+
+.powered {
+  font-size: 80%;
+  text-align: right;
+}
