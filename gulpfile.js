@@ -91,5 +91,5 @@ gulp.task('default', function(callback) {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(src_paths.sass, ['default']);
+  gulp.watch([src_paths.sass, src_paths.script], ['default']);
 });
