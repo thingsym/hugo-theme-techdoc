@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{- if .Site.Home.Content -}}
 {{- .Site.Home.Content -}}
-{{- partial "next-prev-page.html" . -}}
+{{- partial "pagination.html" . -}}
 {{- partial "edit-meta.html" . -}}
 {{- else -}}
 <h1>Customize your own home page</h1>
