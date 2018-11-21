@@ -1,4 +1,4 @@
-.navigation {
+.pagination {
   @include grid($flex-wrap: nowrap, $justify-content: space-between);
   margin-top: 2rem;
   font-weight: bold;
@@ -9,7 +9,7 @@
 }
 
 @media screen and (max-width: #{map-get($default-breakpoints, xs )} ) {
-  .navigation {
+  .pagination {
     @include grid($flex-flow: column nowrap, $justify-content: null, $align-items: center);
   }
   .nav-next {
