@@ -2,6 +2,46 @@
 
 The Techdoc is a Hugo Theme for technical documentation.
 
+![The Techdoc screenshot](/images/screenshot.png "screenshot")
+
+## Features
+
+* Modern, Simple layout
+* Responsive web design
+* Documentation menu
+* Edit link to documentation repository
+* Custom Shortcodes
+* Analytics with Google Analytics, Google Tag Manager
+
+## Getting Started
+
+### Download Hugo theme
+
+If you have git installed, you can do the following at the command-line-interface within the Hugo directory:
+
+```
+cd themes
+git clone https://github.com/thingsym/hugo-theme-techdoc.git
+```
+
+For more information read [the Hugo documentation](https://gohugo.io/themes/installing-and-using-themes/).
+
+### Configure
+
+You may specify options in config.toml (or config.yaml/config.json) of your site to make use of this theme's features.
+
+For an example of `config.toml`, [config.toml](https://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/config.toml) in exampleSite.
+
+### Preview site
+
+To preview your site, run Hugo's built-in local server.
+
+```
+hugo server -t hugo-theme-techdoc
+```
+
+Browse site on http://localhost:1313
+
 ## Development environment
 
 ```
