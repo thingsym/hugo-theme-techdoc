@@ -67,3 +67,16 @@ td {
   border-right: 1px solid $default-line-color;
   padding: .4em;
 }
+
+img {
+  max-width: 100%;
+}
+figure {
+  margin: 0;
+}
+
+hr {
+  height: 2px;
+  border: 0;
+  background-color: #ccc;
+}
