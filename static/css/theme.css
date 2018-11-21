@@ -490,6 +490,20 @@ td {
   padding: .4em;
 }
 
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+hr {
+  height: 2px;
+  border: 0;
+  background-color: #ccc;
+}
+
 /*-----------------------*
     Structure
 *-----------------------*/
@@ -579,7 +593,7 @@ main {
   }
 }
 
-.navigation {
+.pagination {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: -webkit-box;
@@ -599,7 +613,7 @@ main {
 }
 
 @media screen and (max-width: 480px) {
-  .navigation {
+  .pagination {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: -webkit-box;
@@ -773,7 +787,41 @@ header .github:hover {
 
 .menu nav li {
   display: inline-block;
-  margin-right: 2.4rem;
+  margin-right: 1.8rem;
+  position: relative;
+}
+
+.menu nav .fa-angle-right {
+  margin-left: .4rem;
+  font-size: 80%;
+}
+
+.menu nav li.parent:hover > ul.sub-menu {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+
+.menu nav ul.sub-menu {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 1.8rem;
+  left: 0;
+  z-index: 99999;
+}
+
+.menu nav ul.sub-menu li {
+  padding: .4rem;
+  background: #000;
+  width: 140px;
+  font-size: 80%;
 }
 
 @media screen and (max-width: 480px) {
@@ -781,6 +829,19 @@ header .github:hover {
     display: block;
     margin-right: 0;
     border-bottom: 1px solid #333;
+  }
+  .menu nav li:last-child {
+    border-bottom: none;
+  }
+  .menu nav .fa-angle-right {
+    display: none;
+  }
+  .menu nav ul.sub-menu {
+    display: block;
+    position: static;
+  }
+  .menu nav ul.sub-menu li {
+    width: auto;
   }
 }
 
@@ -814,6 +875,10 @@ main {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.sidebar nav ul ul ul {
+  margin-left: 1rem;
 }
 
 .sidebar nav li li a {
