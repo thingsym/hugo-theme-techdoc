@@ -20,7 +20,7 @@ enableMissingTranslationPlaceholders = false
     # Souce Code repository section
     description = "put your description"
     github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.1.0"
+    version = "0.2.0"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)

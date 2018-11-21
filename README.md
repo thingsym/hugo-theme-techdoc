@@ -64,6 +64,11 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.2.0
+  * add screenshot images
+  * add exampleSite
+  * fix sub-menu for responsive
+  * improve menu and pagination
 * Version 0.1.0
   * initial release
 
