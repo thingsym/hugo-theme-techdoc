@@ -1,6 +1,6 @@
 # Hugo Theme Techdoc
 
-The Techdoc is Hugo Theme for technical documentation.
+The Techdoc is a Hugo Theme for technical documentation.
 
 ## Development environment
 
