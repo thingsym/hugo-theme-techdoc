@@ -42,7 +42,32 @@ header {
     }
     li {
       display: inline-block;
-      margin-right: 2.4rem;
+      margin-right: 1.8rem;
+      position: relative;
+    }
+
+    .fa-angle-right {
+      margin-left: .4rem;
+      font-size: 80%;
+    }
+    li.parent:hover > ul.sub-menu {
+      @include grid($flex-flow: column nowrap);
+    }
+
+    ul.sub-menu {
+      display: none;
+      margin: 0;
+      position: absolute;
+      top: 1.8rem;
+      left: 0;
+      z-index: 99999;
+
+      li {
+        padding: .4rem;
+        background: #000;
+        width: 140px;
+        font-size: 80%;
+      }
     }
 
     @media screen and (max-width: #{map-get($default-breakpoints, xs )} ) {
@@ -50,6 +75,23 @@ header {
         display: block;
         margin-right: 0;
         border-bottom: 1px solid #333;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      .fa-angle-right {
+        display: none;
+      }
+
+      ul.sub-menu {
+        display: block;
+        position: static;
+
+        li {
+          width: auto;
+        }
       }
     }
 
