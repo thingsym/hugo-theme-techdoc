@@ -1,4 +1,4 @@
-baseURL = "https://example.org/"
+baseURL = "https://example.com"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
