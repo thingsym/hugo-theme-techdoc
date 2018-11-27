@@ -15,18 +15,20 @@
 
 {{- if hasPrefix $currentNode.URL .menu.URL -}}
   {{- $currentNode.Scratch.Set "NextPageOK" "OK" -}}
-  {{- $currentNode.Scratch.Set "prevPage" ($currentNode.Scratch.Get "prevPageTmp") -}}
+  {{- if .menu.IsHome -}}
+    {{- $currentNode.Scratch.Set "prevPage" "" -}}
+  {{- else -}}
+    {{- $currentNode.Scratch.Set "prevPage" ($currentNode.Scratch.Get "prevPageTmp") -}}
+  {{- end -}}
 {{- else -}}
   {{- if eq ($currentNode.Scratch.Get "NextPageOK") "OK" -}}
     {{- $currentNode.Scratch.Set "NextPageOK" nil -}}
     {{ if in $menu_exclusion .menu.Section }}
     {{- else -}}
-
       {{- $currentNode.Scratch.Set "nextPage" .menu -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
-
 
 {{- $currentNode.Scratch.Set "prevPageTmp" .menu -}}
 {{- $currentNode.Scratch.Set "pages" .menu.Pages -}}
