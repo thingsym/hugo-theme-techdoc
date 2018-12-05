@@ -4,7 +4,7 @@ licenselink = "https://github.com/thingsym/hugo-theme-techdoc/blob/master/LICENS
 description = "The Techdoc is a Hugo Theme for technical documentation."
 homepage = "https://github.com/thingsym/hugo-theme-techdoc"
 repo = "https://github.com/thingsym/hugo-theme-techdoc"
-tags = ["documentation", "doc"]
+tags = ["Documentation", "Docs", "Responsive", "Google analytics"]
 features = ["documentation", "menu"]
 min_version = "0.30"
 
