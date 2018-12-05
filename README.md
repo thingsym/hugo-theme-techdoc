@@ -2,7 +2,7 @@
 
 The Techdoc is a Hugo Theme for technical documentation.
 
-![The Techdoc screenshot](/images/screenshot.png "screenshot")
+![The Techdoc screenshot](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot.png)
 
 ## Features
 
