@@ -33,6 +33,7 @@ enableMissingTranslationPlaceholders = false
 
     # Theme settings section
     dateformat = "" # default "2 Jan 2006"
+    # See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
 
     # path name excluded from documentation menu
     menu_exclusion = ["archives", "blog", "entry", "post", "posts"]
