@@ -3,9 +3,6 @@ body {
   font-feature-settings : 'pwid';
   line-height: $default-line-height;
   background: $default-background-color;
-}
-
-body {
   margin: 0;
 }
 
@@ -20,21 +17,23 @@ p {
   font-size: $default-font-size;
 }
 
-pre {
-  overflow: auto;
-  background: $code-block-background-color;
-  padding: 1rem;
-  border: 1px solid $code-border-color;
-  code {
-    background-color: transparent;
-    padding: 0;
-  }
-}
 code {
   font-family: $code-font-family;
   font-size: $code-font-size;
   background: $code-inline-background-color;
   padding: .2rem;
+}
+
+pre {
+  overflow: auto;
+  background: $code-block-background-color;
+  padding: 1rem;
+  border: 1px solid $code-border-color;
+
+  code {
+    background-color: transparent;
+    padding: 0;
+  }
 }
 
 blockquote {
@@ -52,9 +51,6 @@ table {
   margin-bottom: $default-margin;
   width: 100%;
 
-  tr:nth-child(even) td {
-    background: #f8f8f8;
-  }
 }
 th {
   border-bottom: 1px solid $default-line-color;
@@ -66,6 +62,10 @@ td {
   border-bottom: 1px solid $default-line-color;
   border-right: 1px solid $default-line-color;
   padding: .4em;
+
+  tr:nth-child(even) & {
+    background: #f8f8f8;
+  }
 }
 
 img {
