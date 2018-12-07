@@ -3,7 +3,6 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
-var scsslint = require('gulp-scss-lint');
 require('es6-promise').polyfill();
 
 var runSequence = require('run-sequence');
@@ -28,8 +27,28 @@ var dest_paths = {
 
 gulp.task('lint:sass', function() {
   return gulp.src(src_paths.sass)
-    .pipe(scsslint({
-        'config': 'scss-lint.yml'
+    .pipe($.plumber({
+      errorHandler: function(err) {
+        console.log(err.messageFormatted);
+        this.emit('end');
+      }
+    }))
+    .pipe($.stylelint({
+      config: {
+        ignoreFiles: "src/scss/_normalize.scss",
+        extends: [
+          "stylelint-config-recommended",
+          "stylelint-scss",
+          "stylelint-config-recommended-scss"
+        ],
+        rules: {
+          "block-no-empty": null,
+          "no-descending-specificity": null
+        }
+      },
+      reporters: [
+        { formatter: 'string', console: true }
+      ]
     }));
 });
 
@@ -41,13 +60,14 @@ gulp.task('sass:style', function() {
         this.emit('end');
       }
     }))
-    .pipe($.sass( { outputStyle: 'expanded' } ).on( 'error', $.sass.logError ) )
+    .pipe($.sass({
+      outputStyle: 'expanded'
+    }).on( 'error', $.sass.logError ) )
     .pipe($.autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
     }))
     .pipe(gulp.dest(dest_paths.style))
-    .pipe(browserSync.stream())
     .pipe($.cssnano())
     .pipe($.rename({ suffix: '.min' }))
     .pipe(gulp.dest(dest_paths.style));

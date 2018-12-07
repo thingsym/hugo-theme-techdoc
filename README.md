@@ -2,7 +2,7 @@
 
 The Techdoc is a Hugo Theme for technical documentation.
 
-![The Techdoc screenshot](/images/screenshot.png "screenshot")
+![The Techdoc screenshot](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot.png)
 
 ## Features
 
@@ -64,6 +64,12 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.2.1
+  * fix scss lint errors
+  * change lint from scss-lint to stylelint
+  * add published date
+  * change the font color of powered by
+  * fix link on powered by
 * Version 0.2.0
   * add screenshot images
   * add exampleSite
