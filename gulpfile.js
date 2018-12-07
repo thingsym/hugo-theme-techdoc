@@ -60,13 +60,14 @@ gulp.task('sass:style', function() {
         this.emit('end');
       }
     }))
-    .pipe($.sass( { outputStyle: 'expanded' } ).on( 'error', $.sass.logError ) )
+    .pipe($.sass({
+      outputStyle: 'expanded'
+    }).on( 'error', $.sass.logError ) )
     .pipe($.autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
     }))
     .pipe(gulp.dest(dest_paths.style))
-    .pipe(browserSync.stream())
     .pipe($.cssnano())
     .pipe($.rename({ suffix: '.min' }))
     .pipe(gulp.dest(dest_paths.style));
