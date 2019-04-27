@@ -29,7 +29,7 @@ enableMissingTranslationPlaceholders = false
     # Analytic section
     google_analytics_id = "" # Your Google Analytics tracking id
     tag_manager_container_id = "" # Your Google Tag Manager container id
-    google_site_verification = "" # Your Google Site Verification
+    google_site_verification = "" # Your Google Site Verification for Search Console
 
     # Theme settings section
     dateformat = "" # default "2 Jan 2006"
