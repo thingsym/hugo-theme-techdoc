@@ -42,6 +42,12 @@ hugo server -t hugo-theme-techdoc
 
 Browse site on http://localhost:1313
 
+## Deploy Site to public_html directory
+
+```
+hugo -d public_html
+```
+
 ## Development environment
 
 ```
@@ -49,6 +55,16 @@ cd /path/to/hugo-theme-techdoc
 yarn install
 gulp watch
 ```
+
+## Preview exampleSite
+
+```
+cd /path/to/dir/themes/hugo-theme-techdoc/exampleSite
+
+hugo server --themesDir ../..
+```
+
+Browse site on http://localhost:1313
 
 ## Contribution
 
@@ -64,18 +80,20 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
-* Version 0.2.1
+* Version 0.2.2 - 2019.04.27
+  * fix Lastmod's and PublishDate's initial value of 0001-01-01
+* Version 0.2.1 - 2018.12.07
   * fix scss lint errors
   * change lint from scss-lint to stylelint
   * add published date
   * change the font color of powered by
   * fix link on powered by
-* Version 0.2.0
+* Version 0.2.0 - 2018.11.21
   * add screenshot images
   * add exampleSite
   * fix sub-menu for responsive
   * improve menu and pagination
-* Version 0.1.0
+* Version 0.1.0 - 2018.03.04
   * initial release
 
 ## License
