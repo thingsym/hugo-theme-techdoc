@@ -80,6 +80,8 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.2.2 - 2019.04.27
+  * fix Lastmod's and PublishDate's initial value of 0001-01-01
 * Version 0.2.1 - 2018.12.07
   * fix scss lint errors
   * change lint from scss-lint to stylelint
