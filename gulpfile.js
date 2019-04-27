@@ -47,7 +47,10 @@ gulp.task('lint:sass', function() {
         }
       },
       reporters: [
-        { formatter: 'string', console: true }
+        {
+          formatter: 'string',
+          console: true
+        }
       ]
     }));
 });
@@ -62,7 +65,7 @@ gulp.task('sass:style', function() {
     }))
     .pipe($.sass({
       outputStyle: 'expanded'
-    }).on( 'error', $.sass.logError ) )
+    }).on( 'error', $.sass.logError ))
     .pipe($.autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
@@ -75,7 +78,7 @@ gulp.task('sass:style', function() {
 
 gulp.task('javascript', function() {
   return gulp.src(src_paths.script)
-    .pipe($.uglify().on('error', $.util.log))
+    .pipe($.uglify().on( 'error', $.util.log ))
     .pipe($.rename({ suffix: '.min' }))
     .pipe(gulp.dest(dest_paths.script));
 });
