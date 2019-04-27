@@ -25,3 +25,8 @@
 {{- partial "meta/tag-manager.html" . -}}
 {{- partial "meta/google-site-verification.html" . -}}
 
+{{- if isset .Site.Params "custom_js" }}
+{{ range .Site.Params.custom_js }}
+<script src="{{.}}"></script>
+{{ end }}
+{{- end }}
