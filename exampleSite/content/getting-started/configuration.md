@@ -14,7 +14,7 @@ For an example of `config.toml`, see [config.toml](https://github.com/thingsym/h
     # Souce Code repository section
     description = "put your description"
     github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.2.2"
+    version = "0.3.0"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
@@ -23,7 +23,7 @@ For an example of `config.toml`, see [config.toml](https://github.com/thingsym/h
     # Analytic section
     google_analytics_id = "" # Your Google Analytics tracking id
     tag_manager_container_id = "" # Your Google Tag Manager container id
-    google_site_verification = "" # Your Google Site Verification
+    google_site_verification = "" # Your Google Site Verification for Search Console
 
     # Theme settings section
     dateformat = "" # default "2 Jan 2006"
@@ -47,7 +47,7 @@ default: `https://github.com/thingsym/hugo-theme-techdoc`
 
 The version of souce code
 
-default: `0.2.2`
+default: `0.3.0`
 
 #### `github_doc_repository`
 

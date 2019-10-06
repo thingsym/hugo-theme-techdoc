@@ -5,6 +5,10 @@ var $ = require('gulp-load-plugins')();
 
 require('es6-promise').polyfill();
 
+var webpack = require("webpack");
+var webpackStream = require("webpack-stream");
+var webpackConfig = require("./webpack.config");
+
 var runSequence = require('run-sequence');
 
 var browserSync = require('browser-sync').create();
@@ -12,10 +16,7 @@ var reload = browserSync.reload;
 
 var src_paths = {
   sass: ['src/scss/*.scss'],
-  script: [
-    'static/js/*.js',
-    '!static/js/*.min.js'
-  ],
+  script: ['src/js/*.js'],
 };
 
 var dest_paths = {
@@ -76,33 +77,29 @@ gulp.task('sass:style', function() {
     .pipe(gulp.dest(dest_paths.style));
 });
 
-gulp.task('javascript', function() {
-  return gulp.src(src_paths.script)
-    .pipe($.uglify().on( 'error', $.util.log ))
-    .pipe($.rename({ suffix: '.min' }))
-    .pipe(gulp.dest(dest_paths.script));
-});
-
 gulp.task('lint:javascript', function() {
-  return gulp.src(src_paths.script)
+  return gulp.src(dest_paths.script)
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('browser-sync', function() {
-  browserSync.init({
-    server: {
-      baseDir: dest_paths.browserSync
-    }
-  });
-
-  gulp.watch(src_paths.sass, ['default']).on('change', reload);
+gulp.task('lint:eslint', function() {
+  return gulp.src(src_paths.script)
+    .pipe($.eslint.format())
+    .pipe($.eslint.failAfterError());
 });
 
-gulp.task('lint', ['lint:sass', 'lint:javascript']);
+gulp.task('webpack', function() {
+  return webpackStream(webpackConfig, webpack)
+    .on('error', function (e) {
+      this.emit('end');
+    })
+    .pipe(gulp.dest("dist"));
+});
+
+gulp.task('lint', ['lint:sass', 'lint:eslint', 'lint:javascript']);
 gulp.task('sass', ['sass:style']);
-gulp.task('script', ['javascript']);
-gulp.task('serve', ['browser-sync']);
+gulp.task('script', ['webpack']);
 
 gulp.task('default', function(callback) {
   runSequence(
