@@ -166,6 +166,14 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.3.0 - 2019.10.06
+  * fix archetypes
+  * add prepend-body.html for Tag Manager noscript version
+  * change class name from menu to global-menu
+  * rename partials files
+  * fix javascript path for webpack
+  * improve development environment
+  * move javascript files to src directory
 * Version 0.2.2 - 2019.04.27
   * fix Lastmod's and PublishDate's initial value of 0001-01-01
 * Version 0.2.1 - 2018.12.07
