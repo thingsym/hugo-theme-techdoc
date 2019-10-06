@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Page.Language | default "en" }}">
+{{ with .Site.LanguageCode }}<html lang="{{ . }}">{{ else }}<html>{{ end }}
 <head>
 {{- partial "head.html" . -}}
 {{- partial "custom-head.html" . -}}
@@ -12,8 +12,7 @@
 {{- partial "global-menu.html" . -}}
 <div class="content-container">
 <main>
-{{- block "main" . -}}
-{{- end -}}
+{{- block "main" . -}}{{- end -}}
 <footer>
 {{- partial "content-footer.html" . -}}
 {{- partial "powered.html" . -}}
