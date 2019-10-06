@@ -32,6 +32,92 @@ You may specify options in config.toml (or config.yaml/config.json) of your site
 
 For an example of `config.toml`, [config.toml](https://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/config.toml) in exampleSite.
 
+### Directory layout
+
+```
+archetypes
+  |- default.md
+exampleSite
+  |- config.toml
+  |- ...
+images
+  |- screenshot.png
+  |- tn.png
+layouts
+  |- _default
+  |    |- baseof.html
+  |    |- list.html
+  |    |- single.html
+  |- 404.html
+  |- blog
+  |    |- li.html
+  |    |- list.html
+  |    |- single.html
+  |    |- summary.html
+  |- index.html
+  |- partials
+  |    |- content-footer.html
+  |    |- custom-head.html
+  |    |- edit-meta.html
+  |    |- edit-page.html
+  |    |- footer.html
+  |    |- global-menu.html
+  |    |- head.html
+  |    |- last-updated.html
+  |    |- menu.html
+  |    |- meta
+  |    |    |- chroma.html
+  |    |    |- google-analytics-async.html
+  |    |    |- google-site-verification.html
+  |    |    |- metatag-manager.html
+  |    |- notification.html
+  |    |- pagination.html
+  |    |- powered.html
+  |    |- prepend-body.html
+  |    |- sidebar-footer.html
+  |    |- sidebar.html
+  |    |- site-header.html
+  |- posts
+  |    |- list.html
+  |    |- single.html
+  |- shortcodes
+       |- button.html
+       |- panel.html
+node_modules
+resources
+src
+  |- scss
+  |    |- _component.scss
+  |    |- _element.scss
+  |    |- _normalize.scss
+  |    |- _project.scss
+  |    |- _structure.scss
+  |    |- _variable.scss
+  |    |- chroma.scss
+  |    |- theme.scss
+  |- js
+       |- jquery.backtothetop
+       |- functions.js
+       |- main.js
+static
+  |- css
+  |    |- chroma.css
+  |    |- chroma.min.css
+  |    |- theme.css
+  |    |- theme.min.css
+  |- images
+  |- js
+    |- bundle.js
+.editorconfig
+.gitignore
+gulpfile.js
+LICENSE.md
+package.json
+README.md
+theme.toml
+webpack.config.js
+```
+
 ### Preview site
 
 To preview your site, run Hugo's built-in local server.
@@ -45,18 +131,18 @@ Browse site on http://localhost:1313
 ## Deploy Site to public_html directory
 
 ```
-hugo -d public_html
+hugo -t hugo-theme-techdoc -d public_html
 ```
 
 ## Development environment
 
 ```
 cd /path/to/hugo-theme-techdoc
-yarn install
-gulp watch
+npm install
+npm run gulp:watch
 ```
 
-## Preview exampleSite
+### Preview exampleSite
 
 ```
 cd /path/to/dir/themes/hugo-theme-techdoc/exampleSite
