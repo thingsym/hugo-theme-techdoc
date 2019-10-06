@@ -2,9 +2,9 @@
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
 lastmod: {{ .Date }}
-draft: true
+publishdate: {{ .Date }}
 description: ""
-weight: 5
+weight: 10
 ---
 
 Lorem Ipsum.
