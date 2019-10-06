@@ -7,14 +7,14 @@
 <body>
 <div class="container">
 {{- partial "notification.html" . -}}
-{{- partial "header.html" . -}}
-{{- partial "main-menu.html" . -}}
+{{- partial "site-header.html" . -}}
+{{- partial "global-menu.html" . -}}
 <div class="content-container">
 <main>
 {{- block "main" . -}}
 {{- end -}}
 <footer>
-{{- partial "main-footer.html" . -}}
+{{- partial "content-footer.html" . -}}
 {{- partial "powered.html" . -}}
 </footer>
 </main>
