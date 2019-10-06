@@ -8,8 +8,8 @@ theme = "hugo-theme-techdoc"
 hasCJKLanguage = true
 metaDataFormat = "yaml"
 
+pygmentsCodeFences = true
 pygmentsUseClasses = true
-pygmentsCodefences = true
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
@@ -36,8 +36,14 @@ enableMissingTranslationPlaceholders = false
     # See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
 
     # path name excluded from documentation menu
-    menu_exclusion = ["archives", "blog", "entry", "post", "posts"]
-
+    menu_exclusion = [
+        "archives",
+        "archive",
+        "blog",
+        "entry",
+        "post",
+        "posts"
+    ]
 
 # Global menu section
 [[menu.main]]
