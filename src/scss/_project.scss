@@ -1,39 +1,31 @@
 header {
+  color: #fff;
   background: #000;
-  padding: .2rem 1.2rem;
+  padding: .2rem $default-padding;
 
   h1 {
-    color: #fff;
     font-size: 140%;
     display: inline-block;
-    margin: 0;
   }
 
   .version {
-    color: #fff;
     font-size: 80%;
   }
 
   .github {
+    color: currentColor;
     margin-left: .4rem;
-    color: #ddd;
     font-size: 180%;
-    &:hover {
-      color: #fff;
-    }
   }
 }
 
 .description {
-  color: #ddd;
-  margin: 0;
 }
 
 .global-menu {
+  color: #ccc;
   background: #000;
-  padding: 0 1.2rem .4rem;
-  color: #ddd;
-  border-top: 1px solid #333;
+  padding: .2rem $default-padding;
 
   ul {
     list-style: none;
@@ -55,10 +47,13 @@ header {
     z-index: 99999;
 
     li {
-      padding: .4rem;
+      padding: .2rem $default-padding;
       background: #000;
       width: 140px;
       font-size: 80%;
+      a {
+        color: currentColor;
+      }
     }
   }
 
@@ -74,7 +69,7 @@ header {
     li {
       display: block;
       margin-right: 0;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid currentColor;
 
       &:last-child {
         border-bottom: none;
@@ -91,22 +86,30 @@ header {
 
       li {
         width: auto;
+        background: transparent;
+        padding: 0 .4rem;
+        + li {
+          padding-top: .2rem;
+        }
+        a {
+          color: currentColor;
+        }
       }
     }
   }
 
   a {
     display: block;
-    color: #ddd;
+    color: currentColor;
     text-decoration: none;
     &:hover {
-      color: #fff;
+      text-decoration: underline;
     }
   }
 }
 
 main {
-  padding: 1rem 3rem 3rem;
+  padding: 3rem;
 }
 
 @media screen and (max-width: #{map-get($default-breakpoints, xs )} ) {
@@ -125,25 +128,28 @@ main {
     padding: 0;
     margin: 0;
   }
-  ul ul ul {
-    margin-left: 1rem;
-  }
+
   a {
+		position: relative;
     display: block;
     color: #404040;
     text-decoration: none;
-    padding: .2rem 1.2rem;
+    padding: .2rem 1rem;
+    border-left: solid 4px $sidebar-background-color;
+    border-bottom: solid 1px $sidebar-active-color;
+
     &:hover {
       color: #404040;
       background: $sidebar-hover-color;
       border-left: solid 4px #ccc;
     }
-    border-left: solid 4px $sidebar-background-color;
-    border-bottom: solid 1px $sidebar-active-color;
   }
 
-  li li a {
+  nav > ul > li li a {
     padding-left: 2rem;
+  }
+  nav > ul ul > li li a {
+    padding-left: 3rem;
   }
 
   .active > a {
@@ -151,20 +157,31 @@ main {
     border-left: solid 4px #ccc;
   }
 
+	nav > ul > .has-sub-menu > a:after {
+		position: absolute;
+		top: 25%;
+		right: .5rem;
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+		content: '+';
+		line-height: 1.2;
+		text-align: center;
+		color: #979797;
+		background: #f2f2f2;
+		border: 1px solid #e7e7e7;
+	}
 }
 
 .sidebar-footer {
-  margin: 1rem;
-  margin-top: 2rem;
+	padding: $default-padding;
 }
 
 footer {
-  margin-top: 2rem;
 }
 
 .edit-meta {
   font-size: 80%;
-  margin-top: 2rem;
   text-align: right;
 }
 
