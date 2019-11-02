@@ -15,7 +15,7 @@ For an example of `config.toml`, see [config.toml](https://github.com/thingsym/h
     # Souce Code repository section
     description = "put your description"
     github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.3.0"
+    version = "0.4.0"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
@@ -65,7 +65,7 @@ default: `https://github.com/thingsym/hugo-theme-techdoc`
 
 The version of souce code
 
-default: `0.3.0`
+default: `0.4.0`
 
 #### `github_doc_repository`
 

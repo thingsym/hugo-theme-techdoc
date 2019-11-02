@@ -191,6 +191,11 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.4.0 - 2019.11.02
+	* update Sample Document
+	* add Theme color
+	* add Menu style
+	* improve scss
 * Version 0.3.0 - 2019.10.06
   * fix archetypes
   * add prepend-body.html for Tag Manager noscript version
