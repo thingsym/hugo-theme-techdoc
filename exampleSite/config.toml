@@ -32,6 +32,10 @@ enableMissingTranslationPlaceholders = false
     google_site_verification = "" # Your Google Site Verification for Search Console
 
     # Theme settings section
+    # Theme color
+    custom_font_color = ""
+    custom_background_color = ""
+
     # Documentation Menu section
     # Menu style settings
     menu_style = "open-menu" # "open-menu" or "slide-menu"
