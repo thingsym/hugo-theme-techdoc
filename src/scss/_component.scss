@@ -35,7 +35,7 @@
 	padding: $default-padding;
 }
 .panel-primary {
-	border: 1px solid $default-line-color;
+	border: 1px solid $default-border-color;
 }
 .panel-notice {
 	color: #fff;
@@ -58,11 +58,7 @@
 	background: #ce3426;
 }
 
-.panel-header {
-	h3 {
-		margin: 0;
-	}
-}
+.panel-header {}
 .panel-body {}
 
 .button {
@@ -83,7 +79,7 @@
 }
 
 .button-primary {
-	border: 1px solid $default-line-color;
+	border: 1px solid $default-border-color;
 }
 .button-success {
 	background: #369b08;

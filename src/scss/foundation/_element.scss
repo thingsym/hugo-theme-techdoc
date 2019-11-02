@@ -54,13 +54,13 @@ hr {
 
 table {
 	border-collapse: collapse;
-	border: 1px solid $default-line-color;
+	border: 1px solid $default-border-color;
 	width: 100%;
 }
 th,
 td {
-	border-top: 1px solid $default-line-color;
-	border-right: 1px solid $default-line-color;
+	border-top: 1px solid $default-border-color;
+	border-right: 1px solid $default-border-color;
 	padding: .4rem;
 
 	tr:nth-child(even) & {
@@ -117,7 +117,7 @@ blockquote {
 	color: #959595;
 	margin-left: 0;
 	padding: .1rem .8rem;
-	border-left: 4px solid $default-line-color;
+	border-left: 4px solid $default-border-color;
 
 	p:last-child {
 		margin: 0;
@@ -210,13 +210,13 @@ figure {
 
 /* Links */
 a {
-	color: $default-link-color;
+	color: $default-link-text-color;
 	text-decoration: underline;
 
 	&:focus,
 	&:active,
 	&:hover {
-		color: $default-link-hover-color;
+		color: $default-link-hover-text-color;
 	}
 }
 
