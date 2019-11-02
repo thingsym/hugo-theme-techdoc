@@ -1,3 +1,3 @@
-require( './functions.js' );
-require( './jquery.backtothetop/jquery.backtothetop.js' );
 require( './sidebar-menu.js' );
+require( './keydown-nav.js' );
+require( './jquery.backtothetop/jquery.backtothetop.min.js' );
