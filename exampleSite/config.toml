@@ -20,7 +20,7 @@ enableMissingTranslationPlaceholders = false
     # Souce Code repository section
     description = "put your description"
     github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.3.0"
+    version = "0.4.0"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
@@ -32,6 +32,15 @@ enableMissingTranslationPlaceholders = false
     google_site_verification = "" # Your Google Site Verification for Search Console
 
     # Theme settings section
+    # Theme color
+    custom_font_color = ""
+    custom_background_color = ""
+
+    # Documentation Menu section
+    # Menu style settings
+    menu_style = "open-menu" # "open-menu" or "slide-menu"
+
+    # Date format
     dateformat = "" # default "2 Jan 2006"
     # See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
 

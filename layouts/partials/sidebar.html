@@ -1,5 +1,9 @@
 <div class="sidebar">
-{{- partial "menu.html" . -}}
+{{ if eq .Site.Params.menu_style "open-menu" }}
+{{- partial "menu/open-menu.html" . -}}
+{{ else if eq .Site.Params.menu_style "slide-menu" }}
+{{- partial "menu/slide-menu.html" . -}}
+{{ end }}
 <div class="sidebar-footer">
 {{- partial "sidebar-footer.html" . -}}
 </div>

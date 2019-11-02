@@ -8,10 +8,31 @@ The Techdoc is a Hugo Theme for technical documentation.
 
 * Modern, Simple layout
 * Responsive web design
-* Documentation menu
+* Documentation menu (Select Menu style)
+* Theme color
 * Edit link to documentation repository
 * Custom Shortcodes
 * Analytics with Google Analytics, Google Tag Manager
+
+## Screenshot
+
+### Theme color
+
+![Theme color](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-theme-color.png)
+
+### Menu style
+
+#### Open Menu
+
+![Open Menu](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-open-menu.png)
+
+#### Slide Menu
+
+![Slide Menu](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-slide-menu.gif)
+
+### Edit link
+
+![Edit link](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-edit-link.png)
 
 ## Getting Started
 
@@ -87,9 +108,13 @@ node_modules
 resources
 src
   |- scss
+  |    |- foundation
+  |    |    |- _element.scss
+  |    |    |- _normalize.scss
+  |    |    |- _reset.scss
+  |    |    |- _stack.scss
   |    |- _component.scss
-  |    |- _element.scss
-  |    |- _normalize.scss
+  |    |- _foundation.scss
   |    |- _project.scss
   |    |- _structure.scss
   |    |- _variable.scss
@@ -166,6 +191,11 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.4.0 - 2019.11.02
+	* update Sample Document
+	* add Theme color
+	* add Menu style
+	* improve scss
 * Version 0.3.0 - 2019.10.06
   * fix archetypes
   * add prepend-body.html for Tag Manager noscript version
@@ -192,10 +222,16 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## License
 
-Licensed under the MIT License.
+Techdoc is licensed under the MIT License.
+
+Techdoc bundles the following third-party resources:
+
+* CSS reset by [normalize.css](https://necolas.github.io/normalize.css/), [MIT](https://opensource.org/licenses/MIT)
+* jQuery Plugin [Back to the Top](https://github.com/thingsym/jquery.backtothetop), [MIT](https://opensource.org/licenses/MIT)
+* Sass Mixin [Flexbox Grid Mixins](https://thingsym.github.io/flexbox-grid-mixins/), [MIT](https://opensource.org/licenses/MIT)
 
 ## Author
 
 [thingsym](https://github.com/thingsym)
 
-Copyright (c) 2017-2018 by thingsym
+Copyright (c) 2017-2019 by thingsym
