@@ -32,6 +32,10 @@ enableMissingTranslationPlaceholders = false
     google_site_verification = "" # Your Google Site Verification for Search Console
 
     # Theme settings section
+    # Documentation Menu section
+    # Menu style settings
+    menu_style = "open-menu" # "open-menu" or "slide-menu"
+
     dateformat = "" # default "2 Jan 2006"
     # See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
 
