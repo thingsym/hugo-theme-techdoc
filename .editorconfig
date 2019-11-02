@@ -11,13 +11,16 @@ trim_trailing_whitespace = true
 indent_style = tab
 indent_size = 2
 
-[{*.html*.js}]
+[{*.html,*.js}]
 indent_style = space
 
-[{,package.json,*.yml}]
+[{package.json,*.yml}]
 indent_style = space
 indent_size = 2
 
-[composer.json]
+[{composer.json,*.toml}]
 indent_style = space
 indent_size = 4
+
+[*.md]
+trim_trailing_whitespace = false
