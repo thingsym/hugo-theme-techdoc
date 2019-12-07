@@ -31,6 +31,12 @@ enableMissingTranslationPlaceholders = false
     tag_manager_container_id = "" # Your Google Tag Manager container id
     google_site_verification = "" # Your Google Site Verification for Search Console
 
+    # Open Graph and Twitter Cards settings section
+    title = "Hugo Techdoc Theme"
+    images = ["og-image.png"]
+    # See https://gohugo.io/templates/internal/#open-graph
+    # See https://gohugo.io/templates/internal/#twitter-cards
+
     # Theme settings section
     # Theme color
     custom_font_color = ""
