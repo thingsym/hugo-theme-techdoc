@@ -1,7 +1,7 @@
 /*-----------------------*
 		stack
 *-----------------------*/
-.stack-base {
+.stack-first {
 	margin-top: 0;
 	margin-bottom: 0;
 }
@@ -10,40 +10,19 @@
 	margin-top: $default-stack;
 }
 
-.no-stack {
+.stack--by2 {
+	margin-top: $default-stack * 2;
+}
+
+.stack--by4 {
+	margin-top: $default-stack * 4;
+}
+
+.stack-reset {
 	margin-top: 0;
 }
-.unset-stack {
+
+.stack-unset {
 	margin-top: unset;
 	margin-bottom: unset;
-}
-
-main * {
-	@extend .stack-base;
-}
-
-main {
-	* {
-		+ h1, + h2, + h3, + h4, + h5, + h6,
-		+ p,
-		+ hr,
-		+ table,
-		+ ul,
-		+ ol,
-		+ dl,
-		+ blockquote,
-		+ pre,
-		+ figure {
-			@extend .stack;
-		}
-	}
-
-	li > ul,
-	li > ol {
-		@extend .unset-stack;
-	}
-}
-
-figure > figcaption {
-	@extend .no-stack;
 }

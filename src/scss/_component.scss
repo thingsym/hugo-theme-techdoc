@@ -1,3 +1,33 @@
+main * {
+	@extend .stack-first;
+}
+
+main {
+	* {
+		+ h1, + h2, + h3, + h4, + h5, + h6,
+		+ p,
+		+ hr,
+		+ table,
+		+ ul,
+		+ ol,
+		+ dl,
+		+ blockquote,
+		+ pre,
+		+ figure {
+			@extend .stack;
+		}
+	}
+
+	li > ul,
+	li > ol {
+		@extend .stack-unset;
+	}
+}
+
+figure > figcaption {
+	@extend .stack-reset;
+}
+
 .edit-meta,
 .edit-page,
 .pagination,
@@ -14,7 +44,7 @@
 	@include grid($flex-wrap: nowrap, $justify-content: space-between);
 	font-weight: bold;
 	> * {
-		@extend .no-stack;
+		@extend .stack-reset;
 	}
 }
 .nav-prev {}
