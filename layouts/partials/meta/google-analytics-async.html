@@ -1,6 +1,6 @@
-{{ if .Site.IsServer }}
+{{- if .Site.IsServer -}}
 <!-- only production, not generate Google Analytics with Hugo’s built-in server -->
-{{ else }}
+{{- else -}}
 {{- with .Site.Params.google_analytics_id -}}
 <!-- BEGIN: Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
