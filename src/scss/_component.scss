@@ -62,11 +62,12 @@ figure > figcaption {
 }
 
 .panel {
-	padding: $default-padding;
+	padding: $default-layout-padding;
 }
 .panel-primary {
 	border: 1px solid $default-border-color;
 }
+
 .panel-notice {
 	color: #fff;
 	background: #4ba0e1;
@@ -137,7 +138,7 @@ figure > figcaption {
 }
 
 .notification {
-	padding: .2rem $default-padding;
+	padding: .2rem $default-layout-padding;
 	text-align: center;
 	background: $sidebar-active-color;
 }
