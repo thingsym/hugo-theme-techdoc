@@ -109,9 +109,9 @@ default: `""`
 
 #### `menu_style`
 
-Documentation Menu style Open Menu or Slide Menu
+Documentation Menu style, Open Menu or Slide Menu
 
-default: `slide-menu`  
+default: `open-menu`  
 value: `open-menu` | `slide-menu`
 
 #### `dateformat`

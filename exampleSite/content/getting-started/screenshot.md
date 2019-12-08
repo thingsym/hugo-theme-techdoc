@@ -7,6 +7,8 @@ weight: 30
 
 ### Theme color
 
+![Theme color](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-theme-color.png)
+
 ### Menu style
 
 #### Open Menu
