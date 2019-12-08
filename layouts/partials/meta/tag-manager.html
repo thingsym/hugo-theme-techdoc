@@ -1,6 +1,6 @@
-{{ if .Site.IsServer }}
+{{- if .Site.IsServer -}}
 <!-- only production, not generate Tag Manager with Hugo’s built-in server -->
-{{ else }}
+{{- else -}}
 {{- with .Site.Params.tag_manager_container_id -}}
 <!-- BEGIN: Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

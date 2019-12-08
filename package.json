@@ -1,6 +1,6 @@
 {
   "name": "hugo-theme-techdoc",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "The Techdoc is a Hugo Theme for technical documentation.",
   "main": "gulpfile.js",
   "author": "Thingsym",
@@ -68,6 +68,43 @@
       "ecmaVersion": 2018
     },
     "rules": {}
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "modules": false,
+          "targets": {
+            "browsers": [
+              "last 2 Chrome versions",
+              "last 2 Firefox versions",
+              "last 2 Safari versions",
+              "last 2 Edge versions",
+              "last 2 Opera versions",
+              "last 2 iOS versions",
+              "last 1 Android version",
+              "last 1 ChromeAndroid version",
+              "ie 11",
+              "> 1%"
+            ]
+          }
+        }
+      ]
+    ],
+    "plugins": [],
+    "env": {
+      "default": {
+        "plugins": [
+          "transform-runtime"
+        ]
+      },
+      "test": {
+        "presets": [
+          "env"
+        ]
+      }
+    }
   },
   "scripts": {
     "default": "gulp",

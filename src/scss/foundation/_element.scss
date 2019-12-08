@@ -1,9 +1,21 @@
-body {
-	font-family: $default-font-family;
+/*-----------------------*
+		Element v1.0.0-custom
+*-----------------------*/
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: $default-font-size;
+	line-height: line-height($default-line-space, $default-font-size);
+	color: $default-font-color;
+	font-family: var(--custom-font-family-base, $default-font-family);
 	font-feature-settings : 'pwid';
-	line-height: $default-line-height;
-	background: $default-background-color;
-	margin: 0;
+}
+
+body {
+	background-color: $default-background-color;
+	margin: $default-layout-margin;
 }
 
 h1,
@@ -12,6 +24,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: var(--custom-font-family-headings, $default-font-family);
 	font-weight: bold;
 	line-height: $default-line-height;
 
@@ -22,34 +35,61 @@ h6 {
 }
 
 h1 {
-	font-size: 220%;
-	line-height: 1.2;
+	font-size: 240%;
+	line-height: line-height($default-line-space, 240%);
 }
 h2 {
-	font-size: 160%;
-	line-height: 1.4;
+	font-size: 200%;
+	line-height: line-height($default-line-space, 200%);
 }
 h3 {
-	font-size: 140%;
+	font-size: 160%;
+	line-height: line-height($default-line-space, 160%);
 }
 h4 {
-	font-size: 120%;
+	font-size: 140%;
+	line-height: line-height($default-line-space, 140%);
 }
 h5 {
-	font-size: 100%;
+	font-size: 120%;
+	line-height: line-height($default-line-space, 120%);
 }
 h6 {
-	font-size: 80%;
+	font-size: 100%;
+	line-height: line-height($default-line-space, 100%);
 }
 
-p {
-	font-size: $default-font-size;
+a {
+	color: var(--custom-link-text-color, $default-link-text-color);
+	text-decoration: none;
+
+	&:focus,
+	&:active,
+	&:hover {
+		color: var(--custom-link-text-hover-color, $default-link-text-hover-color);
+		text-decoration: underline;
+	}
 }
 
 hr {
 	background-color: #ccc;
 	height: 2px;
 	border: 0;
+}
+
+p {
+	font-size: $default-font-size;
+}
+
+img {
+	display: inline-block;
+	line-height: 0;
+}
+
+img,
+video {
+	height: auto;
+	max-width: 100%;
 }
 
 table {
@@ -61,88 +101,73 @@ th,
 td {
 	border-top: 1px solid $default-border-color;
 	border-right: 1px solid $default-border-color;
-	padding: .4rem;
-
 	tr:nth-child(even) & {
 		background: #f8f8f8;
 	}
+	padding: .6rem;
 }
 th {
 	background: #eee;
 	font-weight: bold;
+	text-align: left;
 }
 
-ul,
-ol {
-	font-size: $default-font-size;
-	margin: 0;
-	margin-left: 1.5rem;
-}
 ul {
-	&.unstyled {
-		list-style: none;
-	}
-	&.inline {
-		list-style: none;
-	}
+	list-style-type: disc;
+}
+
+ul {
 	&.inline li {
 		display: inline;
+		list-style: disc;
 		padding-right: 2rem;
 	}
 }
-ul ul,
-ol ol,
-ul ol,
-ol ul {
-	font-size: 100%;
-}
-li li {
-	font-size: 100%;
-}
-dl {
-	font-size: $default-font-size;
-	margin: 0 $default-margin;
-}
+
 dt {
 	font-weight: bold;
 }
 dd {
-	margin: 0 0 .8rem $default-margin;
+	margin-left: 2rem;
 }
-strong {
-	font-weight: bold;
-}
-blockquote {
-	background: #f9f9f9;
-	color: #959595;
-	margin-left: 0;
-	padding: .1rem .8rem;
-	border-left: 4px solid $default-border-color;
 
-	p:last-child {
-		margin: 0;
-	}
+blockquote {
+	color: #999;
+	padding: $default-layout-padding;
+	background-color: #f4f4f4;
+	border-left: 4px solid $default-border-color;
+	border-radius: .2rem;
 }
 
 code,
 pre,
 kbd {
 	font-family: Menlo, Monaco, "Courier New", monospace;
-	font-size: 100%;
 }
+
+code,
+kbd {
+	padding: .2rem;
+	border-radius: .2rem;
+}
+code {
+	background-color: #f4f4f4;
+}
+kbd {
+	color: #fff;
+	background-color: #333;
+}
+
 pre {
+	background-color: #f4f4f4;
+	padding: $default-layout-padding;
 	overflow: auto;
-	padding: 1rem;
-	background: $code-block-background-color;
 	white-space: pre-wrap;
-	border: 1px solid $code-border-color;
 	border-radius: .2rem;
 
 	code {
-		color: inherit;
-		background-color: transparent;
 		padding: 0;
-		border: 0;
+		background-color: unset;
 	}
 
 	&.wrap {
@@ -155,83 +180,10 @@ pre {
 		max-height: 240px;
 		overflow-y: scroll;
 	}
-	&.prettyprint {}
+}
 
-}
-code {
-	font-family: $code-font-family;
-	font-size: $code-font-size;
-	background: $code-inline-background-color;
-	padding: .2rem;
-	border-radius: .2rem;
-}
-kbd {
-	padding: .2rem;
-	color: #fff;
-	background-color: #333;
-	border-radius: .2rem;
-}
-abbr,
-acronym,
-dfn {
-	border-bottom: 1px dotted #666;
-	cursor: help;
-}
-address {
-	display: block;
-	margin: 0 0 $default-margin;
-}
-ins {
-	text-decoration: none;
-}
-sup,
-sub {
+figcaption {
+	color: #333;
 	font-size: $default-font-size;
-	height: 0;
-	line-height: 1;
-	position: relative;
-	vertical-align: baseline;
-}
-sup {
-	bottom: .5ex;
-}
-sub {
-	top: .5ex;
-}
-figure {
-	img {
-		display: block;
-	}
-	figcaption {
-		color: #333;
-		font-size: $default-font-size;
-	}
-}
-
-/* Links */
-a {
-	color: $default-link-text-color;
-	text-decoration: underline;
-
-	&:focus,
-	&:active,
-	&:hover {
-		color: $default-link-hover-text-color;
-	}
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-}
-
-input,
-textarea {
-	color: $default-font-color;
-	font-size: 100%;
-	font-weight: normal;
-	line-height: 1.225;
-}
-textarea {
-	line-height: $default-line-height;
+	line-height: line-height($default-line-space, $default-font-size);
 }

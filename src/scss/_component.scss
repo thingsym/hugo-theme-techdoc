@@ -1,3 +1,34 @@
+main * {
+	@extend .stack-first;
+}
+
+main {
+	* {
+		+ h1, + h2, + h3, + h4, + h5, + h6,
+		+ p,
+		+ hr,
+		+ table,
+		+ ul,
+		+ ol,
+		+ dl,
+		+ blockquote,
+		+ pre,
+		+ figure {
+			@extend .stack;
+		}
+	}
+
+	li > ul,
+	li > ol {
+		@extend .stack-unset;
+	}
+}
+
+figure > figcaption {
+	@extend .stack-reset;
+}
+
+.table_of_contents,
 .edit-meta,
 .edit-page,
 .pagination,
@@ -14,7 +45,7 @@
 	@include grid($flex-wrap: nowrap, $justify-content: space-between);
 	font-weight: bold;
 	> * {
-		@extend .no-stack;
+		@extend .stack-reset;
 	}
 }
 .nav-prev {}
@@ -32,11 +63,12 @@
 }
 
 .panel {
-	padding: $default-padding;
+	padding: $default-layout-padding;
 }
 .panel-primary {
 	border: 1px solid $default-border-color;
 }
+
 .panel-notice {
 	color: #fff;
 	background: #4ba0e1;
@@ -107,7 +139,7 @@
 }
 
 .notification {
-	padding: .2rem $default-padding;
+	padding: .2rem $default-layout-padding;
 	text-align: center;
 	background: $sidebar-active-color;
 }
@@ -123,4 +155,38 @@
 figure > figcaption h4 {
 	font-size: 80%;
 	font-weight: normal;
+}
+
+.table_of_contents {
+	font-size: 90%;
+	padding: $default-layout-padding;
+	border: 4px solid $default-border-color;
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+	}
+	li {
+		border-top: 1px solid $default-border-color;
+	}
+	> nav > ul > li:first-child {
+		border-top: unset;
+	}
+
+	ul > li li a {
+		margin-left: 2rem * 1;
+	}
+	ul ul > li li a {
+		margin-left: 2rem * 2;
+	}
+	ul ul ul > li li a {
+		margin-left: 2rem * 3;
+	}
+	ul ul ul ul > li li a {
+		margin-left: 2rem * 4;
+	}
+	ul ul ul ul ul > li li a {
+		margin-left: 2rem * 5;
+	}
+
 }
