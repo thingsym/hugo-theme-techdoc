@@ -204,6 +204,11 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.5.0 - 2019.12.08
+  * update Sample Document
+  * add table of contents
+  * add open graph
+  * add function and stack scss
 * Version 0.4.0 - 2019.11.02
   * update Sample Document
   * add Theme color
