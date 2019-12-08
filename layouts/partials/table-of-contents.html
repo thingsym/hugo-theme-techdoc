@@ -1,0 +1,8 @@
+{{ if .Params.TableOfContents }}
+<aside class="table_of_contents">
+<h5>Table of Contents</h5>
+{{- $toc := .TableOfContents -}}
+{{- $toc := replaceRE `<ul>\n<li>\n<ul>` `<ul>` $toc -}}
+{{- safeHTML $toc -}}
+</aside>
+{{ end }}
