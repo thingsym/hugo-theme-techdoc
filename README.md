@@ -9,9 +9,11 @@ The Techdoc is a Hugo Theme for technical documentation.
 * Modern, Simple layout
 * Responsive web design
 * Documentation menu (Select Menu style)
+* Table Of Contents for the page (selective)
 * Theme color
 * Edit link to documentation repository
 * Custom Shortcodes
+* Open Graph
 * Analytics with Google Analytics, Google Tag Manager
 
 ## Screenshot
@@ -64,18 +66,19 @@ exampleSite
 images
   |- screenshot.png
   |- tn.png
+  |- ...
 layouts
+  |- index.html
+  |- 404.html
   |- _default
   |    |- baseof.html
   |    |- list.html
   |    |- single.html
-  |- 404.html
   |- blog
   |    |- li.html
   |    |- list.html
   |    |- single.html
   |    |- summary.html
-  |- index.html
   |- partials
   |    |- content-footer.html
   |    |- custom-head.html
@@ -85,7 +88,9 @@ layouts
   |    |- global-menu.html
   |    |- head.html
   |    |- last-updated.html
-  |    |- menu.html
+  |    |- menu
+  |    |    |- open-menu.html
+  |    |    |- slide-menu.html
   |    |- meta
   |    |    |- chroma.html
   |    |    |- google-analytics-async.html
@@ -98,6 +103,7 @@ layouts
   |    |- sidebar-footer.html
   |    |- sidebar.html
   |    |- site-header.html
+  |    |- table-of-contents.html
   |- posts
   |    |- list.html
   |    |- single.html
@@ -107,23 +113,29 @@ layouts
 node_modules
 resources
 src
-  |- scss
-  |    |- foundation
-  |    |    |- _element.scss
-  |    |    |- _normalize.scss
-  |    |    |- _reset.scss
-  |    |    |- _stack.scss
-  |    |- _component.scss
-  |    |- _foundation.scss
-  |    |- _project.scss
-  |    |- _structure.scss
-  |    |- _variable.scss
-  |    |- chroma.scss
-  |    |- theme.scss
   |- js
-       |- jquery.backtothetop
-       |- functions.js
-       |- main.js
+  |    |- jquery.backtothetop
+  |    |- functions.js
+  |    |- main.js
+  |- scss
+       |- foundation
+       |    |- _element.scss
+       |    |- _normalize.scss
+       |    |- _reset.scss
+       |    |- _stack.scss
+       |- function
+       |    |- _calc-font-size.scss
+       |    |- _calc-stack.scss
+       |    |- _contrast-color.scss
+       |    |- _strip-unit.scss
+       |- _component.scss
+       |- _foundation.scss
+       |- _function.scss
+       |- _project.scss
+       |- _structure.scss
+       |- _variable.scss
+       |- chroma.scss
+       |- theme.scss
 static
   |- css
   |    |- chroma.css
@@ -137,6 +149,7 @@ static
 .gitignore
 gulpfile.js
 LICENSE.md
+package-lock.json
 package.json
 README.md
 theme.toml
@@ -183,7 +196,7 @@ Browse site on http://localhost:1313
 
 Small patches and bug reports can be submitted a issue tracker in Github. Forking on Github is another good way. You can send a pull request.
 
-1. Fork [Hugo Theme Techdoc](http://thingsym.github.io/hugo-theme-techdoc/) from GitHub repository
+1. Fork [Hugo Theme Techdoc](https://github.com/thingsym/hugo-theme-techdoc) from GitHub repository
 2. Create a feature branch: git checkout -b my-new-feature
 3. Commit your changes: git commit -am 'Add some feature'
 4. Push to the branch: git push origin my-new-feature
@@ -192,10 +205,10 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 ## Changelog
 
 * Version 0.4.0 - 2019.11.02
-	* update Sample Document
-	* add Theme color
-	* add Menu style
-	* improve scss
+  * update Sample Document
+  * add Theme color
+  * add Menu style
+  * improve scss
 * Version 0.3.0 - 2019.10.06
   * fix archetypes
   * add prepend-body.html for Tag Manager noscript version
