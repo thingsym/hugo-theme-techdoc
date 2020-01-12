@@ -2,10 +2,10 @@
 <nav class="pagination">
 {{- template "pagination" dict "menu" .Site.Home "currentnode" $currentNode "menu_exclusion" .Site.Params.menu_exclusion -}}
 {{- with ($.Scratch.Get "prevPage") -}}
-<a class="nav nav-prev" href="{{ .URL }}" title="{{ .Title }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - {{ .Title }}</a>
+<a class="nav nav-prev" href="{{ .Permalink }}" title="{{ .Title }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - {{ .Title }}</a>
 {{ end -}}
 {{- with ($.Scratch.Get "nextPage") -}}
-<a class="nav nav-next" href="{{ .URL }}" title="{{ .Title }}">Next - {{ .Title }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<a class="nav nav-next" href="{{ .Permalink }}" title="{{ .Title }}">Next - {{ .Title }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 {{- end }}
 </nav>
 
@@ -13,7 +13,7 @@
 {{- $currentNode := .currentnode -}}
 {{- $menu_exclusion := .menu_exclusion -}}
 
-{{- if hasPrefix $currentNode.URL .menu.URL -}}
+{{- if hasPrefix $currentNode.Permalink .menu.Permalink -}}
   {{- $currentNode.Scratch.Set "NextPageOK" "OK" -}}
   {{- if .menu.IsHome -}}
     {{- $currentNode.Scratch.Set "prevPage" "" -}}

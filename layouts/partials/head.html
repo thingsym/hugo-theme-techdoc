@@ -11,7 +11,7 @@
 {{- else if isset .Site.Params "description" }}
 <meta name="description" content="{{ .Site.Params.description }}">
 {{- end }}
-{{ .Hugo.Generator }}
+{{ hugo.Generator }}
 <link href="{{ .Site.BaseURL }}index.xml" rel="alternate" type="application/rss+xml">
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="stylesheet" href="{{"css/theme.min.css" | absURL}}">
