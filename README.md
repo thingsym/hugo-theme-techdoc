@@ -206,6 +206,10 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.6.0 - 2020.01.13
+  * fix scss
+  * gulp bump up version to 4.0
+  * fix hugo deprecated warning
 * Version 0.5.0 - 2019.12.08
   * update Sample Document
   * add table of contents
