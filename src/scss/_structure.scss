@@ -19,8 +19,7 @@ body {
 }
 
 main {
-	@include grid-col($col: 9, $flex-shrink: 0 );
-	max-width: 75%;
+	@include grid-col($col: 9, $flex-shrink: 0, $max-width: 75%);
 }
 .sidebar {
 	@include grid-col($col: 3, $order: -1);
@@ -36,8 +35,7 @@ main {
 	}
 
 	main {
-		@include grid-col($col: none, $flex-shrink: 0);
-		max-width: 100%;
+		@include grid-col($col: none, $flex-shrink: 0, $min-width: 100%);
 	}
 	.sidebar {
 		@include grid-col($col: none, $order: 1);

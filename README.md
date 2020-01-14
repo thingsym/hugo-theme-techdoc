@@ -58,102 +58,104 @@ For an example of `config.toml`, [config.toml](https://github.com/thingsym/hugo-
 ### Directory layout
 
 ```
-archetypes
-  |- default.md
-exampleSite
-  |- config.toml
-  |- ...
-images
-  |- screenshot.png
-  |- tn.png
-  |- ...
-layouts
-  |- index.html
-  |- 404.html
-  |- _default
-  |    |- baseof.html
-  |    |- list.html
-  |    |- single.html
-  |- blog
-  |    |- li.html
-  |    |- list.html
-  |    |- single.html
-  |    |- summary.html
-  |- partials
-  |    |- content-footer.html
-  |    |- custom-head.html
-  |    |- edit-meta.html
-  |    |- edit-page.html
-  |    |- footer.html
-  |    |- global-menu.html
-  |    |- head.html
-  |    |- last-updated.html
-  |    |- menu
-  |    |    |- open-menu.html
-  |    |    |- slide-menu.html
-  |    |- meta
-  |    |    |- chroma.html
-  |    |    |- google-analytics-async.html
-  |    |    |- google-site-verification.html
-  |    |    |- metatag-manager.html
-  |    |- notification.html
-  |    |- pagination.html
-  |    |- powered.html
-  |    |- prepend-body.html
-  |    |- sidebar-footer.html
-  |    |- sidebar.html
-  |    |- site-header.html
-  |    |- table-of-contents.html
-  |- posts
-  |    |- list.html
-  |    |- single.html
-  |- shortcodes
-       |- button.html
-       |- panel.html
-node_modules
-resources
-src
-  |- js
-  |    |- jquery.backtothetop
-  |    |- functions.js
-  |    |- main.js
-  |- scss
-       |- foundation
-       |    |- _element.scss
-       |    |- _normalize.scss
-       |    |- _reset.scss
-       |    |- _stack.scss
-       |- function
-       |    |- _calc-font-size.scss
-       |    |- _calc-stack.scss
-       |    |- _contrast-color.scss
-       |    |- _strip-unit.scss
-       |- _component.scss
-       |- _foundation.scss
-       |- _function.scss
-       |- _project.scss
-       |- _structure.scss
-       |- _variable.scss
-       |- chroma.scss
-       |- theme.scss
-static
-  |- css
-  |    |- chroma.css
-  |    |- chroma.min.css
-  |    |- theme.css
-  |    |- theme.min.css
-  |- images
-  |- js
-    |- bundle.js
-.editorconfig
-.gitignore
-gulpfile.js
-LICENSE.md
-package-lock.json
-package.json
-README.md
-theme.toml
-webpack.config.js
+.
+├── archetypes
+│   └── default.md
+├── exampleSite
+│   ├── ..
+├── gulpfile.js
+├── images
+│   ├── ..
+├── layouts
+│   ├── 404.html
+│   ├── blog
+│   │   ├── li.html
+│   │   ├── list.html
+│   │   ├── single.html
+│   │   └── summary.html
+│   ├── _default
+│   │   ├── baseof.html
+│   │   ├── list.html
+│   │   └── single.html
+│   ├── index.html
+│   ├── partials
+│   │   ├── content-footer.html
+│   │   ├── custom-css.html
+│   │   ├── custom-head.html
+│   │   ├── edit-meta.html
+│   │   ├── edit-page.html
+│   │   ├── footer.html
+│   │   ├── global-menu.html
+│   │   ├── head.html
+│   │   ├── last-updated.html
+│   │   ├── menu
+│   │   │   ├── open-menu.html
+│   │   │   └── slide-menu.html
+│   │   ├── meta
+│   │   │   ├── chroma.html
+│   │   │   ├── google-analytics-async.html
+│   │   │   ├── google-site-verification.html
+│   │   │   └── tag-manager.html
+│   │   ├── notification.html
+│   │   ├── pagination.html
+│   │   ├── powered.html
+│   │   ├── prepend-body.html
+│   │   ├── sidebar-footer.html
+│   │   ├── sidebar.html
+│   │   ├── site-header.html
+│   │   └── table-of-contents.html
+│   ├── posts
+│   │   ├── list.html
+│   │   └── single.html
+│   └── shortcodes
+│       ├── button.html
+│       └── panel.html
+├── LICENSE.md
+├── node_modules
+│   └── ..
+├── package.json
+├── package-lock.json
+├── README.md
+├── resources
+│   └── ..
+├── src
+│   ├── js
+│   │   ├── jquery.backtothetop
+│   │   │   ├── jquery.backtothetop.js
+│   │   │   └── jquery.backtothetop.min.js
+│   │   ├── keydown-nav.js
+│   │   ├── main.js
+│   │   └── sidebar-menu.js
+│   └── scss
+│       ├── chroma.scss
+│       ├── _component.scss
+│       ├── foundation
+│       │   ├── _element.scss
+│       │   ├── _normalize.scss
+│       │   ├── _reset.scss
+│       │   └── _stack.scss
+│       ├── _foundation.scss
+│       ├── function
+│       │   ├── _calc-font-size.scss
+│       │   ├── _calc-stack.scss
+│       │   ├── _contrast-color.scss
+│       │   └── _strip-unit.scss
+│       ├── _function.scss
+│       ├── _project.scss
+│       ├── _structure.scss
+│       ├── theme.scss
+│       └── _variable.scss
+├── static
+│   ├── css
+│   │   ├── chroma.css
+│   │   ├── chroma.min.css
+│   │   ├── theme.css
+│   │   └── theme.min.css
+│   ├── images
+│   └── js
+│       └── bundle.js
+├── theme.toml
+└── webpack.config.js
 ```
 
 ### Preview site
@@ -204,6 +206,10 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.6.0 - 2020.01.13
+  * fix scss
+  * gulp bump up version to 4.0
+  * fix hugo deprecated warning
 * Version 0.5.0 - 2019.12.08
   * update Sample Document
   * add table of contents
