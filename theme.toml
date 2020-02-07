@@ -6,7 +6,7 @@ homepage = "https://github.com/thingsym/hugo-theme-techdoc"
 repo = "https://github.com/thingsym/hugo-theme-techdoc"
 tags = ["Documentation", "Docs", "Responsive", "Google analytics"]
 features = ["documentation", "menu"]
-min_version = "0.30"
+min_version = "0.60.0"
 
 [author]
   name = "thingsym"
