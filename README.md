@@ -212,6 +212,10 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.7.0 - 2020.02.07
+  * bump up Hugo minimum version to 0.60.0
+  * change shortcode delimiter from % to <
+  * improve tableOfContents for Goldmark
 * Version 0.6.0 - 2020.01.13
   * fix scss
   * gulp bump up version to 4.0
