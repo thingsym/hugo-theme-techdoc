@@ -6,7 +6,7 @@ weight: 10
 description: "calling built-in Shortcodes into your content files."
 ---
 
-See https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes
+See https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes
 
 ## figure
 

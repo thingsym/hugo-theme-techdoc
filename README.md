@@ -38,6 +38,12 @@ The Techdoc is a Hugo Theme for technical documentation.
 
 ## Getting Started
 
+### Requirement
+
+Hugo minimum version: 0.60.0
+
+Default Markdown parser library `Goldmark` compatible
+
 ### Download Hugo theme
 
 If you have git installed, you can do the following at the command-line-interface within the Hugo directory:
@@ -62,10 +68,10 @@ For an example of `config.toml`, [config.toml](https://github.com/thingsym/hugo-
 ├── archetypes
 │   └── default.md
 ├── exampleSite
-│   ├── ..
+│   └── ..
 ├── gulpfile.js
 ├── images
-│   ├── ..
+│   └── ..
 ├── layouts
 │   ├── 404.html
 │   ├── blog
@@ -206,6 +212,10 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.7.0 - 2020.02.07
+  * bump up Hugo minimum version to 0.60.0
+  * change shortcode delimiter from % to <
+  * improve tableOfContents for Goldmark
 * Version 0.6.0 - 2020.01.13
   * fix scss
   * gulp bump up version to 4.0
@@ -258,4 +268,4 @@ Techdoc bundles the following third-party resources:
 
 [thingsym](https://github.com/thingsym)
 
-Copyright (c) 2017-2019 by thingsym
+Copyright (c) 2017-2020 by thingsym

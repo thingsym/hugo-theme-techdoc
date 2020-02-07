@@ -13,6 +13,9 @@ The `TableOfContents` field set to `true` in your content’s front matter will 
 ```
 TableOfContents: true
 ```
+
+Setting the built-in .TableOfContents variables can configure what heading levels you want to include in TOC. See [the built-in .TableOfContents variables settings](https://gohugo.io/getting-started/configuration-markup/#table-of-contents)
+
 {{% /panel %}}
 
 ## Section 1

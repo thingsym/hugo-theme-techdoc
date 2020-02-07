@@ -20,7 +20,7 @@ enableMissingTranslationPlaceholders = false
     # Souce Code repository section
     description = "put your description"
     github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.6.0"
+    version = "0.7.0"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
@@ -70,3 +70,9 @@ enableMissingTranslationPlaceholders = false
     name = "Twitter"
     url = "https://twitter.com/thingsym"
     weight = 2
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
