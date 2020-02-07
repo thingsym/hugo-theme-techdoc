@@ -70,3 +70,9 @@ enableMissingTranslationPlaceholders = false
     name = "Twitter"
     url = "https://twitter.com/thingsym"
     weight = 2
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
