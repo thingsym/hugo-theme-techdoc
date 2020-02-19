@@ -17,7 +17,7 @@ enableMissingTranslationPlaceholders = false
 
 [Params]
 
-    # Souce Code repository section
+    # Source Code repository section
     description = "put your description"
     github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
     version = "0.7.0"
