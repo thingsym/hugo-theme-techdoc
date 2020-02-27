@@ -40,6 +40,7 @@ enableMissingTranslationPlaceholders = false
 
     # Theme settings section
     # Theme color
+    # See color value reference https://developer.mozilla.org/en-US/docs/Web/CSS/color
     custom_font_color = ""
     custom_background_color = ""
 
@@ -62,16 +63,20 @@ enableMissingTranslationPlaceholders = false
     ]
 
 # Global menu section
-[[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
+# See https://gohugo.io/content-management/menus/
+[menu]
+  [[menu.main]]
+      name = "Home"
+      url = "/"
+      weight = 1
 
-[[menu.main]]
-    name = "Twitter"
-    url = "https://twitter.com/thingsym"
-    weight = 2
+  [[menu.main]]
+      name = "Twitter"
+      url = "https://twitter.com/thingsym"
+      weight = 2
 
+# Markup configure section
+# See https://gohugo.io/getting-started/configuration-markup/
 [markup]
   [markup.tableOfContents]
     startLevel = 2
