@@ -8,7 +8,7 @@ weight: 9
 
 description: Text about this post
 images:
-- post-cover.png
+- /images/pexels-photo-196666.jpeg
 ---
 
 ## [Installation](./installation)
