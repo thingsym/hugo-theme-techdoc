@@ -212,6 +212,8 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.8.2 - 2020.03.07
+  * fix open graph image path
 * Version 0.8.1 - 2020.03.07
   * fix open graph image path
 * Version 0.8.0 - 2020.02.27
