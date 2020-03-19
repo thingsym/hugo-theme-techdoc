@@ -53,6 +53,13 @@ cd themes
 git clone https://github.com/thingsym/hugo-theme-techdoc.git
 ```
 
+作業環境が git 管理下にある場合は submodule として導入
+
+git submodule add git submodule add https://github.com/spiegel-im-spiegel/hugo-theme-text.git themes/hugo-theme-text
+
+
+or (zip arcive)
+
 For more information read [the Hugo documentation](https://gohugo.io/themes/installing-and-using-themes/).
 
 ### Configure
@@ -198,6 +205,36 @@ hugo server --themesDir ../..
 
 Browse site on http://localhost:1313
 
+----
+
+## Hugo install
+
+```
+curl -O https://github.com/gohugoio/hugo/releases/download/v0.30/hugo_0.30_Linux-64bit.tar.gz
+tar -zxvf hugo_0.30_Linux-64bit.tar.gz
+mv hugo /usr/local/bin
+rm LICENSE.md README.md
+hugo help
+```
+
+## Hugo server (port: 3000)
+
+```
+cd /path/to/dir
+
+hugo server --port 3000 --bind 0.0.0.0 -wD --ignoreCache --baseURL http://example.com/ -t hugo-theme-techdoc
+```
+
+## Preview exampleSite (port: 3000)
+
+```
+cd /path/to/dir/themes/hugo-theme-techdoc/exampleSite
+
+hugo server --port 3000 --bind 0.0.0.0 -wD --ignoreCache --baseURL http://example.com/ --themesDir ../..
+```
+
+----
+
 ## Contribution
 
 ### Patches and Bug Fixes
@@ -212,6 +249,8 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.8.3 - 2020.03.19
+  * fix edit page link
 * Version 0.8.2 - 2020.03.07
   * fix open graph image path
 * Version 0.8.1 - 2020.03.07
