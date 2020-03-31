@@ -8,14 +8,11 @@ theme = "hugo-theme-techdoc"
 hasCJKLanguage = true
 metaDataFormat = "yaml"
 
-pygmentsCodeFences = true
-pygmentsUseClasses = true
-
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 
-[Params]
+[params]
 
     # Source Code repository section
     description = "put your description"
@@ -59,26 +56,29 @@ enableMissingTranslationPlaceholders = false
         "blog",
         "entry",
         "post",
-        "posts"
+        "posts",
     ]
 
 # Global menu section
 # See https://gohugo.io/content-management/menus/
 [menu]
-  [[menu.main]]
-      name = "Home"
-      url = "/"
-      weight = 1
+    [[menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
 
-  [[menu.main]]
-      name = "Twitter"
-      url = "https://twitter.com/thingsym"
-      weight = 2
+    [[menu.main]]
+        name = "Twitter"
+        url = "https://twitter.com/thingsym"
+        weight = 2
 
 # Markup configure section
 # See https://gohugo.io/getting-started/configuration-markup/
 [markup]
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel = 4
-    ordered = false
+    defaultMarkdownHandler = "goldmark"
+    [markup.goldmark.renderer]
+        unsafe= true
+    [markup.tableOfContents]
+        startLevel = 2
+        endLevel = 4
+        ordered = false
