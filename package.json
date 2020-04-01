@@ -43,6 +43,11 @@
     "webpack-stream": "^5.2.1"
   },
   "stylelint": {
+    "rules": {
+      "no-descending-specificity": null,
+      "no-duplicate-selectors": null,
+      "block-no-empty": null
+    },
     "extends": [
       "stylelint-config-recommended",
       "stylelint-scss",
@@ -65,7 +70,9 @@
     "parserOptions": {
       "ecmaVersion": 2018
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off"
+    }
   },
   "babel": {
     "presets": [
@@ -118,11 +125,11 @@
     "sass:style:minify": "node-sass src/scss/theme.scss static/css/theme.min.css --output-style compressed && postcss --use autoprefixer --no-map -r static/css/theme.min.css",
     "sass:chroma": "node-sass src/scss/chroma.scss static/css/chroma.css --output-style expanded && postcss --use autoprefixer --no-map -r static/css/chroma.css",
     "sass:chroma:minify": "node-sass src/scss/chroma.scss static/css/chroma.min.css --output-style compressed && postcss --use autoprefixer --no-map -r static/css/chroma.min.css",
-    "lint:all": "run-p \"lint:*\"",
+    "lint": "run-p \"lint:*\"",
     "lint:es": "eslint static/js/bundle.js",
     "lint:es:fix": "eslint static/js/bundle.js --fix",
-    "lint:css": "stylelint \"static/css/*.css\" \"css/**/*.css\"",
-    "lint:scss": "stylelint \"src/scss/*.scss\" \"src/scss/**/*.scss\"",
+    "lint:css": "stylelint static/css/*.css css/**/*.css !static/css/*.min.css !css/**/*.min.css",
+    "lint:scss": "stylelint src/scss/*.scss src/scss/**/*.scss",
     "watch": "run-p \"watch:*\"",
     "watch:css": "chokidar \"src/scss/*.scss\" \"src/scss/**/*.scss\" -c \"npm run build:css\" --initial --polling",
     "watch:js": "chokidar \"src/js/*.js\" \"src/js/**/*.js\" -c \"npm run build:js\" --initial --polling"
