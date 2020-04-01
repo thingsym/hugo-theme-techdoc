@@ -13,8 +13,8 @@ The Techdoc is a Hugo Theme for technical documentation.
 * Theme color
 * Edit link to documentation repository
 * Custom Shortcodes
-* Open Graph
 * Search Shortcode powered by [Algolia](https://www.algolia.com/)
+* Open Graph
 * Analytics with Google Analytics, Google Tag Manager
 
 ## Screenshot
