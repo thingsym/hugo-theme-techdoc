@@ -215,6 +215,14 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.9.0 - 2020.04.01
+  * fix lint config
+  * update Sample Document
+  * update jQuery to v3.4.1
+  * add search function and shortcode powered by Algolia
+  * fix config.toml
+  * fix sass
+  * fix hugo deprecated warning
 * Version 0.8.3 - 2020.03.19
   * fix edit page link
 * Version 0.8.2 - 2020.03.07

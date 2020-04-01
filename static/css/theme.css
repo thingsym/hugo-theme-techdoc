@@ -59,8 +59,10 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
+  /* stylelint-disable */
   font-family: monospace, monospace;
   /* 1 */
+  /* stylelint-enable */
   font-size: 1em;
   /* 2 */
 }
@@ -81,11 +83,13 @@ a {
 abbr[title] {
   border-bottom: none;
   /* 1 */
+  /* stylelint-disable */
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
   /* 2 */
+  /* stylelint-enable */
 }
 
 /**
@@ -103,8 +107,10 @@ strong {
 code,
 kbd,
 samp {
+  /* stylelint-disable */
   font-family: monospace, monospace;
   /* 1 */
+  /* stylelint-enable */
   font-size: 1em;
   /* 2 */
 }
@@ -548,9 +554,18 @@ ul {
   list-style-type: disc;
 }
 
+ul.no-style, .ais-Pagination-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.inline {
+  list-style: none;
+  padding-left: 0;
+}
+
 ul.inline li {
   display: inline;
-  list-style: disc;
   padding-right: 2rem;
 }
 
@@ -648,7 +663,7 @@ main * + figure, .table_of_contents,
 .panel,
 .button,
 .gist,
-.twitter-tweet {
+.twitter-tweet, .ais-Hits-item {
   margin-top: 1.28rem;
 }
 
@@ -665,7 +680,7 @@ main * + figure, .table_of_contents,
 }
 
 .stack-unset, main li > ul,
-main li > ol {
+main li > ol, .ais-Hits-item p {
   margin-top: unset;
   margin-bottom: unset;
 }
@@ -921,6 +936,53 @@ figure > figcaption h4 {
 
 .table_of_contents ul ul ul ul ul > li li a {
   margin-left: 10rem;
+}
+
+.ais-SearchBox .ais-SearchBox-input {
+  width: 70%;
+}
+
+.ais-SearchBox button {
+  margin-left: .2rem;
+  padding: .4rem;
+}
+
+.ais-Stats {
+  font-size: 80%;
+  color: #70757a;
+}
+
+.ais-Hits-item h3 {
+  font-size: 140%;
+  font-weight: normal;
+}
+
+.ais-Hits-item p {
+  color: #3C4043;
+}
+
+.ais-Hits-item .lastmod {
+  font-size: 90%;
+  color: #70757a;
+}
+
+.ais-Pagination {
+  margin-top: 1em;
+}
+
+.ais-Pagination-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ais-Pagination-item {
+  padding: .6rem;
 }
 
 header {
