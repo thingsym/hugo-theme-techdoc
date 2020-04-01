@@ -12,7 +12,7 @@ For an example of `config.toml`, see [config.toml](https://github.com/thingsym/h
 
 ## Params
 
-    # Souce Code repository section
+    # Source Code repository section
     description = "put your description"
     github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
     version = "0.8.3"
@@ -27,6 +27,7 @@ For an example of `config.toml`, see [config.toml](https://github.com/thingsym/h
     google_site_verification = "" # Your Google Site Verification for Search Console
 
     # Open Graph and Twitter Cards settings section
+    # Open Graph settings for each page are set on the front matter.
     # See https://gohugo.io/templates/internal/#open-graph
     # See https://gohugo.io/templates/internal/#twitter-cards
     title = "Hugo Techdoc Theme"
@@ -53,8 +54,15 @@ For an example of `config.toml`, see [config.toml](https://github.com/thingsym/h
         "blog",
         "entry",
         "post",
-        "posts"
+        "posts",
     ]
+
+    # Algolia site search section
+    # See https://www.algolia.com/doc/
+    algolia_search_enable = true
+    algolia_indexName = "hugo-demo-techdoc"
+    algolia_appId = "7W4SAN4PLK"
+    algolia_apiKey = "cbf12a63ff72d9c5dc0c10c195cf9128" # Search-Only API Key
 
 #### `description`
 
@@ -158,3 +166,30 @@ default: `[
         "post",
         "posts"
     ]`
+
+
+#### `algolia_search_enable`
+
+Enable Algolia search
+
+default: `true`
+
+value: `true` | `false`
+
+#### `algolia_indexName`
+
+Algolia index name
+
+default: `hugo-demo-techdoc`
+
+#### `algolia_appId`
+
+Application id
+
+default: `7W4SAN4PLK`
+
+#### `algolia_apiKey`
+
+Search-Only API Key
+
+default: `cbf12a63ff72d9c5dc0c10c195cf9128`
