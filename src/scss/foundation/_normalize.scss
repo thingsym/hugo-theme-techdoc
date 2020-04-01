@@ -62,7 +62,9 @@ hr {
  */
 
 pre {
+  /* stylelint-disable */
   font-family: monospace, monospace; /* 1 */
+  /* stylelint-enable */
   font-size: 1em; /* 2 */
 }
 
@@ -84,8 +86,10 @@ a {
 
 abbr[title] {
   border-bottom: none; /* 1 */
+  /* stylelint-disable */
   text-decoration: underline; /* 2 */
   text-decoration: underline dotted; /* 2 */
+  /* stylelint-enable */
 }
 
 /**
@@ -105,7 +109,9 @@ strong {
 code,
 kbd,
 samp {
+  /* stylelint-disable */
   font-family: monospace, monospace; /* 1 */
+  /* stylelint-enable */
   font-size: 1em; /* 2 */
 }
 

@@ -8,19 +8,16 @@ theme = "hugo-theme-techdoc"
 hasCJKLanguage = true
 metaDataFormat = "yaml"
 
-pygmentsCodeFences = true
-pygmentsUseClasses = true
-
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 
-[Params]
+[params]
 
     # Source Code repository section
     description = "put your description"
     github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.8.3"
+    version = "0.9.0"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
@@ -59,26 +56,60 @@ enableMissingTranslationPlaceholders = false
         "blog",
         "entry",
         "post",
-        "posts"
+        "posts",
     ]
+
+    # Algolia site search section
+    # See https://www.algolia.com/doc/
+    algolia_search_enable = true
+    algolia_indexName = "hugo-demo-techdoc"
+    algolia_appId = "7W4SAN4PLK"
+    algolia_apiKey = "cbf12a63ff72d9c5dc0c10c195cf9128" # Search-Only API Key
 
 # Global menu section
 # See https://gohugo.io/content-management/menus/
 [menu]
-  [[menu.main]]
-      name = "Home"
-      url = "/"
-      weight = 1
+    [[menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
 
-  [[menu.main]]
-      name = "Twitter"
-      url = "https://twitter.com/thingsym"
-      weight = 2
+    [[menu.main]]
+        name = "Twitter"
+        url = "https://twitter.com/thingsym"
+        weight = 2
 
 # Markup configure section
 # See https://gohugo.io/getting-started/configuration-markup/
 [markup]
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel = 4
-    ordered = false
+    defaultMarkdownHandler = "goldmark"
+    [markup.goldmark.renderer]
+        unsafe= true
+    [markup.tableOfContents]
+        startLevel = 2
+        endLevel = 4
+        ordered = false
+
+# Algolia Search configure section
+[outputFormats.Algolia]
+    baseName = "algolia"
+    isPlainText = true
+    mediaType = "application/json"
+    notAlternative = true
+
+[params.algolia]
+    vars = [
+        "title",
+        "summary",
+        "content",
+        "date",
+        "publishdate",
+        "description",
+        "permalink",
+        "keywords",
+        "lastmod",
+    ]
+    params = [
+        "tags",
+        "categories",
+    ]

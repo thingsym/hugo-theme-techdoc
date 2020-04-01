@@ -18,6 +18,15 @@ description: "calling custom Shortcodes into your content files."
 <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="https://github.com/thingsym/hugo-theme-techdoc">Ut enim ad minim venia</a>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 {{< /panel >}}
 
+### Alert panel using Markdown (use the `%` character)
+
+{{% panel title="primary" %}}
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
+- One
+- Two
+- Three
+{{% /panel %}}
 
 ### Alert panel with titles and colors
 

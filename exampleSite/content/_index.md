@@ -22,4 +22,6 @@ images:
 * [Theme color](getting-started/screenshot/#theme-color)
 * [Edit link](getting-started/screenshot/#edit-link) to documentation repository
 * [Custom Shortcodes](sample/custom-shortcodes/)
+* [Search Shortcode](sample/search-shortcode/) powered by [Algolia](https://www.algolia.com/)
+* Open Graph
 * Analytics with Google Analytics, Google Tag Manager

@@ -190,3 +190,44 @@ figure > figcaption h4 {
 	}
 
 }
+
+.ais-SearchBox {
+	.ais-SearchBox-input {
+		width: 70%;
+	}
+	button {
+		margin-left: .2rem;
+		padding: .4rem;
+	}
+}
+.ais-Stats {
+	font-size: 80%;
+	color: #70757a;
+}
+.ais-Hits-item {
+	@extend .stack;
+
+	h3 {
+		font-size: 140%;
+		font-weight: normal;
+	}
+	p {
+		@extend .stack-unset;
+		color: #3C4043;
+	}
+	.lastmod {
+		font-size: 90%;
+		color: #70757a;
+	}
+}
+
+.ais-Pagination {
+	margin-top: 1em;
+}
+.ais-Pagination-list {
+	@extend ul.no-style;
+	@include grid($flex-wrap: wrap, $justify-content: center);
+}
+.ais-Pagination-item {
+	padding: .6rem;
+}
