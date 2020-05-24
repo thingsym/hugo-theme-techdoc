@@ -90,11 +90,14 @@ enableMissingTranslationPlaceholders = false
         endLevel = 4
         ordered = false
 
+[outputs]
+    home = ["HTML", "RSS", "Algolia"]
+
 # Algolia Search configure section
 [outputFormats.Algolia]
     baseName = "algolia"
-    isPlainText = true
     mediaType = "application/json"
+    isPlainText = true
     notAlternative = true
 
 [params.algolia]
