@@ -215,6 +215,11 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.9.1 - 2020.05.24
+  * fix config.toml
+  * fix url in rss meta link
+  * remove line break	in algolia.json
+
 * Version 0.9.0 - 2020.04.01
   * fix lint config
   * update Sample Document
