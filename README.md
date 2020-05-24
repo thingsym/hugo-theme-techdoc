@@ -65,6 +65,8 @@ For an example of `config.toml`, [config.toml](https://github.com/thingsym/hugo-
 ### Directory layout
 
 ```
+tree .
+
 .
 ├── archetypes
 │   └── default.md
@@ -82,6 +84,7 @@ For an example of `config.toml`, [config.toml](https://github.com/thingsym/hugo-
 │   │   └── summary.html
 │   ├── _default
 │   │   ├── baseof.html
+│   │   ├── list.algolia.json
 │   │   ├── list.html
 │   │   └── single.html
 │   ├── index.html
@@ -120,13 +123,10 @@ For an example of `config.toml`, [config.toml](https://github.com/thingsym/hugo-
 │       └── panel.html
 │       └── search.html
 ├── LICENSE.md
-├── node_modules
-│   └── ..
 ├── package.json
 ├── package-lock.json
 ├── README.md
 ├── resources
-│   └── ..
 ├── src
 │   ├── js
 │   │   ├── jquery.backtothetop
