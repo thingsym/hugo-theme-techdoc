@@ -17,7 +17,7 @@ enableMissingTranslationPlaceholders = false
     # Source Code repository section
     description = "put your description"
     github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.9.0"
+    version = "0.9.1"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
@@ -90,11 +90,14 @@ enableMissingTranslationPlaceholders = false
         endLevel = 4
         ordered = false
 
+[outputs]
+    home = ["HTML", "RSS", "Algolia"]
+
 # Algolia Search configure section
 [outputFormats.Algolia]
     baseName = "algolia"
-    isPlainText = true
     mediaType = "application/json"
+    isPlainText = true
     notAlternative = true
 
 [params.algolia]

@@ -8,15 +8,15 @@
   {{- if or (and ($page.IsDescendant $section) (and (not $page.Draft) (not $page.Params.private))) $section.IsHome -}}
     {{ if $page.File }}
       {{- .Scratch.SetInMap $page.File.Path "objectID" $page.File.UniqueID -}}
-    {{ end }}
+    {{- end -}}
 
     {{- .Scratch.SetInMap "temp" "date" $page.Date.UTC.Unix -}}
     {{ if ne ( $page.PublishDate.Format "2006-01-02" ) "0001-01-01" }}
       {{- .Scratch.SetInMap "temp" "publishdate" $page.PublishDate -}}
-    {{ end }}
+    {{- end -}}
     {{ if ne ( $page.Lastmod.Format "2006-01-02" ) "0001-01-01" }}
       {{- .Scratch.SetInMap "temp" "lastmod" $page.Lastmod -}}
-    {{ end }}
+    {{- end -}}
     {{- .Scratch.SetInMap "temp" "content" ($page.Plain | truncate 2000) -}}
     {{- .Scratch.SetInMap "temp" "title" $page.Title -}}
     {{- .Scratch.SetInMap "temp" "permalink" $page.Permalink -}}

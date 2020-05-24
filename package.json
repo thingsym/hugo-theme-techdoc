@@ -1,6 +1,6 @@
 {
   "name": "hugo-theme-techdoc",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "The Techdoc is a Hugo Theme for technical documentation.",
   "main": "gulpfile.js",
   "author": "Thingsym",
@@ -43,16 +43,16 @@
     "webpack-stream": "^5.2.1"
   },
   "stylelint": {
-    "rules": {
-      "no-descending-specificity": null,
-      "no-duplicate-selectors": null,
-      "block-no-empty": null
-    },
     "extends": [
       "stylelint-config-recommended",
       "stylelint-scss",
       "stylelint-config-recommended-scss"
-    ]
+    ],
+    "rules": {
+      "no-descending-specificity": null,
+      "no-duplicate-selectors": null,
+      "block-no-empty": null
+    }
   },
   "eslintConfig": {
     "env": {
