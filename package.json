@@ -43,16 +43,16 @@
     "webpack-stream": "^5.2.1"
   },
   "stylelint": {
-    "rules": {
-      "no-descending-specificity": null,
-      "no-duplicate-selectors": null,
-      "block-no-empty": null
-    },
     "extends": [
       "stylelint-config-recommended",
       "stylelint-scss",
       "stylelint-config-recommended-scss"
-    ]
+    ],
+    "rules": {
+      "no-descending-specificity": null,
+      "no-duplicate-selectors": null,
+      "block-no-empty": null
+    }
   },
   "eslintConfig": {
     "env": {
