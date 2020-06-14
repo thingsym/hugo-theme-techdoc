@@ -8,7 +8,7 @@ TableOfContents: true
 ---
 
 {{% panel status="primary" title="Note" icon="far fa-lightbulb" %}}
-The `TableOfContents` field set to `true` in your content’s front matter will render a table of contents.
+The `TableOfContents` field with `true` in your content’s front matter will render a table of contents.
 
 ```
 TableOfContents: true
