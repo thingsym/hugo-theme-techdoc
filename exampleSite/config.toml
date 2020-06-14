@@ -17,7 +17,7 @@ enableMissingTranslationPlaceholders = false
     # Source Code repository section
     description = "put your description"
     github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.9.1"
+    version = "0.9.2"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
@@ -87,7 +87,7 @@ enableMissingTranslationPlaceholders = false
         unsafe= true
     [markup.tableOfContents]
         startLevel = 2
-        endLevel = 4
+        endLevel = 6
         ordered = false
 
 [outputs]

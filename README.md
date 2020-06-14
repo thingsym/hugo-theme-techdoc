@@ -215,6 +215,12 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.9.2 - 2020.06.14
+  * add note and sample to document
+  * fix tableOfContents endLevel
+  * add chapter 'unlimited levels' to document
+  * add menu indentation up to 5 levels
+
 * Version 0.9.1 - 2020.05.24
   * fix config.toml
   * fix url in rss meta link

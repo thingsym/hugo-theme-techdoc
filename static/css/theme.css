@@ -1145,6 +1145,18 @@ main {
   padding-left: 3rem;
 }
 
+.sidebar nav > ul ul ul > li li a {
+  padding-left: 4rem;
+}
+
+.sidebar nav > ul ul ul ul > li li a {
+  padding-left: 5rem;
+}
+
+.sidebar nav > ul ul ul ul ul > li li a {
+  padding-left: 6rem;
+}
+
 @media screen and (max-width: 480px) {
   .sidebar nav > ul > li:first-child a {
     border-top: solid 1px #eee;
