@@ -4,6 +4,10 @@ The Techdoc is a Hugo Theme for technical documentation.
 
 ![The Techdoc screenshot](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot.png)
 
+- Hugo Themes page: [https://themes.gohugo.io/hugo-theme-techdoc/](https://themes.gohugo.io/hugo-theme-techdoc/)
+- Demo site: [https://themes.gohugo.io/theme/hugo-theme-techdoc/](https://themes.gohugo.io/theme/hugo-theme-techdoc/)
+- Download: [https://github.com/thingsym/hugo-theme-techdoc](https://github.com/thingsym/hugo-theme-techdoc)
+
 ## Features
 
 * Modern, Simple layout
@@ -12,6 +16,7 @@ The Techdoc is a Hugo Theme for technical documentation.
 * Table Of Contents for the page (selective)
 * Theme color
 * Edit link to documentation repository
+* Header link to HTML headings
 * Custom Shortcodes
 * Search Shortcode powered by [Algolia](https://www.algolia.com/)
 * Open Graph
@@ -119,9 +124,9 @@ tree .
 │   │   ├── list.html
 │   │   └── single.html
 │   └── shortcodes
-│       ├── button.html
-│       └── panel.html
-│       └── search.html
+│       ├── button.html
+│       ├── panel.html
+│       └── search.html
 ├── LICENSE.md
 ├── package.json
 ├── package-lock.json
@@ -129,6 +134,7 @@ tree .
 ├── resources
 ├── src
 │   ├── js
+│   │   ├── headerlink.js
 │   │   ├── jquery.backtothetop
 │   │   │   ├── jquery.backtothetop.js
 │   │   │   └── jquery.backtothetop.min.js
@@ -301,4 +307,4 @@ Techdoc bundles the following third-party resources:
 
 [thingsym](https://github.com/thingsym)
 
-Copyright (c) 2017-2020 by thingsym
+Copyright (c) 2017-2020 by [thingsym](https://management.thingslabo.com/)
