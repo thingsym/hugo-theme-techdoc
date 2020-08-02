@@ -221,6 +221,10 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.9.3 - 2020.08.02
+  * remove jQuery dependency with keydown nav
+  * add header link
+
 * Version 0.9.2 - 2020.06.14
   * add note and sample to document
   * fix tableOfContents endLevel
