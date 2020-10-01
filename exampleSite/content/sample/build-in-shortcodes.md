@@ -4,6 +4,7 @@ date: 2017-10-17T15:26:15Z
 draft: false
 weight: 10
 description: "calling built-in Shortcodes into your content files."
+TableOfContents: true
 ---
 
 See https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes
