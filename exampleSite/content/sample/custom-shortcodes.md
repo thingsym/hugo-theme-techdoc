@@ -64,6 +64,8 @@ description: "calling custom Shortcodes into your content files."
 
 {{< button url="#" >}}primary{{< /button >}}
 
+{{< button status="notice" url="#" >}}notice{{< /button >}}
+
 {{< button status="success" url="#" >}}success{{< /button >}}
 
 {{< button status="caution" url="#" >}}caution{{< /button >}}

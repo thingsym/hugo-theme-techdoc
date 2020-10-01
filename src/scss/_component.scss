@@ -96,44 +96,64 @@ figure > figcaption {
 .button {
 	display: inline-block;
 	font-size: 120%;
-	padding: .8rem;
+	padding: .5rem 1.2rem;
 	font-weight: bold;
 	text-decoration: none;
-	border-radius: 12px;
-	color: #fff;
-	background: #4ba0e1;
+	border-radius: .8rem;
+	color: #000;
+	background:$default-background-color;
+	border: 2px solid ;
+	border-color: $default-border-color;
 
 	&:hover {
-		color: #fff;
+		color: #000;
 		text-decoration: none;
-		background: #3b89c5;
+		background: #f7f7f7;
 	}
 }
 
-.button-primary {
-	border: 1px solid $default-border-color;
+.button-notice {
+	color: #fff;
+	background: #4ba0e1;
+	border-color: transparent;
+	&:hover {
+		color: #fff;
+		background: #3b89c5;
+	}
 }
 .button-success {
+	color: #fff;
 	background: #369b08;
+	border-color: transparent;
 	&:hover {
+		color: #fff;
 		background: #256905;
 	}
 }
 .button-caution {
+	color: #fff;
 	background: #f56558;
+	border-color: transparent;
 	&:hover {
+		color: #fff;
 		background: #d45145;
 	}
 }
 .button-warning {
+	color: #fff;
 	background: #f5811b;
+	border-color: transparent;
 	&:hover {
+		color: #fff;
 		background: #db7012;
 	}
 }
 .button-danger {
+	color: #fff;
 	background: #ce3426;
+	border-color: transparent;
 	&:hover {
+		color: #fff;
 		background: #a0281d;
 	}
 }
