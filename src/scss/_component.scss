@@ -236,3 +236,54 @@ figure > figcaption h4 {
 .ais-Pagination-item {
 	padding: .6rem;
 }
+
+.code {
+	@include grid($flex-wrap: wrap);
+	@extend .stack;
+
+	.filename {
+		@include grid-col($col: 9, $flex-shrink: 0, $max-width: 75%);
+		font-size: 80%;
+		color: #666;
+	}
+	.copy-btn {
+		margin-left: auto;
+
+		cursor: pointer;
+		position: relative;
+
+		font-size: 80%;
+		border: solid 1px #ccc;
+		padding: .2rem .6rem;
+		border-radius: .3rem;
+		line-height: 1;
+		margin-bottom: .2rem;
+		outline: none;
+	}
+	.code-content {
+		@include grid-col($col: 12, $flex-shrink: 0, $max-width: 100%);
+
+		.highlight {
+			@extend .stack-reset;
+		}
+	}
+}
+
+.tooltipped::after {
+	content: 'Copied!';
+	background: #555;
+	display: inline-block;
+	color: #fff;
+	border-radius: .4rem;
+	position: absolute;
+	left: 50%;
+	top: -1.8rem;
+	transform: translate(-50%, 0);
+	font-size: .75rem;
+	padding: 4px 10px 6px 10px;
+	animation: fade-tooltip .5s 1s 1 forwards;
+}
+
+@keyframes fade-tooltip {
+  to { opacity: 0; }
+}
