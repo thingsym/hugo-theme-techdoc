@@ -1,5 +1,5 @@
 main * {
-	@extend .stack-first;
+	@extend .first-stack;
 }
 
 main {
@@ -20,12 +20,12 @@ main {
 
 	li > ul,
 	li > ol {
-		@extend .stack-unset;
+		@extend .unset-stack;
 	}
 }
 
 figure > figcaption {
-	@extend .stack-reset;
+	@extend .none-stack;
 }
 
 .table_of_contents,
@@ -45,7 +45,7 @@ figure > figcaption {
 	@include grid($flex-wrap: nowrap, $justify-content: space-between);
 	font-weight: bold;
 	> * {
-		@extend .stack-reset;
+		@extend .none-stack;
 	}
 }
 .nav-prev {}
