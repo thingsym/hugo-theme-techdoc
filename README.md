@@ -178,15 +178,6 @@ tree . -I node_modules
 └── webpack.config.js
 ```
 
-### Third party library
-
-* [jQuery](https://jquery.com/)
-* [jQuery Easing](https://github.com/gdsmith/jquery.easing)
-* [Font Awesome](https://fontawesome.com/)
-* [clipboard.js](https://clipboardjs.com/)
-* [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
-* [Day.js](https://github.com/iamkun/dayjs)
-
 ### Preview site
 
 To preview your site, run Hugo's built-in local server.
@@ -235,21 +226,28 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.9.4 - 2020.10.08
+  * improve scss for custom shortcodes using css custom properties
+  * change stack to css custom properties
+  * fix scss
+  * fix button shortcode, adding notice color
+  * add Code highlight with clipboard custom shortcode
+  * fix webpack.config.js
+  * fix npm scripts
+  * update package.json
+  * adjust no sidebar layout
 * Version 0.9.3 - 2020.08.02
   * remove jQuery dependency with keydown nav
   * add header link
-
 * Version 0.9.2 - 2020.06.14
   * add note and sample to document
   * fix tableOfContents endLevel
   * add chapter 'unlimited levels' to document
   * add menu indentation up to 5 levels
-
 * Version 0.9.1 - 2020.05.24
   * fix config.toml
   * fix url in rss meta link
   * remove line break	in algolia.json
-
 * Version 0.9.0 - 2020.04.01
   * fix lint config
   * update Sample Document
@@ -320,6 +318,12 @@ Techdoc bundles the following third-party resources:
 * CSS reset by [normalize.css](https://necolas.github.io/normalize.css/), [MIT](https://opensource.org/licenses/MIT)
 * jQuery Plugin [Back to the Top](https://github.com/thingsym/jquery.backtothetop), [MIT](https://opensource.org/licenses/MIT)
 * Sass Mixin [Flexbox Grid Mixins](https://thingsym.github.io/flexbox-grid-mixins/), [MIT](https://opensource.org/licenses/MIT)
+* [jQuery](https://jquery.com/)
+* [jQuery Easing](https://github.com/gdsmith/jquery.easing)
+* [Font Awesome](https://fontawesome.com/)
+* [clipboard.js](https://clipboardjs.com/)
+* [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
+* [Day.js](https://github.com/iamkun/dayjs)
 
 ## Author
 
