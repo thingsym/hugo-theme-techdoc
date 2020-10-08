@@ -18,6 +18,9 @@ The Techdoc is a Hugo Theme for technical documentation.
 * Edit link to documentation repository
 * Header link to HTML headings
 * Custom Shortcodes
+  * Code highlight with clipboard
+  * Alert panel
+  * Button
 * Search Shortcode powered by [Algolia](https://www.algolia.com/)
 * Open Graph
 * Analytics with Google Analytics, Google Tag Manager
@@ -70,7 +73,7 @@ For an example of `config.toml`, [config.toml](https://github.com/thingsym/hugo-
 ### Directory layout
 
 ```
-tree .
+tree . -I node_modules
 
 .
 ├── archetypes
@@ -125,6 +128,7 @@ tree .
 │   │   └── single.html
 │   └── shortcodes
 │       ├── button.html
+│       ├── code.html
 │       ├── panel.html
 │       └── search.html
 ├── LICENSE.md
@@ -134,6 +138,7 @@ tree .
 ├── resources
 ├── src
 │   ├── js
+│   │   ├── code.js
 │   │   ├── headerlink.js
 │   │   ├── jquery.backtothetop
 │   │   │   ├── jquery.backtothetop.js
@@ -172,6 +177,15 @@ tree .
 ├── theme.toml
 └── webpack.config.js
 ```
+
+### Third party library
+
+* [jQuery](https://jquery.com/)
+* [jQuery Easing](https://github.com/gdsmith/jquery.easing)
+* [Font Awesome](https://fontawesome.com/)
+* [clipboard.js](https://clipboardjs.com/)
+* [algoliasearch](https://github.com/algolia/algoliasearch-client-javascript)
+* [Day.js](https://github.com/iamkun/dayjs)
 
 ### Preview site
 
