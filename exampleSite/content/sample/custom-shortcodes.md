@@ -4,7 +4,22 @@ date: 2017-10-17T15:26:15Z
 draft: false
 weight: 10
 description: "calling custom Shortcodes into your content files."
+TableOfContents: true
 ---
+
+## Code highlight with clipboard
+
+{{< code file="sample/custom-shortcodes.html" >}}{{</* highlight html */>}}
+<section id="main">
+  <div>
+   <h1 id="title">{{ .Title }}</h1>
+    {{ range .Pages }}
+        {{ .Render "summary"}}
+    {{ end }}
+  </div>
+</section>
+{{</* /highlight */>}}
+{{< /code >}}
 
 ## Alert panel
 
@@ -44,11 +59,13 @@ description: "calling custom Shortcodes into your content files."
 
 ### Alert panel with Font Awesome
 
-{{< panel status="danger" title="danger" icon="fas fa-download" >}}Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.{{< /panel >}}
+{{< panel status="danger" title="danger" icon="fas fa-exclamation-triangle" >}}Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.{{< /panel >}}
 
 ## Button
 
 {{< button url="#" >}}primary{{< /button >}}
+
+{{< button status="notice" url="#" >}}notice{{< /button >}}
 
 {{< button status="success" url="#" >}}success{{< /button >}}
 

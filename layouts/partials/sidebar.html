@@ -1,3 +1,4 @@
+{{ if ne .Site.Params.menu_style "" }}
 <div class="sidebar">
 {{ if eq .Site.Params.menu_style "open-menu" }}
 {{- partial "menu/open-menu.html" . -}}
@@ -8,3 +9,4 @@
 {{- partial "sidebar-footer.html" . -}}
 </div>
 </div>
+{{ end }}

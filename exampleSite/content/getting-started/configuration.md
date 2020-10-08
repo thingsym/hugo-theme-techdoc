@@ -15,7 +15,7 @@ For an example of `config.toml`, see [config.toml](https://github.com/thingsym/h
     # Source Code repository section
     description = "put your description"
     github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.9.3"
+    version = "0.9.4"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
@@ -41,7 +41,7 @@ For an example of `config.toml`, see [config.toml](https://github.com/thingsym/h
 
     # Documentation Menu section
     # Menu style settings
-    menu_style = "open-menu" # "open-menu" or "slide-menu"
+    menu_style = "open-menu" # "open-menu" or "slide-menu" or "" blank is as no sidebar
 
     # Date format
     dateformat = "" # default "2 Jan 2006"
@@ -80,7 +80,7 @@ default: `https://github.com/thingsym/hugo-theme-techdoc`
 
 The version of souce code
 
-default: `0.9.3`
+default: `0.9.4`
 
 #### `github_doc_repository`
 
