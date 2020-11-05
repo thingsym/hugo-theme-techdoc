@@ -64,7 +64,7 @@ git submodule add https://github.com/thingsym/hugo-theme-techdoc.git themes/hugo
 
 For more information read [the Hugo documentation](https://gohugo.io/getting-started/quick-start/).
 
-### Download Hugo theme on your project
+### Or download Hugo theme on your project
 
 If you have git installed, you can do the following at the command-line-interface within your project directory.
 
@@ -234,6 +234,9 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 5. Create new Pull Request
 
 ## Changelog
+
+* Version 0.9.5 - 2020.11.05
+  * fix link style with Alert panel
 
 * Version 0.9.4 - 2020.10.08
   * improve scss for custom shortcodes using css custom properties
