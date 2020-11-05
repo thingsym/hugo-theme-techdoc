@@ -64,7 +64,7 @@ git submodule add https://github.com/thingsym/hugo-theme-techdoc.git themes/hugo
 
 For more information read [the Hugo documentation](https://gohugo.io/getting-started/quick-start/).
 
-### Download Hugo theme on your project
+### Or download Hugo theme on your project
 
 If you have git installed, you can do the following at the command-line-interface within your project directory.
 
