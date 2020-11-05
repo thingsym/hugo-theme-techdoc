@@ -235,6 +235,9 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.9.5 - 2020.11.05
+  * fix link style with Alert panel
+
 * Version 0.9.4 - 2020.10.08
   * improve scss for custom shortcodes using css custom properties
   * change stack to css custom properties
