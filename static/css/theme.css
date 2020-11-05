@@ -862,6 +862,11 @@ main:only-child {
   border-color: var(--panel-border-color, transparent);
 }
 
+.panel a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .panel-primary {
   --panel-border-color: #f0f0f0;
 }
@@ -869,26 +874,36 @@ main:only-child {
 .panel-notice {
   --panel-font-color: #fff;
   --panel-background-color: #4ba0e1;
+  --custom-link-text-color: #fff;
+  --custom-link-text-hover-color: #fff;
 }
 
 .panel-success {
   --panel-font-color: #fff;
   --panel-background-color: #609f43;
+  --custom-link-text-color: #fff;
+  --custom-link-text-hover-color: #fff;
 }
 
 .panel-caution {
   --panel-font-color: #fff;
   --panel-background-color: #de776d;
+  --custom-link-text-color: #fff;
+  --custom-link-text-hover-color: #fff;
 }
 
 .panel-warning {
   --panel-font-color: #fff;
   --panel-background-color: #e67e22;
+  --custom-link-text-color: #fff;
+  --custom-link-text-hover-color: #fff;
 }
 
 .panel-danger {
   --panel-font-color: #fff;
   --panel-background-color: #ce3426;
+  --custom-link-text-color: #fff;
+  --custom-link-text-hover-color: #fff;
 }
 
 .button {
