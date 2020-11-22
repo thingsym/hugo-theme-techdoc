@@ -30,10 +30,6 @@ See https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcod
 </section>
 {{< /highlight >}}
 
-## instagram
-
-{{< instagram BWNjjyYFxVx >}}
-
 ## tweet
 
 {{< tweet 877500564405444608 >}}

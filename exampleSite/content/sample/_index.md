@@ -6,14 +6,14 @@ weight: 10
 description: "this is a sample document."
 ---
 
-## Header
+## Headings
 
-# H1 Header
-## H2 Header
-### H3 Header
-#### H4 Header
-##### H5 Header
-###### H6 Header
+# Heading level 1
+## Heading level 2
+### Heading level 3
+#### Heading level 4
+##### Heading level 5
+###### Heading level 6
 
 ## Paragraph
 
@@ -27,7 +27,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 ---
 
-## List
+## Lists
+
+### Unordered Lists
 
 * Lorem ipsum dolor sit amet, consectetur adipisicing elit
 * Lorem ipsum dolor sit amet, consectetur adipisicing elit
@@ -36,6 +38,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 	* Lorem ipsum dolor sit amet, consectetur adipisicing elit
 	* Lorem ipsum dolor sit amet, consectetur adipisicing elit
 	* Lorem ipsum dolor sit amet, consectetur adipisicing elit
+
+### Ordered Lists
 
 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit
 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit
@@ -44,15 +48,20 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 ## Code
 
 ```ruby
-puts 'The best way to log and share programmers knowledge.' puts 'The best way to log and share programmers knowledge.'
+puts 'The best way to log and share programmers knowledge.' 
+puts 'The best way to log and share programmers knowledge.'
 
-puts 'The best way to log and share programmers knowledge.' puts 'The best way to log and share programmers knowledge.'
-
+puts 'The best way to log and share programmers knowledge.' 
 puts 'The best way to log and share programmers knowledge.'
 
 puts 'The best way to log and share programmers knowledge.'
-puts 'The best way to log and share programmers knowledge.' puts 'The best way to log and share programmers knowledge.'
+
+puts 'The best way to log and share programmers knowledge.' 
+puts 'The best way to log and share programmers knowledge.' 
+puts 'The best way to log and share programmers knowledge.'
 ```
+
+## Inline code
 
 inline code `#ffce44`
 
@@ -91,6 +100,30 @@ inline code `#ffce44`
 
 ![2 People Sitting With View of Yellow Flowers during Daytime](/images/pexels-photo-196666.jpeg "sample")
 
+
 ## Image with link
 
 [![2 People Sitting With View of Yellow Flowers during Daytime](/images/pexels-photo-196666.jpeg)](https://www.pexels.com/photo/2-people-sitting-with-view-of-yellow-flowers-during-daytime-196666/)
+
+
+## Definition Lists
+
+First Term
+: This is the definition.
+
+Second Term
+: This is the definition.
+: This is the definition.
+
+## Task Lists
+
+- [x] to do task 1
+- [ ] to do task 2
+- [ ] to do task 3
+
+## Footnotes
+
+this is a footnote,[^1] and this is a second footnote.[^2]
+
+[^1]: This is the first footnote.
+[^2]: This is the second footnote.
