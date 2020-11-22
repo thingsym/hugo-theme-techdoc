@@ -1,3 +1,6 @@
+@use '../variable';
+@use '../function/calc-stack';
+
 /*-----------------------*
 		Element v1.0.0-custom
 *-----------------------*/
@@ -6,16 +9,16 @@
 }
 
 :root {
-	font-size: $default-font-size;
-	line-height: line-height($default-line-space, $default-font-size);
-	color: $default-font-color;
-	font-family: var(--custom-font-family-base, $default-font-family);
+	font-size: variable.$default-font-size;
+	line-height: calc-stack.line-height(variable.$default-line-space, variable.$default-font-size);
+	color: variable.$default-font-color;
+	font-family: var(--custom-font-family-base, variable.$default-font-family);
 	font-feature-settings : 'pwid';
 }
 
 body {
-	background-color: $default-background-color;
-	margin: $default-layout-margin;
+	background-color: variable.$default-background-color;
+	margin: variable.$default-layout-margin;
 }
 
 h1,
@@ -24,9 +27,9 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--custom-font-family-headings, $default-font-family);
+	font-family: var(--custom-font-family-headings, variable.$default-font-family);
 	font-weight: bold;
-	line-height: $default-line-height;
+	line-height: variable.$default-line-height;
 
 	> small {
 		font-size: 75%;
@@ -36,37 +39,37 @@ h6 {
 
 h1 {
 	font-size: 240%;
-	line-height: line-height($default-line-space, 240%);
+	line-height: calc-stack.line-height(variable.$default-line-space, 240%);
 }
 h2 {
 	font-size: 200%;
-	line-height: line-height($default-line-space, 200%);
+	line-height: calc-stack.line-height(variable.$default-line-space, 200%);
 }
 h3 {
 	font-size: 160%;
-	line-height: line-height($default-line-space, 160%);
+	line-height: calc-stack.line-height(variable.$default-line-space, 160%);
 }
 h4 {
 	font-size: 140%;
-	line-height: line-height($default-line-space, 140%);
+	line-height: calc-stack.line-height(variable.$default-line-space, 140%);
 }
 h5 {
 	font-size: 120%;
-	line-height: line-height($default-line-space, 120%);
+	line-height: calc-stack.line-height(variable.$default-line-space, 120%);
 }
 h6 {
 	font-size: 100%;
-	line-height: line-height($default-line-space, 100%);
+	line-height: calc-stack.line-height(variable.$default-line-space, 100%);
 }
 
 a {
-	color: var(--custom-link-text-color, $default-link-text-color);
+	color: var(--custom-link-text-color, variable.$default-link-text-color);
 	text-decoration: none;
 
 	&:focus,
 	&:active,
 	&:hover {
-		color: var(--custom-link-text-hover-color, $default-link-text-hover-color);
+		color: var(--custom-link-text-hover-color, variable.$default-link-text-hover-color);
 		text-decoration: underline;
 	}
 }
@@ -78,7 +81,7 @@ hr {
 }
 
 p {
-	font-size: $default-font-size;
+	font-size: variable.$default-font-size;
 }
 
 img {
@@ -94,13 +97,13 @@ video {
 
 table {
 	border-collapse: collapse;
-	border: 1px solid $default-border-color;
+	border: 1px solid variable.$default-border-color;
 	width: 100%;
 }
 th,
 td {
-	border-top: 1px solid $default-border-color;
-	border-right: 1px solid $default-border-color;
+	border-top: 1px solid variable.$default-border-color;
+	border-right: 1px solid variable.$default-border-color;
 	tr:nth-child(even) & {
 		background: #f8f8f8;
 	}
@@ -140,9 +143,9 @@ dd {
 
 blockquote {
 	color: #999;
-	padding: $default-layout-padding;
+	padding: variable.$default-layout-padding;
 	background-color: #f4f4f4;
-	border-left: 4px solid $default-border-color;
+	border-left: 4px solid variable.$default-border-color;
 	border-radius: .2rem;
 }
 
@@ -167,7 +170,7 @@ kbd {
 
 pre {
 	background-color: #f4f4f4;
-	padding: $default-layout-padding;
+	padding: variable.$default-layout-padding;
 	overflow: auto;
 	white-space: pre-wrap;
 	border-radius: .2rem;
@@ -191,6 +194,6 @@ pre {
 
 figcaption {
 	color: #333;
-	font-size: $default-font-size;
-	line-height: line-height($default-line-space, $default-font-size);
+	font-size: variable.$default-font-size;
+	line-height: calc-stack.line-height(variable.$default-line-space, variable.$default-font-size);
 }

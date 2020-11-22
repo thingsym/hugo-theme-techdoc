@@ -1,5 +1,15 @@
+// Built-In Modules
+@use 'sass:map';
+
+// Custom Modules
+@use '../../node_modules/flexbox-grid-mixins/sass/flexbox-grid-mixins';
+
+// Included Modules
+@use 'variable';
+@use 'foundation/stack';
+
 main * {
-	@extend .first-stack;
+	@extend %first-stack;
 }
 
 main {
@@ -14,18 +24,18 @@ main {
 		+ blockquote,
 		+ pre,
 		+ figure {
-			@extend .stack;
+			@extend %stack;
 		}
 	}
 
 	li > ul,
 	li > ol {
-		@extend .unset-stack;
+		@extend %unset-stack;
 	}
 }
 
 figure > figcaption {
-	@extend .none-stack;
+	@extend %none-stack;
 }
 
 .table_of_contents,
@@ -38,14 +48,14 @@ figure > figcaption {
 .button,
 .gist,
 .twitter-tweet {
-	@extend .stack;
+	@extend %stack;
 }
 
 .pagination {
-	@include grid($flex-wrap: nowrap, $justify-content: space-between);
+	@include flexbox-grid-mixins.grid($flex-wrap: nowrap, $justify-content: space-between);
 	font-weight: bold;
 	> * {
-		@extend .none-stack;
+		@extend %none-stack;
 	}
 }
 .nav-prev {}
@@ -53,9 +63,9 @@ figure > figcaption {
 	margin-left: auto;
 }
 
-@media screen and (max-width: #{map-get($default-breakpoints, xs )} ) {
+@media screen and (max-width: #{map.get(variable.$default-breakpoints, xs )} ) {
 	.pagination {
-		@include grid($flex-flow: column nowrap, $justify-content: null, $align-items: center);
+		@include flexbox-grid-mixins.grid($flex-flow: column nowrap, $justify-content: null, $align-items: center);
 	}
 	.nav-next {
 		margin-left: 0;
@@ -67,7 +77,7 @@ figure > figcaption {
 	--panel-background-color: unset;
 	--panel-border-color: transparent;
 
-	padding: $default-layout-padding;
+	padding: variable.$default-layout-padding;
 	color: var(--panel-font-color, #000);
 	background: var(--panel-background-color, unset);
 	border: 1px solid;
@@ -80,7 +90,7 @@ figure > figcaption {
 }
 
 .panel-primary {
-	--panel-border-color: #{$default-border-color};
+	--panel-border-color: #{variable.$default-border-color};
 }
 .panel-notice {
 	--panel-font-color: #fff;
@@ -127,9 +137,9 @@ figure > figcaption {
 
 	--button-font-color: #000;
 	--button-font-hover-color: #000;
-	--button-background-color: #{$default-background-color};
+	--button-background-color: #{variable.$default-background-color};
 	--button-background-hover-color: #f7f7f7;
-	--button-border-color: #{$default-border-color};
+	--button-border-color: #{variable.$default-border-color};
 
 	color: var(--button-font-color, #000);
 	background: var(--button-background-color, unset);
@@ -137,7 +147,7 @@ figure > figcaption {
 	border-color: var(--button-border-color, transparent);
 
 	&:hover {
-		color:var(--button-font-hover-color, #000);
+		color: var(--button-font-hover-color, #000);
 		text-decoration: none;
 		background: var(--button-background-hover-color, unset);
 	}
@@ -160,7 +170,7 @@ figure > figcaption {
 .button-caution {
 	--button-font-color: #fff;
 	--button-font-hover-color: #fff;
-	--button-background-color:  #f56558;
+	--button-background-color: #f56558;
 	--button-background-hover-color: #d45145;
 	--button-border-color: transparent;
 }
@@ -174,15 +184,15 @@ figure > figcaption {
 .button-danger {
 	--button-font-color: #fff;
 	--button-font-hover-color: #fff;
-	--button-background-color:  #ce3426;
+	--button-background-color: #ce3426;
 	--button-background-hover-color: #a0281d;
 	--button-border-color: transparent;
 }
 
 .notification {
-	padding: .2rem $default-layout-padding;
+	padding: .2rem variable.$default-layout-padding;
 	text-align: center;
-	background: $sidebar-active-color;
+	background: variable.$sidebar-active-color;
 }
 
 .backtothetop {
@@ -200,15 +210,15 @@ figure > figcaption h4 {
 
 .table_of_contents {
 	font-size: 90%;
-	padding: $default-layout-padding;
-	border: 4px solid $default-border-color;
+	padding: variable.$default-layout-padding;
+	border: 4px solid variable.$default-border-color;
 
 	ul {
 		list-style: none;
 		padding-left: 0;
 	}
 	li {
-		border-top: 1px solid $default-border-color;
+		border-top: 1px solid variable.$default-border-color;
 	}
 	> nav > ul > li:first-child {
 		border-top: unset;
@@ -251,14 +261,14 @@ figure > figcaption h4 {
 	color: #70757a;
 }
 .ais-Hits-item {
-	@extend .stack;
+	@extend %stack;
 
 	h3 {
 		font-size: 140%;
 		font-weight: normal;
 	}
 	p {
-		@extend .unset-stack;
+		@extend %unset-stack;
 		color: #3C4043;
 	}
 	.lastmod {
@@ -271,19 +281,20 @@ figure > figcaption h4 {
 	margin-top: 1em;
 }
 .ais-Pagination-list {
-	@extend ul.no-style;
-	@include grid($flex-wrap: wrap, $justify-content: center);
+	list-style: none;
+	padding-left: 0;
+	@include flexbox-grid-mixins.grid($flex-wrap: wrap, $justify-content: center);
 }
 .ais-Pagination-item {
 	padding: .6rem;
 }
 
 .code {
-	@include grid($flex-wrap: wrap);
-	@extend .stack;
+	@include flexbox-grid-mixins.grid($flex-wrap: wrap);
+	@extend %stack;
 
 	.filename {
-		@include grid-col($col: 9, $flex-shrink: 0, $max-width: 75%);
+		@include flexbox-grid-mixins.grid-col($col: 9, $flex-shrink: 0, $max-width: 75%);
 		font-size: 80%;
 		color: #666;
 	}
@@ -302,10 +313,10 @@ figure > figcaption h4 {
 		outline: none;
 	}
 	.code-content {
-		@include grid-col($col: 12, $flex-shrink: 0, $max-width: 100%);
+		@include flexbox-grid-mixins.grid-col($col: 12, $flex-shrink: 0, $max-width: 100%);
 
 		.highlight {
-			@extend .none-stack;
+			@extend %none-stack;
 		}
 	}
 }

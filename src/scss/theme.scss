@@ -1,9 +1,4 @@
-@import 'node_modules/flexbox-grid-mixins/sass/flexbox-grid-mixins';
-@import 'function';
-
-@import 'variable';
-
-@import "foundation";
-@import "structure";
-@import "component";
-@import "project";
+@use "foundation";
+@use "structure";
+@use "component";
+@use "project";
