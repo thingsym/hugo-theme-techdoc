@@ -1,21 +1,24 @@
 @charset "utf-8";
+
+@use 'strip-unit';
+
 // ===================================================================
 // px to em
 // ===================================================================
 
 @function px2em($px, $base: 16) {
-	@return strip-unit($px) / strip-unit($base) * 1em;
+	@return strip-unit.strip-unit($px) / strip-unit.strip-unit($base) * 1em;
 }
 
 @function px2rem($px, $base: 16) {
-	@return strip-unit($px) / strip-unit($base) * 1rem;
+	@return strip-unit.strip-unit($px) / strip-unit.strip-unit($base) * 1rem;
 }
 // ===================================================================
 // percent to px
 // ===================================================================
 
 @function percent2px($percent, $base: 16) {
-  @return strip-unit($base) * (strip-unit($percent) / 100) * 1px;
+  @return strip-unit.strip-unit($base) * (strip-unit.strip-unit($percent) / 100) * 1px;
 }
 
 // ===================================================================
@@ -23,11 +26,11 @@
 // ===================================================================
 
 @function percent2em($percent, $base: 16) {
-  @return (strip-unit($base) * (strip-unit($percent) / 100)) / strip-unit($base) * 1em;
+  @return (strip-unit.strip-unit($base) * (strip-unit.strip-unit($percent) / 100)) / strip-unit.strip-unit($base) * 1em;
 }
 
 @function percent2rem($percent, $base: 16) {
-  @return (strip-unit($base) * (strip-unit($percent) / 100)) / strip-unit($base) * 1rem;
+  @return (strip-unit.strip-unit($base) * (strip-unit.strip-unit($percent) / 100)) / strip-unit.strip-unit($base) * 1rem;
 }
 
 // ===================================================================
@@ -35,9 +38,9 @@
 // ===================================================================
 
 @function em2px($em, $base: 16) {
-  @return strip-unit($em) * strip-unit($base) * 1px;
+  @return strip-unit.strip-unit($em) * strip-unit.strip-unit($base) * 1px;
 }
 
 @function rem2px($rem, $base: 16) {
-  @return strip-unit($rem) * strip-unit($base) * 1px;
+  @return strip-unit.strip-unit($rem) * strip-unit.strip-unit($base) * 1px;
 }
