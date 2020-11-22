@@ -196,9 +196,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -206,9 +206,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -217,9 +217,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -270,8 +270,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   /* 1 */
@@ -282,8 +282,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -291,7 +291,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -301,7 +301,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -435,8 +435,8 @@ fieldset {
   line-height: 2;
   color: #000;
   font-family: var(--custom-font-family-base, -apple-system, BlinkMacSystemFont, "游ゴシック体", YuGothic, "メイリオ", Meiryo, "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
-  -webkit-font-feature-settings: 'pwid';
-          font-feature-settings: 'pwid';
+  -webkit-font-feature-settings: "pwid";
+          font-feature-settings: "pwid";
 }
 
 body {
@@ -454,7 +454,6 @@ h6 {
   font-weight: bold;
   line-height: 2;
 }
-
 h1 > small,
 h2 > small,
 h3 > small,
@@ -467,7 +466,7 @@ h6 > small {
 
 h1 {
   font-size: 240%;
-  line-height: 1.41667;
+  line-height: 1.4166666667;
 }
 
 h2 {
@@ -482,12 +481,12 @@ h3 {
 
 h4 {
   font-size: 140%;
-  line-height: 1.71429;
+  line-height: 1.7142857143;
 }
 
 h5 {
   font-size: 120%;
-  line-height: 1.83333;
+  line-height: 1.8333333333;
 }
 
 h6 {
@@ -499,7 +498,6 @@ a {
   color: var(--custom-link-text-color, #2e7eb3);
   text-decoration: none;
 }
-
 a:focus, a:active, a:hover {
   color: var(--custom-link-text-hover-color, #38a0e4);
   text-decoration: underline;
@@ -536,11 +534,10 @@ th,
 td {
   border-top: 1px solid #f0f0f0;
   border-right: 1px solid #f0f0f0;
-  padding: .6rem;
+  padding: 0.6rem;
 }
-
-tr:nth-child(even) th, tr:nth-child(even)
-td {
+tr:nth-child(even) th,
+tr:nth-child(even) td {
   background: #f8f8f8;
 }
 
@@ -554,16 +551,14 @@ ul {
   list-style-type: disc;
 }
 
-ul.no-style, .ais-Pagination-list {
+ul.no-style {
   list-style: none;
   padding-left: 0;
 }
-
 ul.inline {
   list-style: none;
   padding-left: 0;
 }
-
 ul.inline li {
   display: inline;
   padding-right: 2rem;
@@ -582,7 +577,7 @@ blockquote {
   padding: 1.28rem;
   background-color: #f4f4f4;
   border-left: 4px solid #f0f0f0;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
 }
 
 code,
@@ -593,8 +588,8 @@ kbd {
 
 code,
 kbd {
-  padding: .2rem;
-  border-radius: .2rem;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
 }
 
 code {
@@ -611,21 +606,18 @@ pre {
   padding: 1.28rem;
   overflow: auto;
   white-space: pre-wrap;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
 }
-
 pre code {
   padding: 0;
   background-color: unset;
 }
-
 pre.wrap {
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
 }
-
 pre.scrollable {
   max-height: 240px;
   overflow-y: scroll;
@@ -650,12 +642,19 @@ figcaption {
   --last-stack-bottom: 0;
 }
 
-.first-stack, main * {
+.first-stack,
+main * {
   margin-top: var(--first-stack-top, unset);
   margin-bottom: var(--first-stack-bottom, unset);
 }
 
-.stack, main * + h1, main * + h2, main * + h3, main * + h4, main * + h5, main * + h6,
+.stack,
+main * + h1,
+main * + h2,
+main * + h3,
+main * + h4,
+main * + h5,
+main * + h6,
 main * + p,
 main * + hr,
 main * + table,
@@ -664,7 +663,8 @@ main * + ol,
 main * + dl,
 main * + blockquote,
 main * + pre,
-main * + figure, .table_of_contents,
+main * + figure,
+.table_of_contents,
 .edit-meta,
 .edit-page,
 .pagination,
@@ -673,7 +673,9 @@ main * + figure, .table_of_contents,
 .panel,
 .button,
 .gist,
-.twitter-tweet, .ais-Hits-item, .code {
+.twitter-tweet,
+.ais-Hits-item,
+.code {
   margin-top: var(--stack-top, unset);
   margin-bottom: var(--stack-bottom, unset);
 }
@@ -698,18 +700,18 @@ main * + figure, .table_of_contents,
   margin-bottom: calc(var(--first-stack-bottom, unset) / 2);
 }
 
-.none-stack, figure > figcaption, .pagination > *, .code .code-content .highlight {
+.none-stack,
+figure > figcaption,
+.pagination > *,
+.code .code-content .highlight {
   margin-top: 0;
 }
 
-.unset-stack, main li > ul,
-main li > ol, .ais-Hits-item p {
+.unset-stack,
+main li > ul,
+main li > ol,
+.ais-Hits-item p {
   margin-top: unset;
-}
-
-.reverse-stack {
-  margin-top: var(--stack-bottom, unset);
-  margin-bottom: var(--stack-top, unset);
 }
 
 /*-----------------------*
@@ -758,7 +760,6 @@ main {
           flex: 0 0 75%;
   max-width: 75%;
 }
-
 main:only-child {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -793,6 +794,7 @@ main:only-child {
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
   }
+
   main {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -801,6 +803,7 @@ main:only-child {
             flex: 0 0 auto;
     min-width: 100%;
   }
+
   .sidebar {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -812,7 +815,6 @@ main:only-child {
             order: 1;
   }
 }
-
 .pagination {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -826,7 +828,6 @@ main:only-child {
           justify-content: space-between;
   font-weight: bold;
 }
-
 .nav-next {
   margin-left: auto;
 }
@@ -846,11 +847,11 @@ main:only-child {
         -ms-flex-align: center;
             align-items: center;
   }
+
   .nav-next {
     margin-left: 0;
   }
 }
-
 .panel {
   --panel-font-color: #000;
   --panel-background-color: unset;
@@ -861,7 +862,6 @@ main:only-child {
   border: 1px solid;
   border-color: var(--panel-border-color, transparent);
 }
-
 .panel a {
   text-decoration: underline;
   font-weight: bold;
@@ -909,10 +909,10 @@ main:only-child {
 .button {
   display: inline-block;
   font-size: 120%;
-  padding: .5rem 1.2rem;
+  padding: 0.5rem 1.2rem;
   font-weight: bold;
   text-decoration: none;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   --button-font-color: #000;
   --button-font-hover-color: #000;
   --button-background-color: #fafafa;
@@ -923,7 +923,6 @@ main:only-child {
   border: 2px solid;
   border-color: var(--button-border-color, transparent);
 }
-
 .button:hover {
   color: var(--button-font-hover-color, #000);
   text-decoration: none;
@@ -949,7 +948,7 @@ main:only-child {
 .button-caution {
   --button-font-color: #fff;
   --button-font-hover-color: #fff;
-  --button-background-color:  #f56558;
+  --button-background-color: #f56558;
   --button-background-hover-color: #d45145;
   --button-border-color: transparent;
 }
@@ -965,7 +964,7 @@ main:only-child {
 .button-danger {
   --button-font-color: #fff;
   --button-font-hover-color: #fff;
-  --button-background-color:  #ce3426;
+  --button-background-color: #ce3426;
   --button-background-hover-color: #a0281d;
   --button-border-color: transparent;
 }
@@ -995,52 +994,43 @@ figure > figcaption h4 {
   padding: 1.28rem;
   border: 4px solid #f0f0f0;
 }
-
 .table_of_contents ul {
   list-style: none;
   padding-left: 0;
 }
-
 .table_of_contents li {
   border-top: 1px solid #f0f0f0;
 }
-
 .table_of_contents > nav > ul > li:first-child {
   border-top: unset;
 }
-
 .table_of_contents ul > li li a {
   margin-left: 2rem;
 }
-
 .table_of_contents ul ul > li li a {
   margin-left: 4rem;
 }
-
 .table_of_contents ul ul ul > li li a {
   margin-left: 6rem;
 }
-
 .table_of_contents ul ul ul ul > li li a {
   margin-left: 8rem;
 }
-
 .table_of_contents ul ul ul ul ul > li li a {
   margin-left: 10rem;
 }
 
 .headerlink > .svg-inline--fa {
-  margin-left: .4rem;
-  width: .8rem;
+  margin-left: 0.4rem;
+  width: 0.8rem;
 }
 
 .ais-SearchBox .ais-SearchBox-input {
   width: 70%;
 }
-
 .ais-SearchBox button {
-  margin-left: .2rem;
-  padding: .4rem;
+  margin-left: 0.2rem;
+  padding: 0.4rem;
 }
 
 .ais-Stats {
@@ -1052,11 +1042,9 @@ figure > figcaption h4 {
   font-size: 140%;
   font-weight: normal;
 }
-
 .ais-Hits-item p {
   color: #3C4043;
 }
-
 .ais-Hits-item .lastmod {
   font-size: 90%;
   color: #70757a;
@@ -1067,6 +1055,8 @@ figure > figcaption h4 {
 }
 
 .ais-Pagination-list {
+  list-style: none;
+  padding-left: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -1080,7 +1070,7 @@ figure > figcaption h4 {
 }
 
 .ais-Pagination-item {
-  padding: .6rem;
+  padding: 0.6rem;
 }
 
 .code {
@@ -1092,7 +1082,6 @@ figure > figcaption h4 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-
 .code .filename {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1103,20 +1092,18 @@ figure > figcaption h4 {
   font-size: 80%;
   color: #666;
 }
-
 .code .copy-btn {
   margin-left: auto;
   cursor: pointer;
   position: relative;
   font-size: 80%;
   border: solid 1px #ccc;
-  padding: .2rem .6rem;
-  border-radius: .3rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.3rem;
   line-height: 1;
-  margin-bottom: .2rem;
+  margin-bottom: 0.2rem;
   outline: none;
 }
-
 .code .code-content {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1125,22 +1112,21 @@ figure > figcaption h4 {
           flex: 0 0 100%;
   max-width: 100%;
 }
-
 .tooltipped::after {
-  content: 'Copied!';
+  content: "Copied!";
   background: #555;
   display: inline-block;
   color: #fff;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   position: absolute;
   left: 50%;
   top: -1.8rem;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  font-size: .75rem;
+  font-size: 0.75rem;
   padding: 4px 10px 6px 10px;
-  -webkit-animation: fade-tooltip .5s 1s 1 forwards;
-          animation: fade-tooltip .5s 1s 1 forwards;
+  -webkit-animation: fade-tooltip 0.5s 1s 1 forwards;
+          animation: fade-tooltip 0.5s 1s 1 forwards;
 }
 
 @-webkit-keyframes fade-tooltip {
@@ -1154,26 +1140,22 @@ figure > figcaption h4 {
     opacity: 0;
   }
 }
-
 header {
   color: var(--custom-font-color, #fff);
   background: var(--custom-background-color, #000);
   padding: 0.5rem 1.28rem;
 }
-
 header h1 {
   font-size: 140%;
   display: inline-block;
 }
-
 header .version {
-  margin-left: .4rem;
+  margin-left: 0.4rem;
   font-size: 80%;
 }
-
 header .github {
   color: currentColor;
-  margin-left: .4rem;
+  margin-left: 0.4rem;
   font-size: 180%;
 }
 
@@ -1182,19 +1164,16 @@ header .github {
   background: var(--custom-background-color, #000);
   padding: 0.2rem 1.28rem;
 }
-
 .global-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .global-menu li {
   display: inline-block;
   margin-right: 1.8rem;
   position: relative;
 }
-
 .global-menu ul.sub-menu {
   display: none;
   margin: 0;
@@ -1203,23 +1182,19 @@ header .github {
   left: 0;
   z-index: 99999;
 }
-
 .global-menu ul.sub-menu li {
   padding: 0.2rem 1.28rem;
   background: var(--custom-background-color, #000);
   width: 140px;
   font-size: 80%;
 }
-
 .global-menu ul.sub-menu li a {
   color: var(--custom-font-color, #fff);
 }
-
 .global-menu .fa-angle-right {
-  margin-left: .4rem;
+  margin-left: 0.4rem;
   font-size: 80%;
 }
-
 .global-menu li.parent:hover > ul.sub-menu {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1231,7 +1206,6 @@ header .github {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
 }
-
 @media screen and (max-width: 480px) {
   .global-menu li {
     display: block;
@@ -1251,22 +1225,20 @@ header .github {
   .global-menu ul.sub-menu li {
     width: auto;
     background: transparent;
-    padding: 0 .4rem;
+    padding: 0 0.4rem;
   }
   .global-menu ul.sub-menu li + li {
-    padding-top: .2rem;
+    padding-top: 0.2rem;
   }
   .global-menu ul.sub-menu li a {
     color: currentColor;
   }
 }
-
 .global-menu a {
   display: block;
   color: currentColor;
   text-decoration: none;
 }
-
 .global-menu a:hover {
   text-decoration: underline;
 }
@@ -1280,71 +1252,58 @@ main {
     padding: 1rem;
   }
 }
-
 .sidebar {
   font-size: 90%;
   line-height: 1.8;
   background: #f9f9f9;
   border-right: 1px solid #eee;
 }
-
 .sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .sidebar a {
   position: relative;
   display: block;
   color: #404040;
   text-decoration: none;
-  padding: .2rem 1rem;
+  padding: 0.2rem 1rem;
   border-left: solid 4px #f9f9f9;
   border-bottom: solid 1px #eee;
 }
-
 .sidebar a:hover {
   color: #404040;
   background: #eee;
   border-left: solid 4px #ccc;
 }
-
 .sidebar nav > ul > li li a {
   padding-left: 2rem;
 }
-
 .sidebar nav > ul ul > li li a {
   padding-left: 3rem;
 }
-
 .sidebar nav > ul ul ul > li li a {
   padding-left: 4rem;
 }
-
 .sidebar nav > ul ul ul ul > li li a {
   padding-left: 5rem;
 }
-
 .sidebar nav > ul ul ul ul ul > li li a {
   padding-left: 6rem;
 }
-
 @media screen and (max-width: 480px) {
   .sidebar nav > ul > li:first-child a {
     border-top: solid 1px #eee;
   }
 }
-
 .sidebar .active > a {
   background: #eee;
   border-left: solid 4px #ccc;
 }
-
 .sidebar .slide-menu .has-sub-menu:not(.parent) ul {
   display: none;
 }
-
 .sidebar .slide-menu .has-sub-menu > a span.mark {
   position: absolute;
   top: 0;
