@@ -79,6 +79,14 @@ You may specify options in config.toml (or config.yaml/config.json) of your site
 
 For an example of `config.toml`, [config.toml](https://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/config.toml) in exampleSite.
 
+### Update Hugo theme for git submodule
+
+```
+git submodule update --remote
+git add themes/hugo-theme-techdoc
+git commit
+```
+
 ### Directory layout
 
 ```
