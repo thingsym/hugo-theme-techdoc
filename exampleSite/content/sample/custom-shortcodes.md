@@ -75,7 +75,7 @@ TableOfContents: true
 
 {{< button status="danger" url="#" >}}danger{{< /button >}}
 
-#### Button with Font Awesome
+### Button with Font Awesome
 
 {{< button icon="fas fa-download" url="#" >}}Download{{< /button >}}
 
