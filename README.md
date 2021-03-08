@@ -266,6 +266,13 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.9.7 - 2021.03.08
+	* add docker-compose.yml for development environment
+	* change keyboard event from event.keyCode to event.key because it is deprecated
+	* update package.json
+	* add FUNDING.yml
+	* fix space for minify publish
+	* change flexbox-grid-mixins from libsass to dart-sass
 * Version 0.9.6 - 2020.11.22
 	* add sample Markdown Syntax
 	* update sample document
