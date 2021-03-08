@@ -5,12 +5,12 @@
 
     // prev links - left arrow key
     document.addEventListener( 'keydown', event => {
-      if (nav_prev && event.keyCode === 37) {
+      if (nav_prev && event.key === 'ArrowLeft') {
         location.href = nav_prev.getAttribute('href');
       }
 
       // next links - right arrow key
-      if (nav_next && event.keyCode === 39) {
+      if (nav_next && event.key === 'ArrowRight') {
         location.href = nav_next.getAttribute('href');
       }
     });
