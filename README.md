@@ -211,13 +211,7 @@ Browse site on http://localhost:1313
 hugo -t hugo-theme-techdoc -d public_html
 ```
 
-## Development environment
-
-```
-cd /path/to/hugo-theme-techdoc
-npm install
-npm run gulp:watch
-```
+## Local development environment
 
 ### Preview exampleSite
 
@@ -228,6 +222,34 @@ hugo server --themesDir ../..
 ```
 
 Browse site on http://localhost:1313
+
+### Build development
+
+```
+cd /path/to/hugo-theme-techdoc
+npm install
+npm run gulp watch
+```
+
+## Docker development environment
+
+### Run Docker and Preview exampleSite
+
+```
+cd /path/to/hugo-theme-techdoc
+docker-compose up -d
+```
+
+Browse site on http://localhost:1313
+
+### Build development
+
+```
+cd /path/to/hugo-theme-techdoc
+docker-compose up -d
+docker-compose run --rm node npm install
+docker-compose run --rm node npm run watch
+```
 
 ## Contribution
 
