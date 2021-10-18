@@ -11,7 +11,7 @@ See https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcod
 
 ## figure
 
-{{< figure src="../images/pexels-photo-196666.jpeg" title="2 People Sitting With View of Yellow Flowers during Daytime" >}}
+{{< figure src="../../images/pexels-photo-196666.jpeg" title="2 People Sitting With View of Yellow Flowers during Daytime" >}}
 
 ## gist
 
