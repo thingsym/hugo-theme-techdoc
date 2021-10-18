@@ -265,6 +265,14 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.9.8 - 2021.10.18
+	* fix sample document
+	* edit README
+	* update package.json
+	* add github_doc_repository_path
+	* change to relative link
+	* add workflows for publishing demo site to gh-pages
+
 * Version 0.9.7 - 2021.03.08
 	* add docker-compose.yml for development environment
 	* change keyboard event from event.keyCode to event.key because it is deprecated
