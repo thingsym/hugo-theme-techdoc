@@ -4,8 +4,8 @@ The Techdoc is a Hugo Theme for technical documentation.
 
 ![The Techdoc screenshot](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot.png)
 
-- Hugo Themes page: [https://themes.gohugo.io/hugo-theme-techdoc/](https://themes.gohugo.io/hugo-theme-techdoc/)
-- Demo site: [https://themes.gohugo.io/theme/hugo-theme-techdoc/](https://themes.gohugo.io/theme/hugo-theme-techdoc/)
+- Hugo Themes page: [https://themes.gohugo.io/themes/hugo-theme-techdoc/](https://themes.gohugo.io/themes/hugo-theme-techdoc/)
+- Demo site: [https://thingsym.github.io/hugo-theme-techdoc/](https://thingsym.github.io/hugo-theme-techdoc/)
 - Download: [https://github.com/thingsym/hugo-theme-techdoc](https://github.com/thingsym/hugo-theme-techdoc)
 
 ## Features
@@ -247,7 +247,6 @@ Browse site on http://localhost:1313
 
 ```
 cd /path/to/hugo-theme-techdoc
-docker-compose up -d
 docker-compose run --rm node npm install
 docker-compose run --rm node npm run watch
 ```
