@@ -4,8 +4,8 @@ The Techdoc is a Hugo Theme for technical documentation.
 
 ![The Techdoc screenshot](https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot.png)
 
-- Hugo Themes page: [https://themes.gohugo.io/hugo-theme-techdoc/](https://themes.gohugo.io/hugo-theme-techdoc/)
-- Demo site: [https://themes.gohugo.io/theme/hugo-theme-techdoc/](https://themes.gohugo.io/theme/hugo-theme-techdoc/)
+- Hugo Themes page: [https://themes.gohugo.io/themes/hugo-theme-techdoc/](https://themes.gohugo.io/themes/hugo-theme-techdoc/)
+- Demo site: [https://thingsym.github.io/hugo-theme-techdoc/](https://thingsym.github.io/hugo-theme-techdoc/)
 - Download: [https://github.com/thingsym/hugo-theme-techdoc](https://github.com/thingsym/hugo-theme-techdoc)
 
 ## Features
@@ -247,7 +247,6 @@ Browse site on http://localhost:1313
 
 ```
 cd /path/to/hugo-theme-techdoc
-docker-compose up -d
 docker-compose run --rm node npm install
 docker-compose run --rm node npm run watch
 ```
@@ -265,6 +264,14 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 5. Create new Pull Request
 
 ## Changelog
+
+* Version 0.9.8 - 2021.10.18
+	* fix sample document
+	* edit README
+	* update package.json
+	* add github_doc_repository_path
+	* change to relative link
+	* add workflows for publishing demo site to gh-pages
 
 * Version 0.9.7 - 2021.03.08
 	* add docker-compose.yml for development environment
