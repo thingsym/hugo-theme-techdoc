@@ -20,6 +20,7 @@ For an example of `config.toml`, see [config.toml](https://github.com/thingsym/h
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
     github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
+    github_doc_repository_path = ""
 
     # Analytic section
     google_analytics_id = "" # Your Google Analytics tracking id
@@ -87,6 +88,12 @@ default: `0.9.7`
 URL of documentation repository for editting
 
 default: `https://github.com/thingsym/hugo-theme-techdoc`
+
+#### `github_doc_repository_path`
+
+content directory path (when including the content directory in the repository)
+
+default: `""`
 
 #### `google_analytics_id`
 
