@@ -1,0 +1,290 @@
+<!doctype html><html lang=en-us>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Migrate to Hugo from Jekyll - Hugo Techdoc Theme</title>
+<meta name=description content="put your description">
+<meta name=generator content="Hugo 0.88.1">
+<link href=https://thingsym.github.io/hugo-theme-techdoc/index.xml rel=alternate type=application/rss+xml>
+<link rel=canonical href=https://thingsym.github.io/hugo-theme-techdoc/post/migrate-from-jekyll/>
+<link rel=stylesheet href=https://thingsym.github.io/hugo-theme-techdoc/css/theme.min.css>
+<script src=https://use.fontawesome.com/releases/v5.0.6/js/all.js></script>
+<link rel=stylesheet href=https://thingsym.github.io/hugo-theme-techdoc/css/chroma.min.css>
+<script src=https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script>
+<script src=https://thingsym.github.io/hugo-theme-techdoc/js/bundle.js></script><style>:root{}</style>
+<meta property="og:title" content="Migrate to Hugo from Jekyll">
+<meta property="og:description" content="Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ <root>/ ▾ images/ logo.png  should become
+▾ <root>/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://thingsym.github.io/hugo-theme-techdoc/post/migrate-from-jekyll/"><meta property="og:image" content="https://thingsym.github.io/hugo-theme-techdoc/images/og-image.png"><meta property="article:section" content="post">
+<meta property="article:published_time" content="2014-03-10T00:00:00+00:00">
+<meta property="article:modified_time" content="2014-03-10T00:00:00+00:00"><meta property="og:site_name" content="Hugo Techdoc Theme">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://thingsym.github.io/hugo-theme-techdoc/images/og-image.png">
+<meta name=twitter:title content="Migrate to Hugo from Jekyll">
+<meta name=twitter:description content="Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ <root>/ ▾ images/ logo.png  should become
+▾ <root>/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.">
+<meta itemprop=name content="Migrate to Hugo from Jekyll">
+<meta itemprop=description content="Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ <root>/ ▾ images/ logo.png  should become
+▾ <root>/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static."><meta itemprop=datePublished content="2014-03-10T00:00:00+00:00">
+<meta itemprop=dateModified content="2014-03-10T00:00:00+00:00">
+<meta itemprop=wordCount content="813"><meta itemprop=image content="https://thingsym.github.io/hugo-theme-techdoc/images/og-image.png">
+<meta itemprop=keywords content></head>
+<body><div class=container><header>
+<h1>Hugo Techdoc Theme</h1><span class=version>Version 0.9.8</span><a href=https://github.com/thingsym/hugo-theme-techdoc class=github><i class="fab fa-github"></i></a>
+<p class=description>put your description</p>
+</header>
+<div class=global-menu>
+<nav>
+<ul>
+<li><a href=/hugo-theme-techdoc/>Home</a></li>
+<li><a href=https://twitter.com/thingsym>Twitter</a></li>
+<li><a href=/hugo-theme-techdoc/post/goisforlovers/>(Hu)go Template Primer</a></li>
+<li><a href=/hugo-theme-techdoc/about/>About Hugo</a></li>
+<li><a href=/hugo-theme-techdoc/post/hugoisforlovers/>Getting Started with Hugo</a></li><li class="parent active"><a href>Tutorials<i class="fas fa-angle-right"></i></a>
+<ul class=sub-menu>
+<li class=child><a href=/hugo-theme-techdoc/post/creating-a-new-theme/>Creating a New Theme</a></li>
+<li class=child><a href=/hugo-theme-techdoc/post/migrate-from-jekyll/>Migrating from Jekyll</a></li>
+</ul>
+</li></ul>
+</nav>
+</div>
+<div class=content-container>
+<main><h1>Migrate to Hugo from Jekyll</h1>
+<h2 id=move-static-content-to-static>Move static content to <code>static</code></h2>
+<p>Jekyll has a rule that any directory not starting with <code>_</code> will be copied as-is to the <code>_site</code> output. Hugo keeps all static content under <code>static</code>. You should therefore move it all there.
+With Jekyll, something that looked like</p>
+<pre><code>▾ &lt;root&gt;/
+    ▾ images/
+        logo.png
+</code></pre>
+<p>should become</p>
+<pre><code>▾ &lt;root&gt;/
+    ▾ static/
+        ▾ images/
+            logo.png
+</code></pre>
+<p>Additionally, you&rsquo;ll want any files that should reside at the root (such as <code>CNAME</code>) to be moved to <code>static</code>.</p>
+<h2 id=create-your-hugo-configuration-file>Create your Hugo configuration file</h2>
+<p>Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the <a href=/overview/configuration/>Hugo configuration documentation</a> for details.</p>
+<h2 id=set-your-configuration-publish-folder-to-_site>Set your configuration publish folder to <code>_site</code></h2>
+<p>The default is for Jekyll to publish to <code>_site</code> and for Hugo to publish to <code>public</code>. If, like me, you have <a href=http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html><code>_site</code> mapped to a git submodule on the <code>gh-pages</code> branch</a>, you&rsquo;ll want to do one of two alternatives:</p>
+<ol>
+<li>
+<p>Change your submodule to point to map <code>gh-pages</code> to public instead of <code>_site</code> (recommended).</p>
+<pre><code> git submodule deinit _site
+ git rm _site
+ git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
+</code></pre>
+</li>
+<li>
+<p>Or, change the Hugo configuration to use <code>_site</code> instead of <code>public</code>.</p>
+<pre><code> {
+     ..
+     &quot;publishdir&quot;: &quot;_site&quot;,
+     ..
+ }
+</code></pre>
+</li>
+</ol>
+<h2 id=convert-jekyll-templates-to-hugo-templates>Convert Jekyll templates to Hugo templates</h2>
+<p>That&rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to <a href=http://jekyllrb.com/docs/templates/>Jekyll&rsquo;s template documentation</a> if you need to refresh your memory on how you built your blog and <a href=/layout/templates/>Hugo&rsquo;s template</a> to learn Hugo&rsquo;s way.</p>
+<p>As a single reference data point, converting my templates for <a href=http://heyitsalex.net/>heyitsalex.net</a> took me no more than a few hours.</p>
+<h2 id=convert-jekyll-plugins-to-hugo-shortcodes>Convert Jekyll plugins to Hugo shortcodes</h2>
+<p>Jekyll has <a href=http://jekyllrb.com/docs/plugins/>plugins</a>; Hugo has <a href=/doc/shortcodes/>shortcodes</a>. It&rsquo;s fairly trivial to do a port.</p>
+<h3 id=implementation>Implementation</h3>
+<p>As an example, I was using a custom <a href=https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb><code>image_tag</code></a> plugin to generate figures with caption when running Jekyll. As I read about shortcodes, I found Hugo had a nice built-in shortcode that does exactly the same thing.</p>
+<p>Jekyll&rsquo;s plugin:</p>
+<pre><code>module Jekyll
+  class ImageTag &lt; Liquid::Tag
+    @url = nil
+    @caption = nil
+    @class = nil
+    @link = nil
+    // Patterns
+    IMAGE_URL_WITH_CLASS_AND_CAPTION =
+    IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK = /(\w+)(\s+)((https?:\/\/|\/)(\S+))(\s+)&quot;(.*?)&quot;(\s+)-&gt;((https?:\/\/|\/)(\S+))(\s*)/i
+    IMAGE_URL_WITH_CAPTION = /((https?:\/\/|\/)(\S+))(\s+)&quot;(.*?)&quot;/i
+    IMAGE_URL_WITH_CLASS = /(\w+)(\s+)((https?:\/\/|\/)(\S+))/i
+    IMAGE_URL = /((https?:\/\/|\/)(\S+))/i
+    def initialize(tag_name, markup, tokens)
+      super
+      if markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK
+        @class   = $1
+        @url     = $3
+        @caption = $7
+        @link = $9
+      elsif markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION
+        @class   = $1
+        @url     = $3
+        @caption = $7
+      elsif markup =~ IMAGE_URL_WITH_CAPTION
+        @url     = $1
+        @caption = $5
+      elsif markup =~ IMAGE_URL_WITH_CLASS
+        @class = $1
+        @url   = $3
+      elsif markup =~ IMAGE_URL
+        @url = $1
+      end
+    end
+    def render(context)
+      if @class
+        source = &quot;&lt;figure class='#{@class}'&gt;&quot;
+      else
+        source = &quot;&lt;figure&gt;&quot;
+      end
+      if @link
+        source += &quot;&lt;a href=\&quot;#{@link}\&quot;&gt;&quot;
+      end
+      source += &quot;&lt;img src=\&quot;#{@url}\&quot;&gt;&quot;
+      if @link
+        source += &quot;&lt;/a&gt;&quot;
+      end
+      source += &quot;&lt;figcaption&gt;#{@caption}&lt;/figcaption&gt;&quot; if @caption
+      source += &quot;&lt;/figure&gt;&quot;
+      source
+    end
+  end
+end
+Liquid::Template.register_tag('image', Jekyll::ImageTag)
+</code></pre>
+<p>is written as this Hugo shortcode:</p>
+<pre><code>&lt;!-- image --&gt;
+&lt;figure {{ with .Get &quot;class&quot; }}class=&quot;{{.}}&quot;{{ end }}&gt;
+    {{ with .Get &quot;link&quot;}}&lt;a href=&quot;{{.}}&quot;&gt;{{ end }}
+        &lt;img src=&quot;{{ .Get &quot;src&quot; }}&quot; {{ if or (.Get &quot;alt&quot;) (.Get &quot;caption&quot;) }}alt=&quot;{{ with .Get &quot;alt&quot;}}{{.}}{{else}}{{ .Get &quot;caption&quot; }}{{ end }}&quot;{{ end }} /&gt;
+    {{ if .Get &quot;link&quot;}}&lt;/a&gt;{{ end }}
+    {{ if or (or (.Get &quot;title&quot;) (.Get &quot;caption&quot;)) (.Get &quot;attr&quot;)}}
+    &lt;figcaption&gt;{{ if isset .Params &quot;title&quot; }}
+        {{ .Get &quot;title&quot; }}{{ end }}
+        {{ if or (.Get &quot;caption&quot;) (.Get &quot;attr&quot;)}}&lt;p&gt;
+        {{ .Get &quot;caption&quot; }}
+        {{ with .Get &quot;attrlink&quot;}}&lt;a href=&quot;{{.}}&quot;&gt; {{ end }}
+            {{ .Get &quot;attr&quot; }}
+        {{ if .Get &quot;attrlink&quot;}}&lt;/a&gt; {{ end }}
+        &lt;/p&gt; {{ end }}
+    &lt;/figcaption&gt;
+    {{ end }}
+&lt;/figure&gt;
+&lt;!-- image --&gt;
+</code></pre>
+<h3 id=usage>Usage</h3>
+<p>I simply changed:</p>
+<pre><code>{% image full http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg &quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were &quot;having fun&quot; and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; -&gt;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/ %}
+</code></pre>
+<p>to this (this example uses a slightly extended version named <code>fig</code>, different than the built-in <code>figure</code>):</p>
+<pre><code>{{% fig class=&quot;full&quot; src=&quot;http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg&quot; title=&quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were having fun and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; link=&quot;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/&quot; %}}
+</code></pre>
+<p>As a bonus, the shortcode named parameters are, arguably, more readable.</p>
+<h2 id=finishing-touches>Finishing touches</h2>
+<h3 id=fix-content>Fix content</h3>
+<p>Depending on the amount of customization that was done with each post with Jekyll, this step will require more or less effort. There are no hard and fast rules here except that <code>hugo server --watch</code> is your friend. Test your changes and fix errors as needed.</p>
+<h3 id=clean-up>Clean up</h3>
+<p>You&rsquo;ll want to remove the Jekyll configuration at this point. If you have anything else that isn&rsquo;t used, delete it.</p>
+<h2 id=a-practical-example-in-a-diff>A practical example in a diff</h2>
+<p><a href=http://heyitsalex.net/>Hey, it&rsquo;s Alex</a> was migrated in less than a <em>father-with-kids day</em> from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this <a href=https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610>diff</a>.</p>
+<div class=edit-meta>
+Last updated on 10 Mar 2014
+<br>
+Published on 10 Mar 2014
+<br><a href=https://github.com/thingsym/hugo-theme-techdoc/edit/master/exampleSite/content/post/migrate-from-jekyll.md class=edit-page><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class=pagination><a class="nav nav-prev" href=https://thingsym.github.io/hugo-theme-techdoc/post/creating-a-new-theme/ title="Creating a New Theme"><i class="fas fa-arrow-left" aria-hidden=true></i>&nbsp;Prev - Creating a New Theme</a>
+<a class="nav nav-next" href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/ title="Getting Started">Next - Getting Started <i class="fas fa-arrow-right" aria-hidden=true></i></a>
+</nav><footer><p class=powered>Powered by <a href=https://gohugo.io>Hugo</a>. Theme by <a href=https://themes.gohugo.io/hugo-theme-techdoc/>TechDoc</a>. Designed by <a href=https://github.com/thingsym/hugo-theme-techdoc>Thingsym</a>.</p>
+</footer>
+</main>
+<div class=sidebar>
+<nav class=open-menu>
+<ul>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc>Home</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/>Getting Started</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/installation/>Installation</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/configuration/>Configuration</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/screenshot/>Screenshot</a></li>
+</ul>
+</li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/>Sample Document</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/markdown-syntax/>Markdown Syntax</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/build-in-shortcodes/>Build-in Shortcodes</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/custom-shortcodes/>Custom Shortcodes</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/table-of-contents/>Table of Contents</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/search-shortcode/>Search Shortcode</a></li>
+</ul>
+</li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/>Chapter 1</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/1/>Chapter 1-1</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/2/>Chapter 1-2</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/3/>Chapter 1-3</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/4/>Chapter 1-4</a></li>
+</ul>
+</li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/>Chapter 2 (weighted)</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/3/>Chapter 2-3 (weight: 10)</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/4/>Chapter 2-4 (weight: 20)</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/2/>Chapter 2-2 (weight: 30)</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/1/>Chapter 2-1 (weight: 40)</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/5/>Chapter 2-0 (weight: no set)</a></li>
+</ul>
+</li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/>Chapter 3 (hierarchized)</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/1/>Chapter 3-1</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/>Chapter 3-2</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/1/>Chapter 3-2-1</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/2/>Chapter 3-2-2</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/3/>Chapter 3-2-3</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/4/>Chapter 3-2-4</a></li>
+</ul>
+</li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/3/>Chapter 3-3</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/4/>Chapter 3-4</a></li>
+</ul>
+</li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/>Chapter 4 (unlimited levels)</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/>Chapter 4-1</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/>Chapter 4-1-1</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/>Chapter 4-1-1-1</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/>Chapter 4-1-1-1-1</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/chapter4-1-1-1-1-1/>Chapter 4-1-1-1-1-1</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/chapter4-1-1-1-1-1/chapter4-1-1-1-1-1-1/>Chapter 4-1-1-1-1-1-1</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<div class=sidebar-footer></div>
+</div>
+</div><a href=# id=backtothetop-fixed class=backtothetop data-backtothetop-duration=600 data-backtothetop-easing=easeOutQuart data-backtothetop-fixed-fadein=1000 data-backtothetop-fixed-fadeout=1000 data-backtothetop-fixed-bottom=10 data-backtothetop-fixed-right=20>
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!doctype html><html lang=en-us>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>(Hu)go Template Primer - Hugo Techdoc Theme</title>
+<meta name=description content="put your description">
+<meta name=generator content="Hugo 0.88.1">
+<link href=https://thingsym.github.io/hugo-theme-techdoc/index.xml rel=alternate type=application/rss+xml>
+<link rel=canonical href=https://thingsym.github.io/hugo-theme-techdoc/post/goisforlovers/>
+<link rel=stylesheet href=https://thingsym.github.io/hugo-theme-techdoc/css/theme.min.css>
+<script src=https://use.fontawesome.com/releases/v5.0.6/js/all.js></script>
+<link rel=stylesheet href=https://thingsym.github.io/hugo-theme-techdoc/css/chroma.min.css>
+<script src=https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script>
+<script src=https://thingsym.github.io/hugo-theme-techdoc/js/bundle.js></script><style>:root{}</style>
+<meta property="og:title" content="(Hu)go Template Primer">
+<meta property="og:description" content="Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://thingsym.github.io/hugo-theme-techdoc/post/goisforlovers/"><meta property="og:image" content="https://thingsym.github.io/hugo-theme-techdoc/images/og-image.png"><meta property="article:section" content="post">
+<meta property="article:published_time" content="2014-04-02T00:00:00+00:00">
+<meta property="article:modified_time" content="2014-04-02T00:00:00+00:00"><meta property="og:site_name" content="Hugo Techdoc Theme">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://thingsym.github.io/hugo-theme-techdoc/images/og-image.png">
+<meta name=twitter:title content="(Hu)go Template Primer">
+<meta name=twitter:description content="Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.">
+<meta itemprop=name content="(Hu)go Template Primer">
+<meta itemprop=description content="Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates."><meta itemprop=datePublished content="2014-04-02T00:00:00+00:00">
+<meta itemprop=dateModified content="2014-04-02T00:00:00+00:00">
+<meta itemprop=wordCount content="1487"><meta itemprop=image content="https://thingsym.github.io/hugo-theme-techdoc/images/og-image.png">
+<meta itemprop=keywords content="go,golang,templates,themes,development,"></head>
+<body><div class=container><header>
+<h1>Hugo Techdoc Theme</h1><span class=version>Version 0.9.8</span><a href=https://github.com/thingsym/hugo-theme-techdoc class=github><i class="fab fa-github"></i></a>
+<p class=description>put your description</p>
+</header>
+<div class=global-menu>
+<nav>
+<ul>
+<li><a href=/hugo-theme-techdoc/>Home</a></li>
+<li><a href=https://twitter.com/thingsym>Twitter</a></li>
+<li><a href=/hugo-theme-techdoc/post/goisforlovers/>(Hu)go Template Primer</a></li>
+<li><a href=/hugo-theme-techdoc/about/>About Hugo</a></li>
+<li><a href=/hugo-theme-techdoc/post/hugoisforlovers/>Getting Started with Hugo</a></li><li class=parent><a href>Tutorials<i class="fas fa-angle-right"></i></a>
+<ul class=sub-menu>
+<li class=child><a href=/hugo-theme-techdoc/post/creating-a-new-theme/>Creating a New Theme</a></li>
+<li class=child><a href=/hugo-theme-techdoc/post/migrate-from-jekyll/>Migrating from Jekyll</a></li>
+</ul>
+</li></ul>
+</nav>
+</div>
+<div class=content-container>
+<main><h1>(Hu)go Template Primer</h1>
+<p>Hugo uses the excellent <a href=https://golang.org/>Go</a> <a href=https://golang.org/pkg/html/template/>html/template</a> library for
+its template engine. It is an extremely lightweight engine that provides a very
+small amount of logic. In our experience that it is just the right amount of
+logic to be able to create a good static website. If you have used other
+template systems from different languages or frameworks you will find a lot of
+similarities in Go templates.</p>
+<p>This document is a brief primer on using Go templates. The <a href=https://golang.org/pkg/html/template/>Go docs</a>
+provide more details.</p>
+<h2 id=introduction-to-go-templates>Introduction to Go Templates</h2>
+<p>Go templates provide an extremely simple template language. It adheres to the
+belief that only the most basic of logic belongs in the template or view layer.
+One consequence of this simplicity is that Go templates parse very quickly.</p>
+<p>A unique characteristic of Go templates is they are content aware. Variables and
+content will be sanitized depending on the context of where they are used. More
+details can be found in the <a href=https://golang.org/pkg/html/template/>Go docs</a>.</p>
+<h2 id=basic-syntax>Basic Syntax</h2>
+<p>Golang templates are HTML files with the addition of variables and
+functions.</p>
+<p><strong>Go variables and functions are accessible within {{ }}</strong></p>
+<p>Accessing a predefined variable &ldquo;foo&rdquo;:</p>
+<pre><code>{{ foo }}
+</code></pre>
+<p><strong>Parameters are separated using spaces</strong></p>
+<p>Calling the add function with input of 1, 2:</p>
+<pre><code>{{ add 1 2 }}
+</code></pre>
+<p><strong>Methods and fields are accessed via dot notation</strong></p>
+<p>Accessing the Page Parameter &ldquo;bar&rdquo;</p>
+<pre><code>{{ .Params.bar }}
+</code></pre>
+<p><strong>Parentheses can be used to group items together</strong></p>
+<pre><code>{{ if or (isset .Params &quot;alt&quot;) (isset .Params &quot;caption&quot;) }} Caption {{ end }}
+</code></pre>
+<h2 id=variables>Variables</h2>
+<p>Each Go template has a struct (object) made available to it. In hugo each
+template is passed either a page or a node struct depending on which type of
+page you are rendering. More details are available on the
+<a href=/layout/variables>variables</a> page.</p>
+<p>A variable is accessed by referencing the variable name.</p>
+<pre><code>&lt;title&gt;{{ .Title }}&lt;/title&gt;
+</code></pre>
+<p>Variables can also be defined and referenced.</p>
+<pre><code>{{ $address := &quot;123 Main St.&quot;}}
+{{ $address }}
+</code></pre>
+<h2 id=functions>Functions</h2>
+<p>Go template ship with a few functions which provide basic functionality. The Go
+template system also provides a mechanism for applications to extend the
+available functions with their own. <a href=/layout/functions>Hugo template
+functions</a> provide some additional functionality we believe
+are useful for building websites. Functions are called by using their name
+followed by the required parameters separated by spaces. Template
+functions cannot be added without recompiling hugo.</p>
+<p><strong>Example:</strong></p>
+<pre><code>{{ add 1 2 }}
+</code></pre>
+<h2 id=includes>Includes</h2>
+<p>When including another template you will pass to it the data it will be
+able to access. To pass along the current context please remember to
+include a trailing dot. The templates location will always be starting at
+the /layout/ directory within Hugo.</p>
+<p><strong>Example:</strong></p>
+<pre><code>{{ template &quot;chrome/header.html&quot; . }}
+</code></pre>
+<h2 id=logic>Logic</h2>
+<p>Go templates provide the most basic iteration and conditional logic.</p>
+<h3 id=iteration>Iteration</h3>
+<p>Just like in Go, the Go templates make heavy use of range to iterate over
+a map, array or slice. The following are different examples of how to use
+range.</p>
+<p><strong>Example 1: Using Context</strong></p>
+<pre><code>{{ range array }}
+    {{ . }}
+{{ end }}
+</code></pre>
+<p><strong>Example 2: Declaring value variable name</strong></p>
+<pre><code>{{range $element := array}}
+    {{ $element }}
+{{ end }}
+</code></pre>
+<p><strong>Example 2: Declaring key and value variable name</strong></p>
+<pre><code>{{range $index, $element := array}}
+    {{ $index }}
+    {{ $element }}
+{{ end }}
+</code></pre>
+<h3 id=conditionals>Conditionals</h3>
+<p>If, else, with, or, & and provide the framework for handling conditional
+logic in Go Templates. Like range, each statement is closed with <code>end</code>.</p>
+<p>Go Templates treat the following values as false:</p>
+<ul>
+<li>false</li>
+<li>0</li>
+<li>any array, slice, map, or string of length zero</li>
+</ul>
+<p><strong>Example 1: If</strong></p>
+<pre><code>{{ if isset .Params &quot;title&quot; }}&lt;h4&gt;{{ index .Params &quot;title&quot; }}&lt;/h4&gt;{{ end }}
+</code></pre>
+<p><strong>Example 2: If -> Else</strong></p>
+<pre><code>{{ if isset .Params &quot;alt&quot; }}
+    {{ index .Params &quot;alt&quot; }}
+{{else}}
+    {{ index .Params &quot;caption&quot; }}
+{{ end }}
+</code></pre>
+<p><strong>Example 3: And & Or</strong></p>
+<pre><code>{{ if and (or (isset .Params &quot;title&quot;) (isset .Params &quot;caption&quot;)) (isset .Params &quot;attr&quot;)}}
+</code></pre>
+<p><strong>Example 4: With</strong></p>
+<p>An alternative way of writing &ldquo;if&rdquo; and then referencing the same value
+is to use &ldquo;with&rdquo; instead. With rebinds the context <code>.</code> within its scope,
+and skips the block if the variable is absent.</p>
+<p>The first example above could be simplified as:</p>
+<pre><code>{{ with .Params.title }}&lt;h4&gt;{{ . }}&lt;/h4&gt;{{ end }}
+</code></pre>
+<p><strong>Example 5: If -> Else If</strong></p>
+<pre><code>{{ if isset .Params &quot;alt&quot; }}
+    {{ index .Params &quot;alt&quot; }}
+{{ else if isset .Params &quot;caption&quot; }}
+    {{ index .Params &quot;caption&quot; }}
+{{ end }}
+</code></pre>
+<h2 id=pipes>Pipes</h2>
+<p>One of the most powerful components of Go templates is the ability to
+stack actions one after another. This is done by using pipes. Borrowed
+from unix pipes, the concept is simple, each pipeline&rsquo;s output becomes the
+input of the following pipe.</p>
+<p>Because of the very simple syntax of Go templates, the pipe is essential
+to being able to chain together function calls. One limitation of the
+pipes is that they only can work with a single value and that value
+becomes the last parameter of the next pipeline.</p>
+<p>A few simple examples should help convey how to use the pipe.</p>
+<p><strong>Example 1 :</strong></p>
+<pre><code>{{ if eq 1 1 }} Same {{ end }}
+</code></pre>
+<p>is the same as</p>
+<pre><code>{{ eq 1 1 | if }} Same {{ end }}
+</code></pre>
+<p>It does look odd to place the if at the end, but it does provide a good
+illustration of how to use the pipes.</p>
+<p><strong>Example 2 :</strong></p>
+<pre><code>{{ index .Params &quot;disqus_url&quot; | html }}
+</code></pre>
+<p>Access the page parameter called &ldquo;disqus_url&rdquo; and escape the HTML.</p>
+<p><strong>Example 3 :</strong></p>
+<pre><code>{{ if or (or (isset .Params &quot;title&quot;) (isset .Params &quot;caption&quot;)) (isset .Params &quot;attr&quot;)}}
+Stuff Here
+{{ end }}
+</code></pre>
+<p>Could be rewritten as</p>
+<pre><code>{{  isset .Params &quot;caption&quot; | or isset .Params &quot;title&quot; | or isset .Params &quot;attr&quot; | if }}
+Stuff Here
+{{ end }}
+</code></pre>
+<h2 id=context-aka-the-dot>Context (aka. the dot)</h2>
+<p>The most easily overlooked concept to understand about Go templates is that {{ . }}
+always refers to the current context. In the top level of your template this
+will be the data set made available to it. Inside of a iteration it will have
+the value of the current item. When inside of a loop the context has changed. .
+will no longer refer to the data available to the entire page. If you need to
+access this from within the loop you will likely want to set it to a variable
+instead of depending on the context.</p>
+<p><strong>Example:</strong></p>
+<pre><code>  {{ $title := .Site.Title }}
+  {{ range .Params.tags }}
+    &lt;li&gt; &lt;a href=&quot;{{ $baseurl }}/tags/{{ . | urlize }}&quot;&gt;{{ . }}&lt;/a&gt; - {{ $title }} &lt;/li&gt;
+  {{ end }}
+</code></pre>
+<p>Notice how once we have entered the loop the value of {{ . }} has changed. We
+have defined a variable outside of the loop so we have access to it from within
+the loop.</p>
+<h1 id=hugo-parameters>Hugo Parameters</h1>
+<p>Hugo provides the option of passing values to the template language
+through the site configuration (for sitewide values), or through the meta
+data of each specific piece of content. You can define any values of any
+type (supported by your front matter/config format) and use them however
+you want to inside of your templates.</p>
+<h2 id=using-content-page-parameters>Using Content (page) Parameters</h2>
+<p>In each piece of content you can provide variables to be used by the
+templates. This happens in the <a href=/content/front-matter>front matter</a>.</p>
+<p>An example of this is used in this documentation site. Most of the pages
+benefit from having the table of contents provided. Sometimes the TOC just
+doesn&rsquo;t make a lot of sense. We&rsquo;ve defined a variable in our front matter
+of some pages to turn off the TOC from being displayed.</p>
+<p>Here is the example front matter:</p>
+<pre tabindex=0><code>---
+title: &quot;Permalinks&quot;
+date: &quot;2013-11-18&quot;
+aliases:
+  - &quot;/doc/permalinks/&quot;
+groups: [&quot;extras&quot;]
+groups_weight: 30
+notoc: true
+---
+</code></pre><p>Here is the corresponding code inside of the template:</p>
+<pre><code>  {{ if not .Params.notoc }}
+    &lt;div id=&quot;toc&quot; class=&quot;well col-md-4 col-sm-6&quot;&gt;
+    {{ .TableOfContents }}
+    &lt;/div&gt;
+  {{ end }}
+</code></pre>
+<h2 id=using-site-config-parameters>Using Site (config) Parameters</h2>
+<p>In your top-level configuration file (eg, <code>config.yaml</code>) you can define site
+parameters, which are values which will be available to you in chrome.</p>
+<p>For instance, you might declare:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>params</span>:
+  <span style=color:#f92672>CopyrightHTML</span>: <span style=color:#e6db74>&#34;Copyright &amp;#xA9; 2013 John Doe. All Rights Reserved.&#34;</span>
+  <span style=color:#f92672>TwitterUser</span>: <span style=color:#e6db74>&#34;spf13&#34;</span>
+  <span style=color:#f92672>SidebarRecentLimit</span>: <span style=color:#ae81ff>5</span>
+</code></pre></div><p>Within a footer layout, you might then declare a <code>&lt;footer></code> which is only
+provided if the <code>CopyrightHTML</code> parameter is provided, and if it is given,
+you would declare it to be HTML-safe, so that the HTML entity is not escaped
+again. This would let you easily update just your top-level config file each
+January 1st, instead of hunting through your templates.</p>
+<pre tabindex=0><code>{{if .Site.Params.CopyrightHTML}}&lt;footer&gt;
+&lt;div class=&quot;text-center&quot;&gt;{{.Site.Params.CopyrightHTML | safeHtml}}&lt;/div&gt;
+&lt;/footer&gt;{{end}}
+</code></pre><p>An alternative way of writing the &ldquo;if&rdquo; and then referencing the same value
+is to use &ldquo;with&rdquo; instead. With rebinds the context <code>.</code> within its scope,
+and skips the block if the variable is absent:</p>
+<pre tabindex=0><code>{{with .Site.Params.TwitterUser}}&lt;span class=&quot;twitter&quot;&gt;
+&lt;a href=&quot;https://twitter.com/{{.}}&quot; rel=&quot;author&quot;&gt;
+&lt;img src=&quot;/images/twitter.png&quot; width=&quot;48&quot; height=&quot;48&quot; title=&quot;Twitter: {{.}}&quot;
+ alt=&quot;Twitter&quot;&gt;&lt;/a&gt;
+&lt;/span&gt;{{end}}
+</code></pre><p>Finally, if you want to pull &ldquo;magic constants&rdquo; out of your layouts, you can do
+so, such as in this example:</p>
+<pre tabindex=0><code>&lt;nav class=&quot;recent&quot;&gt;
+  &lt;h1&gt;Recent Posts&lt;/h1&gt;
+  &lt;ul&gt;{{range first .Site.Params.SidebarRecentLimit .Site.Recent}}
+    &lt;li&gt;&lt;a href=&quot;{{.RelPermalink}}&quot;&gt;{{.Title}}&lt;/a&gt;&lt;/li&gt;
+  {{end}}&lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre><div class=edit-meta>
+Last updated on 2 Apr 2014
+<br>
+Published on 2 Apr 2014
+<br><a href=https://github.com/thingsym/hugo-theme-techdoc/edit/master/exampleSite/content/post/goisforlovers.md class=edit-page><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class=pagination><a class="nav nav-prev" href=https://thingsym.github.io/hugo-theme-techdoc/post/migrate-from-jekyll/ title="Migrate to Hugo from Jekyll"><i class="fas fa-arrow-left" aria-hidden=true></i>&nbsp;Prev - Migrate to Hugo from Jekyll</a>
+<a class="nav nav-next" href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/ title="Getting Started">Next - Getting Started <i class="fas fa-arrow-right" aria-hidden=true></i></a>
+</nav><footer><p class=powered>Powered by <a href=https://gohugo.io>Hugo</a>. Theme by <a href=https://themes.gohugo.io/hugo-theme-techdoc/>TechDoc</a>. Designed by <a href=https://github.com/thingsym/hugo-theme-techdoc>Thingsym</a>.</p>
+</footer>
+</main>
+<div class=sidebar>
+<nav class=open-menu>
+<ul>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc>Home</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/>Getting Started</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/installation/>Installation</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/configuration/>Configuration</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/screenshot/>Screenshot</a></li>
+</ul>
+</li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/>Sample Document</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/markdown-syntax/>Markdown Syntax</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/build-in-shortcodes/>Build-in Shortcodes</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/custom-shortcodes/>Custom Shortcodes</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/table-of-contents/>Table of Contents</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/search-shortcode/>Search Shortcode</a></li>
+</ul>
+</li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/>Chapter 1</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/1/>Chapter 1-1</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/2/>Chapter 1-2</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/3/>Chapter 1-3</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/4/>Chapter 1-4</a></li>
+</ul>
+</li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/>Chapter 2 (weighted)</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/3/>Chapter 2-3 (weight: 10)</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/4/>Chapter 2-4 (weight: 20)</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/2/>Chapter 2-2 (weight: 30)</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/1/>Chapter 2-1 (weight: 40)</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/5/>Chapter 2-0 (weight: no set)</a></li>
+</ul>
+</li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/>Chapter 3 (hierarchized)</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/1/>Chapter 3-1</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/>Chapter 3-2</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/1/>Chapter 3-2-1</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/2/>Chapter 3-2-2</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/3/>Chapter 3-2-3</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/4/>Chapter 3-2-4</a></li>
+</ul>
+</li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/3/>Chapter 3-3</a></li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/4/>Chapter 3-4</a></li>
+</ul>
+</li>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/>Chapter 4 (unlimited levels)</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/>Chapter 4-1</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/>Chapter 4-1-1</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/>Chapter 4-1-1-1</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/>Chapter 4-1-1-1-1</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/chapter4-1-1-1-1-1/>Chapter 4-1-1-1-1-1</a>
+<ul class=sub-menu>
+<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/chapter4-1-1-1-1-1/chapter4-1-1-1-1-1-1/>Chapter 4-1-1-1-1-1-1</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<div class=sidebar-footer></div>
+</div>
+</div><a href=# id=backtothetop-fixed class=backtothetop data-backtothetop-duration=600 data-backtothetop-easing=easeOutQuart data-backtothetop-fixed-fadein=1000 data-backtothetop-fixed-fadeout=1000 data-backtothetop-fixed-bottom=10 data-backtothetop-fixed-right=20>
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>
