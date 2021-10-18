@@ -1,6 +1,6 @@
 {
   "name": "hugo-theme-techdoc",
-  "version": "0.9.7",
+  "version": "0.9.8",
   "description": "The Techdoc is a Hugo Theme for technical documentation.",
   "main": "gulpfile.js",
   "author": "Thingsym",
