@@ -50,16 +50,16 @@ h3 {
 	line-height: calc-stack.line-height(variable.$default-line-space, 160%);
 }
 h4 {
-	font-size: 140%;
-	line-height: calc-stack.line-height(variable.$default-line-space, 140%);
+	font-size: 125%;
+	line-height: calc-stack.line-height(variable.$default-line-space, 125%);
 }
 h5 {
-	font-size: 120%;
-	line-height: calc-stack.line-height(variable.$default-line-space, 120%);
-}
-h6 {
 	font-size: 100%;
 	line-height: calc-stack.line-height(variable.$default-line-space, 100%);
+}
+h6 {
+	font-size: 80%;
+	line-height: calc-stack.line-height(variable.$default-line-space, 80%);
 }
 
 a {
