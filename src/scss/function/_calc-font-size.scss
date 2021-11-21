@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+// Built-In Modules
+@use 'sass:math';
+
+// Included Modules
 @use 'strip-unit';
 
 // ===================================================================
@@ -7,18 +11,20 @@
 // ===================================================================
 
 @function px2em($px, $base: 16) {
-	@return strip-unit.strip-unit($px) / strip-unit.strip-unit($base) * 1em;
+	@return math.div(strip-unit.strip-unit($px), strip-unit.strip-unit($base)) * 1em;
+
 }
 
 @function px2rem($px, $base: 16) {
-	@return strip-unit.strip-unit($px) / strip-unit.strip-unit($base) * 1rem;
+	@return math.div(strip-unit.strip-unit($px), strip-unit.strip-unit($base)) * 1rem;
 }
+
 // ===================================================================
 // percent to px
 // ===================================================================
 
 @function percent2px($percent, $base: 16) {
-  @return strip-unit.strip-unit($base) * (strip-unit.strip-unit($percent) / 100) * 1px;
+  @return strip-unit.strip-unit($base) * math.div(strip-unit.strip-unit($percent), 100) * 1px;
 }
 
 // ===================================================================
@@ -26,11 +32,11 @@
 // ===================================================================
 
 @function percent2em($percent, $base: 16) {
-  @return (strip-unit.strip-unit($base) * (strip-unit.strip-unit($percent) / 100)) / strip-unit.strip-unit($base) * 1em;
+  @return math.div(strip-unit.strip-unit($base) * math.div(strip-unit.strip-unit($percent), 100), strip-unit.strip-unit($base)) * 1em;
 }
 
 @function percent2rem($percent, $base: 16) {
-  @return (strip-unit.strip-unit($base) * (strip-unit.strip-unit($percent) / 100)) / strip-unit.strip-unit($base) * 1rem;
+  @return math.div(strip-unit.strip-unit($base) * math.div(strip-unit.strip-unit($percent), 100), strip-unit.strip-unit($base)) * 1rem;
 }
 
 // ===================================================================

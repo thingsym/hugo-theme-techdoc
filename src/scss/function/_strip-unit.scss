@@ -6,7 +6,7 @@
 
 @function strip-unit($value) {
 	@if meta.type-of($value) == 'number' and math.is-unitless($value) == false {
-		@return $value / ($value * 0 + 1);
+		@return math.div($value, $value * 0 + 1);
 	} @else if meta.type-of($value) == 'number' {
 		@return $value;
 	} @else {

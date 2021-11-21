@@ -9,7 +9,7 @@
 
 @function stack($line-height: 1, $font-size: 16px, $base: 16px) {
 	$line-height: strip-unit.strip-unit($line-height) * strip-unit.strip-unit($base);
-	@return $line-height / strip-unit.strip-unit($font-size) * 1rem;
+	@return math.div($line-height, strip-unit.strip-unit($font-size)) * 1rem;
 }
 
 @function line-height($line-space: 4px, $font-size: 16px, $base: 16px) {
@@ -24,5 +24,5 @@
 	$font-size: strip-unit.strip-unit($font-size);
 	$line-space: strip-unit.strip-unit($line-space);
 
-	@return (($line-space * 2) + $font-size) / $font-size;
+	@return math.div($line-space * 2 + $font-size, $font-size);
 }
