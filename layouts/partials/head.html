@@ -15,12 +15,16 @@
 <link href="{{ .Site.BaseURL }}/index.xml" rel="alternate" type="application/rss+xml">
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="stylesheet" href="{{"css/theme.min.css" | absURL}}">
-<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-{{ partial "meta/chroma.html" . -}}
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.1.1/js/fontawesome.min.js"
+    integrity="sha256-8VIPpMbn140LuBA5s/e/YBbGen4ny3AdkwmoIvfGHeU=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"
+    integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"
+    integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 <script src="{{ "js/bundle.js" | absURL }}"></script>
+{{ partial "meta/chroma.html" . -}}
 {{- partial "meta/google-analytics-async.html" . -}}
 {{- partial "meta/tag-manager.html" . -}}
 {{- partial "meta/google-site-verification.html" . -}}
