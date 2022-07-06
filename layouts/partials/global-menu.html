@@ -5,18 +5,32 @@
 <ul>
 {{- range .Site.Menus.main.ByWeight -}}
 {{ if .HasChildren -}}
-<li class="parent{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}"><a href="{{ .URL }}">{{- .Name -}} <i class="fas fa-angle-right"></i></a>
+<li class="parent{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}">{{template "menu-item" dict "item" .}}
 <ul class="sub-menu">
 {{ range .Children -}}
-<li class="child{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a></li>
+<li class="child{{ if $currentPage.HasMenuCurrent "main" . }} active{{ end }}">{{template "menu-item" dict "item" .}}</li>
 {{ end -}}
 </ul>
 </li>
 {{- else }}
-<li{{ if $currentPage.HasMenuCurrent "main" . }} class="active"{{ end }}><a href="{{ .URL }}">{{- .Name -}}</a></li>
+<li{{ if $currentPage.HasMenuCurrent "main" . }} class="active"{{ end }}>{{template "menu-item" dict "item" .}}</li>
 {{- end -}}
 {{- end -}}
 </ul>
 </nav>
 </div>
 {{- end }}
+
+{{define "menu-item"}}
+{{- with .item -}}
+<a href="{{ .URL }}">
+  {{- with .Pre -}}{{- . -}}{{- end -}}
+  {{- .Name -}}
+  {{- with .Post -}}{{- . -}}{{- end -}}
+  {{ if .HasChildren -}}
+  <i class="fas fa-angle-right"></i>
+  {{ end -}}  
+</a>
+{{- end -}}
+{{- end -}}
+
