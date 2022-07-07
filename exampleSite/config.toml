@@ -74,11 +74,17 @@ enableMissingTranslationPlaceholders = false
         name = "Home"
         url = "/"
         weight = 1
+        identifier = 'home'
 
     [[menu.main]]
         name = "Twitter"
         url = "https://twitter.com/thingsym"
         weight = 2
+        identifier = 'twitter'
+        pre = "<b>pre!</b>"
+        post = "<b>post!</b>"
+        [menu.main.params]
+          class = 'twitter-menu-item'
 
 # Markup configure section
 # See https://gohugo.io/getting-started/configuration-markup/
