@@ -75,14 +75,15 @@ enableMissingTranslationPlaceholders = false
         url = "/"
         weight = 1
         identifier = 'home'
+        pre = "<i class='fa fa-heart'></i>&nbsp;"
 
     [[menu.main]]
         name = "Twitter"
         url = "https://twitter.com/thingsym"
         weight = 2
         identifier = 'twitter'
-        pre = "<b>pre!</b>"
-        post = "<b>post!</b>"
+        pre = "<b>pre!</b> "
+        post = " <b>post!</b>"
         [menu.main.params]
           class = 'twitter-menu-item'
 
