@@ -27,9 +27,9 @@
   {{- with .Pre -}}{{- . -}}{{- end -}}
   {{- .Name -}}
   {{- with .Post -}}{{- . -}}{{- end -}}
-  {{ if .HasChildren -}}
+  {{- if .HasChildren -}}
   <i class="fas fa-angle-right"></i>
-  {{ end -}}
+  {{- end -}}
 </a>
 {{- end -}}
 {{- end -}}
