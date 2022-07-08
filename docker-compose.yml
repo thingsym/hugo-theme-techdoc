@@ -1,6 +1,6 @@
 version: '3'
 services:
-  server:
+  hugo:
     image: klakegg/hugo:0.81.0-alpine
     volumes:
       - .:/hugo/themes/hugo-theme-techdoc
