@@ -2,10 +2,11 @@
 
 $default-layout-width: 1024px !default;
 
-$default-font-size: 100% !default;
-$default-line-space: 8px !default;
-$default-line-height: calc-stack.line-height($default-line-space, $default-font-size) !default;
-$default-stack: calc-stack.stack($default-line-height, $default-font-size) * 4 !default;
+$default-base-font-size: 18px !default;
+$default-font-size: 18px !default;
+$default-line-space: 6px !default;
+$default-line-height: calc-stack.line-height($default-line-space, $default-font-size, $default-base-font-size) !default;
+$default-stack: calc-stack.stack($default-line-height, $default-font-size, $default-base-font-size) !default;
 
 $default-layout-margin: 0 !default;
 $default-layout-padding: $default-stack !default;

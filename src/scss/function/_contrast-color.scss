@@ -22,5 +22,5 @@
 }
 
 @function brightness($color: null) {
-	@return ((color.red($color) * 299) + (color.green($color) * 587) + (color.blue($color) * 114)) / 1000;
+	@return math.div((color.red($color) * 299) + (color.green($color) * 587) + (color.blue($color) * 114), 1000);
 }
