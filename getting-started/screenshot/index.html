@@ -8,11 +8,11 @@
 <link href=https://thingsym.github.io/hugo-theme-techdoc/index.xml rel=alternate type=application/rss+xml>
 <link rel=canonical href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/screenshot/>
 <link rel=stylesheet href=https://thingsym.github.io/hugo-theme-techdoc/css/theme.min.css>
-<script src=https://use.fontawesome.com/releases/v5.0.6/js/all.js></script>
 <link rel=stylesheet href=https://thingsym.github.io/hugo-theme-techdoc/css/chroma.min.css>
-<script src=https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js></script>
-<script src=https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js></script>
-<script src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script>
+<script defer src=https://thingsym.github.io/hugo-theme-techdoc/js/fontawesome6/all.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck=" crossorigin=anonymous></script>
 <script src=https://thingsym.github.io/hugo-theme-techdoc/js/bundle.js></script><style>:root{}</style>
 <meta property="og:title" content="Screenshot">
 <meta property="og:description" content="Theme color Menu style Open Menu Slide Menu Edit link ">
@@ -30,7 +30,7 @@
 <meta itemprop=wordCount content="10"><meta itemprop=image content="https://thingsym.github.io/hugo-theme-techdoc/images/og-image.png">
 <meta itemprop=keywords content></head>
 <body><div class=container><header>
-<h1>Hugo Techdoc Theme</h1><span class=version>Version 0.9.8</span><a href=https://github.com/thingsym/hugo-theme-techdoc class=github><i class="fab fa-github"></i></a>
+<h1>Hugo Techdoc Theme</h1><span class=version>Version 0.9.9</span><a href=https://github.com/thingsym/hugo-theme-techdoc class=github><i class="fab fa-github"></i></a>
 <p class=description>put your description</p>
 </header>
 <div class=global-menu>
@@ -69,17 +69,17 @@ Published on 26 Oct 2019
 </footer>
 </main>
 <div class=sidebar>
-<nav class=open-menu>
+<nav class=slide-menu>
 <ul>
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc>Home</a></li>
-<li class=parent><a href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/>Getting Started</a>
+<li class="parent has-sub-menu"><a href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/>Getting Started<span class="mark opened">-</span></a>
 <ul class=sub-menu>
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/installation/>Installation</a></li>
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/configuration/>Configuration</a></li>
 <li class=active><a href=https://thingsym.github.io/hugo-theme-techdoc/getting-started/screenshot/>Screenshot</a></li>
 </ul>
 </li>
-<li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/>Sample Document</a>
+<li class=has-sub-menu><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/>Sample Document<span class="mark closed">+</span></a>
 <ul class=sub-menu>
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/markdown-syntax/>Markdown Syntax</a></li>
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/build-in-shortcodes/>Build-in Shortcodes</a></li>
@@ -88,7 +88,7 @@ Published on 26 Oct 2019
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/sample/search-shortcode/>Search Shortcode</a></li>
 </ul>
 </li>
-<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/>Chapter 1</a>
+<li class=has-sub-menu><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/>Chapter 1<span class="mark closed">+</span></a>
 <ul class=sub-menu>
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/1/>Chapter 1-1</a></li>
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/2/>Chapter 1-2</a></li>
@@ -96,7 +96,7 @@ Published on 26 Oct 2019
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter1/4/>Chapter 1-4</a></li>
 </ul>
 </li>
-<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/>Chapter 2 (weighted)</a>
+<li class=has-sub-menu><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/>Chapter 2 (weighted)<span class="mark closed">+</span></a>
 <ul class=sub-menu>
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/3/>Chapter 2-3 (weight: 10)</a></li>
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/4/>Chapter 2-4 (weight: 20)</a></li>
@@ -105,10 +105,10 @@ Published on 26 Oct 2019
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter2/5/>Chapter 2-0 (weight: no set)</a></li>
 </ul>
 </li>
-<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/>Chapter 3 (hierarchized)</a>
+<li class=has-sub-menu><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/>Chapter 3 (hierarchized)<span class="mark closed">+</span></a>
 <ul class=sub-menu>
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/1/>Chapter 3-1</a></li>
-<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/>Chapter 3-2</a>
+<li class=has-sub-menu><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/>Chapter 3-2<span class="mark closed">+</span></a>
 <ul class=sub-menu>
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/1/>Chapter 3-2-1</a></li>
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/2/>Chapter 3-2-2</a></li>
@@ -120,17 +120,17 @@ Published on 26 Oct 2019
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter3/4/>Chapter 3-4</a></li>
 </ul>
 </li>
-<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/>Chapter 4 (unlimited levels)</a>
+<li class=has-sub-menu><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/>Chapter 4 (unlimited levels)<span class="mark closed">+</span></a>
 <ul class=sub-menu>
-<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/>Chapter 4-1</a>
+<li class=has-sub-menu><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/>Chapter 4-1<span class="mark closed">+</span></a>
 <ul class=sub-menu>
-<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/>Chapter 4-1-1</a>
+<li class=has-sub-menu><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/>Chapter 4-1-1<span class="mark closed">+</span></a>
 <ul class=sub-menu>
-<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/>Chapter 4-1-1-1</a>
+<li class=has-sub-menu><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/>Chapter 4-1-1-1<span class="mark closed">+</span></a>
 <ul class=sub-menu>
-<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/>Chapter 4-1-1-1-1</a>
+<li class=has-sub-menu><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/>Chapter 4-1-1-1-1<span class="mark closed">+</span></a>
 <ul class=sub-menu>
-<li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/chapter4-1-1-1-1-1/>Chapter 4-1-1-1-1-1</a>
+<li class=has-sub-menu><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/chapter4-1-1-1-1-1/>Chapter 4-1-1-1-1-1<span class="mark closed">+</span></a>
 <ul class=sub-menu>
 <li><a href=https://thingsym.github.io/hugo-theme-techdoc/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/chapter4-1-1-1-1-1/chapter4-1-1-1-1-1-1/>Chapter 4-1-1-1-1-1-1</a>
 </li>
