@@ -265,6 +265,19 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 0.9.9 - 2022.07.08
+	* fix scss
+	* bump up version on jquery, jquery.easing and clipboard
+	* update node package dependencies
+	* change service name
+	* change fontawesome delivery from cdn to self-host
+	* fix config.toml
+	* id and class elements added to menu items
+	* pre and post elements added to menu items [#48]
+	* use SRI for CDN js sources [#45]
+	* fix heading styles
+	* change to using math.div for division
+
 * Version 0.9.8 - 2021.10.18
 	* fix sample document
 	* edit README
