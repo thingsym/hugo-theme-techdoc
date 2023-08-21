@@ -1,7 +1,7 @@
 version: '3'
 services:
   hugo:
-    image: klakegg/hugo:0.81.0-alpine
+    image: klakegg/hugo:0.101.0-alpine
     volumes:
       - .:/hugo/themes/hugo-theme-techdoc
     ports:
