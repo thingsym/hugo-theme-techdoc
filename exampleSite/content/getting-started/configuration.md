@@ -12,58 +12,59 @@ For an example of `config.toml`, see [config.toml](https://github.com/thingsym/h
 
 ## Params
 
-    # Source Code repository section
-    description = "put your description"
-    github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "0.9.9"
+		# Source Code repository section
+		description = "put your description"
+		github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
+		version = "0.9.9"
 
-    # Documentation repository section
-    # documentation repository (set edit link to documentation repository)
-    github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    github_doc_repository_path = ""
+		# Documentation repository section
+		# documentation repository (set edit link to documentation repository)
+		github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
+		github_doc_repository_path = ""
+		github_doc_repository_branch = "master"
 
-    # Analytic section
-    google_analytics_id = "" # Your Google Analytics tracking id
-    tag_manager_container_id = "" # Your Google Tag Manager container id
-    google_site_verification = "" # Your Google Site Verification for Search Console
+		# Analytic section
+		google_analytics_id = "" # Your Google Analytics tracking id
+		tag_manager_container_id = "" # Your Google Tag Manager container id
+		google_site_verification = "" # Your Google Site Verification for Search Console
 
-    # Open Graph and Twitter Cards settings section
-    # Open Graph settings for each page are set on the front matter.
-    # See https://gohugo.io/templates/internal/#open-graph
-    # See https://gohugo.io/templates/internal/#twitter-cards
-    title = "Hugo Techdoc Theme"
-    images = ["images/og-image.png"] # Open graph images are placed in `static/images`
+		# Open Graph and Twitter Cards settings section
+		# Open Graph settings for each page are set on the front matter.
+		# See https://gohugo.io/templates/internal/#open-graph
+		# See https://gohugo.io/templates/internal/#twitter-cards
+		title = "Hugo Techdoc Theme"
+		images = ["images/og-image.png"] # Open graph images are placed in `static/images`
 
-    # Theme settings section
-    # Theme color
-    # See color value reference https://developer.mozilla.org/en-US/docs/Web/CSS/color
-    custom_font_color = ""
-    custom_background_color = ""
+		# Theme settings section
+		# Theme color
+		# See color value reference https://developer.mozilla.org/en-US/docs/Web/CSS/color
+		custom_font_color = ""
+		custom_background_color = ""
 
-    # Documentation Menu section
-    # Menu style settings
-    menu_style = "open-menu" # "open-menu" or "slide-menu" or "" blank is as no sidebar
+		# Documentation Menu section
+		# Menu style settings
+		menu_style = "open-menu" # "open-menu" or "slide-menu" or "" blank is as no sidebar
 
-    # Date format
-    dateformat = "" # default "2 Jan 2006"
-    # See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+		# Date format
+		dateformat = "" # default "2 Jan 2006"
+		# See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
 
-    # path name excluded from documentation menu
-    menu_exclusion = [
-        "archives",
-        "archive",
-        "blog",
-        "entry",
-        "post",
-        "posts",
-    ]
+		# path name excluded from documentation menu
+		menu_exclusion = [
+				"archives",
+				"archive",
+				"blog",
+				"entry",
+				"post",
+				"posts",
+		]
 
-    # Algolia site search section
-    # See https://www.algolia.com/doc/
-    algolia_search_enable = true
-    algolia_indexName = "hugo-demo-techdoc"
-    algolia_appId = "7W4SAN4PLK"
-    algolia_apiKey = "cbf12a63ff72d9c5dc0c10c195cf9128" # Search-Only API Key
+		# Algolia site search section
+		# See https://www.algolia.com/doc/
+		algolia_search_enable = true
+		algolia_indexName = "hugo-demo-techdoc"
+		algolia_appId = "7W4SAN4PLK"
+		algolia_apiKey = "cbf12a63ff72d9c5dc0c10c195cf9128" # Search-Only API Key
 
 #### `description`
 
@@ -152,7 +153,7 @@ default: `""`
 
 Documentation Menu style, Open Menu or Slide Menu
 
-default: `open-menu`  
+default: `open-menu`
 value: `open-menu` | `slide-menu`
 
 #### `dateformat`
@@ -166,13 +167,13 @@ Path name excluded from documentation menu
 By default, we exclude commonly used folder names in blogs.
 
 default: `[
-        "archives",
-        "archive",
-        "blog",
-        "entry",
-        "post",
-        "posts"
-    ]`
+				"archives",
+				"archive",
+				"blog",
+				"entry",
+				"post",
+				"posts"
+		]`
 
 
 #### `algolia_search_enable`
