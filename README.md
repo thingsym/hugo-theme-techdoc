@@ -53,7 +53,7 @@ Hugo minimum version: 0.60.0
 
 Default Markdown parser library `Goldmark` compatible
 
-### Install Hugo theme on your project
+### Install Hugo theme on your project as a git submodule
 
 If you have git installed, you can include hugo-theme-techdoc repository into your core repository as submodule using `git submodule` within your project directory.
 
@@ -63,6 +63,22 @@ git submodule add https://github.com/thingsym/hugo-theme-techdoc.git themes/hugo
 ```
 
 For more information read [the Hugo documentation](https://gohugo.io/getting-started/quick-start/).
+
+### Or install Hugo theme on your project as a Hugo module
+
+If you have Go installed, you can add hugo-theme-techdoc to your site as a Hugo module instead of a git submodule. Navigate to your Hugo project root and edit your `hugo.toml`:
+
+```toml
+[module]
+[[module.imports]]
+path = 'github.com/thingsym/hugo-theme-techdoc'
+```
+
+Then, to install/update the hugo-theme-techdoc module, run:
+
+```
+hugo mod get -u
+```
 
 ### Or download Hugo theme on your project
 
