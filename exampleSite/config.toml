@@ -23,6 +23,7 @@ enableMissingTranslationPlaceholders = false
     # documentation repository (set edit link to documentation repository)
     github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
     github_doc_repository_path = ""
+    github_doc_repository_branch = "master"
 
     # Analytic section
     google_analytics_id = "" # Your Google Analytics tracking id
