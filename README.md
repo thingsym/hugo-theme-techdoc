@@ -281,6 +281,11 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 1.0.0 - 2022.08.21
+	* update hugo docker image
+	* update npm dependencies
+	* allow to set branch of github documentation repository [#64]
+	* enable use as a Hugo module [#63]
 * Version 0.9.9 - 2022.07.08
 	* fix scss
 	* bump up version on jquery, jquery.easing and clipboard
@@ -293,7 +298,6 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 	* use SRI for CDN js sources [#45]
 	* fix heading styles
 	* change to using math.div for division
-
 * Version 0.9.8 - 2021.10.18
 	* fix sample document
 	* edit README
@@ -301,7 +305,6 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 	* add github_doc_repository_path
 	* change to relative link
 	* add workflows for publishing demo site to gh-pages
-
 * Version 0.9.7 - 2021.03.08
 	* add docker-compose.yml for development environment
 	* change keyboard event from event.keyCode to event.key because it is deprecated
