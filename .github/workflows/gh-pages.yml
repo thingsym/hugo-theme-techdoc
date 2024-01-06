@@ -1,4 +1,4 @@
-name: Publish demo site to Github Pages
+name: Publish demo site to GitHub Pages
 
 on:
   push:
@@ -11,18 +11,18 @@ jobs:
     timeout-minutes: 30
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.101.0'
+          hugo-version: '0.121.2'
           extended: true
 
       - name: Build demo website to public directory
         run: |
           cd ./exampleSite
-          hugo --config ../.github/demo_config.toml --themesDir ../.. --minify
+          hugo --config ../.github/demo_hugo.toml --themesDir ../.. --minify
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -30,4 +30,4 @@ jobs:
           personal_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./exampleSite/public
-          commit_message: 'deploy to GitHub Pages via GitHub Actions'
+          commit_message: 'Deploy to GitHub Pages via GitHub Actions'

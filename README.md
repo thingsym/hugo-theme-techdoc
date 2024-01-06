@@ -91,9 +91,9 @@ git clone https://github.com/thingsym/hugo-theme-techdoc.git
 
 ### Configure
 
-You may specify options in config.toml (or config.yaml/config.json) of your site to make use of this theme's features.
+You may specify options in hugo.toml (or hugo.yaml/hugo.json) of your site to make use of this theme's features.
 
-For an example of `config.toml`, [config.toml](https://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/config.toml) in exampleSite.
+For an example of `hugo.toml`, [hugo.toml](https://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/hugo.toml) in exampleSite.
 
 ### Update Hugo theme for git submodule
 
