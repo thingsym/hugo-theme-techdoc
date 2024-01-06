@@ -74,19 +74,19 @@ default: `put your description`
 
 #### `github_repository`
 
-URL of souce code repository
+URL of source code repository
 
 default: `https://github.com/thingsym/hugo-theme-techdoc`
 
 #### `version`
 
-The version of souce code
+The version of source code
 
 default: `1.0.0`
 
 #### `github_doc_repository`
 
-URL of documentation repository for editting
+URL of documentation repository for editing
 
 default: `https://github.com/thingsym/hugo-theme-techdoc`
 
