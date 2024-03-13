@@ -6,7 +6,7 @@ weight: 50
 ---
 
 {{% panel status="primary" title="Note" icon="far fa-lightbulb" %}}
-The document hierarchy is unlimite.
+The document hierarchy is unlimited.
 It also means that the menu levels is unlimited levels.
 
 The menu levels has up to 5 levels of indentation. After that there is no indentation.
