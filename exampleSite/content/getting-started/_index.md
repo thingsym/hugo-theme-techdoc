@@ -17,6 +17,6 @@ Download Hugo theme, configure, preview site ...
 
 ## [Configuration](./configuration)
 
-You may specify options in config.toml (or config.yaml/config.json) of your site to make use of this theme's features.
+You may specify options in hugo.toml (or hugo.yaml/hugo.json) of your site to make use of this theme's features.
 
 ## [Screenshot](./screenshot)
