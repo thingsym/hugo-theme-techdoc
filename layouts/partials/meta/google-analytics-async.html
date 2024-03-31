@@ -1,4 +1,4 @@
-{{- if .Site.IsServer -}}
+{{- if hugo.IsServer -}}
 <!-- only production, not generate Google Analytics with Hugo’s built-in server -->
 {{- else -}}
 {{- with .Site.Params.google_analytics_id -}}
