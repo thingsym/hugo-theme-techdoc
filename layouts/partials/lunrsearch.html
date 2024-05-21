@@ -1,0 +1,115 @@
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+
+<div id="searchbox"></div>
+<div id="stats"></div>
+<div id="hits"></div>
+<div id="pagination"></div>
+
+
+
+<script>
+/* Async Function to Start LunrJS */
+async function startLunrJSAsync() {
+
+  console.log("search: Starting Lunr...");
+
+  let ok = false;
+
+  const lunrIndex = "{{ .Site.BaseURL }}/{{ .Site.Params.algolia_indexName }}";
+  const lunrSummary = "{{ .Site.BaseURL }}/{{ .Site.Params.algolia_indexName }}";
+
+  /* Load the Pre-Built Index */
+  console.log("search: Fetching Index...");
+  let response = await fetch(lunrIndex);
+  let data = await response.json();
+
+
+  var idx = lunr(function () {
+    this.field('id');
+    this.field('title', { boost: 3 });
+    this.field('date');
+    this.field('content');
+    this.field('permalink');
+    
+    // add data to lunr
+    for (var key in data) {
+        this.add({
+           'id': key,
+           'title': data[key].title,
+           'date': data[key].date,
+           'content': data[key].content,
+           'permalink': data[key].permalink,
+           
+        });
+    }
+});
+
+  pages = data
+  console.log("search: Index Loaded!");
+
+  /* Lunr is Ready; Return */
+  console.log("search: Lunr Is Ready!");
+  ok = true;
+  let obj = {
+    idx: idx,
+    pages: pages,
+    ok: ok
+  };
+  return obj;
+}
+
+/* Clear the Search Results element then populate with search results */
+function searchSite(search, query) {
+  let template = document.querySelector("#search-item");
+  let resultsContainer = document.querySelector("#search-results");
+
+  resultsContainer.innerHTML = "";
+
+  let allResults = search.idx.search(query);
+  if (allResults.length === 0) resultsContainer.innerHTML = "<p>Nothing found; search for something else!</p>";
+  else allResults.forEach(function (result) {
+    let output = document.importNode(template.content, true);
+    let title = output.querySelector("a");
+    let breadcrumb = output.querySelector("aside");
+    let summary = output.querySelector("p");
+    let docRef, typemoji;
+
+    title.innerHTML = pages[result.ref].title;
+    title.setAttribute("href", pages[result.ref].permalink);
+    breadcrumb.innerHTML = pages[result.ref].title;
+        
+    resultsContainer.appendChild(output);
+  });
+}
+
+(async () => {
+  /* Initialize Lunr */
+  let Search = await startLunrJSAsync();
+
+  /* If there is a query in the URL, use that as the search query */
+  let query;
+  let params = new URLSearchParams(document.location.search.substring(1));
+  if (params.get("q")) {
+    document.getElementById("search-input").value = params.get("q");
+    query = params.get("q");
+    searchSite(Search, query);
+  }
+})();
+</script>
+
+<body>
+  <form id="search">
+    <label hidden for="search-input">Search site</label>
+    <input type="text" id="search-input" name="q"
+    placeholder="Type here to search">
+    <input type="submit" value="search">
+</form>
+ <div id="search-results"></div>
+    <template id="search-item">
+      <article>
+        <h2><a></a></h2>
+        <aside></aside>
+        <p></p>
+      </article>
+    </template>
+</body>
