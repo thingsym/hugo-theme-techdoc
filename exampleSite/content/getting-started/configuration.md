@@ -20,8 +20,8 @@ For an example of `hugo.toml`, see [hugo.toml](https://github.com/thingsym/hugo-
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
     github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    github_doc_repository_path = ""
     github_doc_repository_branch = "master"
+    github_doc_repository_path = ""
 
     # Analytic section
     google_analytics_id = "" # Your Google Analytics tracking id
