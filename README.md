@@ -49,7 +49,7 @@ The Techdoc is a Hugo Theme for technical documentation.
 
 ### Requirement
 
-Hugo minimum version: 0.60.0
+Hugo minimum version: 0.120.0
 
 Default Markdown parser library `Goldmark` compatible
 
@@ -113,7 +113,7 @@ tree . -I node_modules
 ├── README.md
 ├── archetypes
 │   └── default.md
-├── docker-compose.yml
+├── compose.yml
 ├── exampleSite
 │   └── ..
 ├── gulpfile.js
@@ -254,7 +254,7 @@ npm run gulp watch
 
 ```
 cd /path/to/hugo-theme-techdoc
-docker-compose up -d
+docker compose up -d
 ```
 
 Browse site on http://localhost:1313
@@ -263,8 +263,8 @@ Browse site on http://localhost:1313
 
 ```
 cd /path/to/hugo-theme-techdoc
-docker-compose run --rm node npm install
-docker-compose run --rm node npm run watch
+docker compose run --rm node npm install
+docker compose run --rm node npm run watch
 ```
 
 ## Contribution
@@ -281,7 +281,19 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
-* Version 1.0.0 - 2022.08.21
+* Version 1.0.1 - 2024.08.20
+	* fix README
+	* fix exampleSite document
+	* fix sass
+	* update npm dependencies
+	* fix hugo config
+	* rename docker-compose.yml to compose.yml
+	* change hugo docker image
+	* fix deprecation warning [#68]
+	* bring example site up to date [#66]
+	* fix typos [#65]
+	* fix github workflows
+* Version 1.0.0 - 2023.08.21
 	* update hugo docker image
 	* update npm dependencies
 	* allow to set branch of github documentation repository [#64]

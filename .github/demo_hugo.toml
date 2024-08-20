@@ -17,11 +17,12 @@ enableMissingTranslationPlaceholders = false
     # Source Code repository section
     description = "put your description"
     github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "1.0.0"
+    version = "1.0.1"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
     github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
+    github_doc_repository_branch = "master"
     github_doc_repository_path = "exampleSite/content/"
 
     # Analytic section
@@ -74,11 +75,18 @@ enableMissingTranslationPlaceholders = false
         name = "Home"
         url = "/"
         weight = 1
+        identifier = 'home'
+        pre = "<i class='fa fa-heart'></i>&nbsp;"
 
     [[menu.main]]
         name = "Twitter"
         url = "https://twitter.com/thingsym"
         weight = 2
+        identifier = 'twitter'
+        pre = "<b>pre!</b> "
+        post = " <b>post!</b>"
+        [menu.main.params]
+          class = 'twitter-menu-item'
 
 # Markup configure section
 # See https://gohugo.io/getting-started/configuration-markup/
