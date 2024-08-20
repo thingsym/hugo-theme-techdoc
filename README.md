@@ -49,7 +49,7 @@ The Techdoc is a Hugo Theme for technical documentation.
 
 ### Requirement
 
-Hugo minimum version: 0.60.0
+Hugo minimum version: 0.120.0
 
 Default Markdown parser library `Goldmark` compatible
 
@@ -113,7 +113,7 @@ tree . -I node_modules
 ├── README.md
 ├── archetypes
 │   └── default.md
-├── docker-compose.yml
+├── compose.yml
 ├── exampleSite
 │   └── ..
 ├── gulpfile.js
@@ -254,7 +254,7 @@ npm run gulp watch
 
 ```
 cd /path/to/hugo-theme-techdoc
-docker-compose up -d
+docker compose up -d
 ```
 
 Browse site on http://localhost:1313
@@ -263,8 +263,8 @@ Browse site on http://localhost:1313
 
 ```
 cd /path/to/hugo-theme-techdoc
-docker-compose run --rm node npm install
-docker-compose run --rm node npm run watch
+docker compose run --rm node npm install
+docker compose run --rm node npm run watch
 ```
 
 ## Contribution
