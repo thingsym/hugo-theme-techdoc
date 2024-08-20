@@ -15,7 +15,7 @@ For an example of `hugo.toml`, see [hugo.toml](https://github.com/thingsym/hugo-
     # Source Code repository section
     description = "put your description"
     github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "1.0.0"
+    version = "1.0.1"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
@@ -82,7 +82,7 @@ default: `https://github.com/thingsym/hugo-theme-techdoc`
 
 The version of source code
 
-default: `1.0.0`
+default: `1.0.1`
 
 #### `github_doc_repository`
 
