@@ -25,6 +25,19 @@
     $.extend( defaults, options );
 
     var init = function() {
+      if (history.scrollRestoration) {
+        history.scrollRestoration = "manual";
+      }
+
+      history.replaceState({ scrollTop: 0 }, '', location.href);
+
+      $(window).on('popstate.BackToTheTop', function(e) {
+        if (e.originalEvent.state !== null && e.originalEvent.state.scrollTop !== undefined) {
+          $('html,body').scrollTop(e.originalEvent.state.scrollTop);
+          e.preventDefault();
+        }
+      });
+
       $('a[href^="#"]').on('click.BackToTheTop', function() {
         var scrollTop =
             $(this).data('backtothetop-scrolltop') !== undefined ? $(this).data('backtothetop-scrolltop')
@@ -45,7 +58,8 @@
           { 'scrollTop' : scrollTop + offset }, duration, easing,
           function() {
             if (hash === true) {
-              window.history.pushState('', '', href);
+              window.history.pushState({ scrollTop: scrollTop }, '', href);
+              hash = false;
             }
           }
         );
