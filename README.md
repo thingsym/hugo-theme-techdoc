@@ -259,6 +259,12 @@ docker compose up -d
 
 Browse site on http://localhost:1313
 
+### Stop container and remove container
+
+```
+docker compose down -v
+```
+
 ### Build development
 
 ```
@@ -281,6 +287,8 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 1.0.2 - 2025.01.30
+	* bump up version jQuery Plugin Back to the Top
 * Version 1.0.1 - 2024.08.20
 	* fix README
 	* fix exampleSite document
