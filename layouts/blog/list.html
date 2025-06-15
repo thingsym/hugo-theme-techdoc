@@ -4,5 +4,5 @@
 {{ range (.Paginate ( first 50 .Data.Pages )).Pages }}
 {{ .Render "summary"}}
 {{ end }}
-{{ template "_internal/pagination.html" . }}
+{{- partial "pagination.html" . -}}
 {{- end -}}
