@@ -1,6 +1,6 @@
 services:
   hugo:
-    image: hugomods/hugo:go-0.121.2
+    image: hugomods/hugo:std-go-0.157.0
     volumes:
       - .:/hugo/themes/hugo-theme-techdoc
     ports:
