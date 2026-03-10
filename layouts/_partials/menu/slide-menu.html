@@ -4,11 +4,11 @@
 <li class="{{ if .IsHome }}active{{ end }}"><a href="{{ absLangURL "index.html" }}">Home</a></li>
 {{- if eq .Site.Params.ordersectionsby "title" -}}
   {{- range .Site.Home.Sections.ByTitle -}}
-{{template "slide-menu" dict "sect" . "currentnode" $currentNode}}
+{{template "slide-menu" (dict "sect" . "currentnode" $currentNode) }}
   {{- end -}}
 {{- else -}}
   {{- range .Site.Home.Sections.ByWeight -}}
-{{template "slide-menu" dict "sect" . "currentnode" $currentNode}}
+{{template "slide-menu" (dict "sect" . "currentnode" $currentNode) }}
   {{- end -}}
 {{- end}}
 </ul>
@@ -34,14 +34,14 @@
       {{- range $pages.ByTitle -}}
         {{- if and .Params.hidden (not $.showhidden) -}}
         {{- else -}}
-{{template "slide-menu" dict "sect" . "currentnode" $currentNode}}
+{{template "slide-menu" (dict "sect" . "currentnode" $currentNode) }}
         {{- end -}}
       {{- end -}}
     {{- else -}}
       {{- range $pages.ByWeight -}}
         {{- if and .Params.hidden (not $.showhidden) -}}
         {{- else -}}
-{{template "slide-menu" dict "sect" . "currentnode" $currentNode}}
+{{template "slide-menu" (dict "sect" . "currentnode" $currentNode) }}
         {{- end -}}
       {{- end -}}
     {{- end}}
