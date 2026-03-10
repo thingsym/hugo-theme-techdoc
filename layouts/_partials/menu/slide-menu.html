@@ -1,7 +1,7 @@
 {{$currentNode := .}}
 <nav class="slide-menu">
 <ul>
-<li class="{{ if .IsHome }}active{{ end }}"><a href="{{ .Site.BaseURL }}">Home</a></li>
+<li class="{{ if .IsHome }}active{{ end }}"><a href="{{ absLangURL "index.html" }}">Home</a></li>
 {{- if eq .Site.Params.ordersectionsby "title" -}}
   {{- range .Site.Home.Sections.ByTitle -}}
 {{template "slide-menu" dict "sect" . "currentnode" $currentNode}}
