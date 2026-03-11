@@ -65,7 +65,8 @@
     "rules": {
       "no-descending-specificity": null,
       "no-duplicate-selectors": null,
-      "block-no-empty": null
+      "block-no-empty": null,
+      "property-no-deprecated": null
     }
   },
   "eslintConfig": {
