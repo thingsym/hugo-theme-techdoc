@@ -2,7 +2,7 @@
   "name": "hugo-theme-techdoc",
   "version": "1.0.2",
   "description": "The Techdoc is a Hugo Theme for technical documentation.",
-  "main": "gulpfile.js",
+  "main": "compose.yml",
   "author": "Thingsym",
   "license": "MIT",
   "devDependencies": {
@@ -99,9 +99,8 @@
     }
   },
   "scripts": {
-    "default": "gulp --tasks",
+    "default": "",
     "ncu": "ncu",
-    "gulp": "gulp",
     "build": "run-p build:*",
     "build:js": "npm-run-all -p webpack",
     "build:css": "run-p sass:**",
