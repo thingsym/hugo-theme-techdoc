@@ -1,43 +1,550 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home title on Hugo Techdoc Theme</title><link>https://thingsym.github.io/hugo-theme-techdoc/</link><description>Recent content in Home title on Hugo Techdoc Theme</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="https://thingsym.github.io/hugo-theme-techdoc/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown Syntax</title><link>https://thingsym.github.io/hugo-theme-techdoc/sample/markdown-syntax/</link><pubDate>Tue, 17 Nov 2020 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/sample/markdown-syntax/</guid><description>Headings # Heading level 1 ## Heading level 2 ### Heading level 3 #### Heading level 4 ##### Heading level 5 ###### Heading level 6 Emphasis *Italic* **Bold** ~~Strikethrough~~ Horizontal Rule --- Lists Unordered Lists - First item - Second item - Third item - Fourth item or
-* First item * Second item * Third item * Fourth item Ordered Lists 1. First item 2. Second item 3. Third item 4.</description></item><item><title>Built-in Shortcodes</title><link>https://thingsym.github.io/hugo-theme-techdoc/sample/built-in-shortcodes/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/sample/built-in-shortcodes/</guid><description>See https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes
-figure 2 People Sitting With View of Yellow Flowers during Daytime gist highlight &amp;lt;section id=&amp;#34;main&amp;#34;&amp;gt; &amp;lt;div&amp;gt; &amp;lt;h1 id=&amp;#34;title&amp;#34;&amp;gt;{{ .Title }}&amp;lt;/h1&amp;gt; {{ range .Data.Pages }} {{ .Render &amp;#34;summary&amp;#34;}} {{ end }} &amp;lt;/div&amp;gt; &amp;lt;/section&amp;gt; tweet Hugo 0.24 Released: Big archetype update + @Netlify _redirects etc. file supporthttps://t.co/X94FmYDEZJ #gohugo #golang @spf13 @bepsays
-&amp;mdash; GoHugo.io (@GoHugoIO) June 21, 2017 vimeo youtube</description></item><item><title>Chapter 2-3 (weight: 10)</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter2/3/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter2/3/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Custom Shortcodes</title><link>https://thingsym.github.io/hugo-theme-techdoc/sample/custom-shortcodes/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/sample/custom-shortcodes/</guid><description>Code highlight with clipboard sample/custom-shortcodes.html Copy {{&amp;lt; highlight html &amp;gt;}} &amp;lt;section id=&amp;#34;main&amp;#34;&amp;gt; &amp;lt;div&amp;gt; &amp;lt;h1 id=&amp;#34;title&amp;#34;&amp;gt;{{ .Title }}&amp;lt;/h1&amp;gt; {{ range .Pages }} {{ .Render &amp;#34;summary&amp;#34;}} {{ end }} &amp;lt;/div&amp;gt; &amp;lt;/section&amp;gt; {{&amp;lt; /highlight &amp;gt;}} Alert panel Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</description></item><item><title>Installation</title><link>https://thingsym.github.io/hugo-theme-techdoc/getting-started/installation/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/getting-started/installation/</guid><description>Install Hugo theme on your project If you have git installed, you can include hugo-theme-techdoc repository into your core repository as submodule using git submodule within your project directory.
-cd your_project git submodule add https://github.com/thingsym/hugo-theme-techdoc.git themes/hugo-theme-techdoc For more information read the Hugo documentation.
-Or download Hugo theme on your project If you have git installed, you can do the following at the command-line-interface within your project directory.
-cd your_project/themes git clone https://github.</description></item><item><title>Table of Contents</title><link>https://thingsym.github.io/hugo-theme-techdoc/sample/table-of-contents/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/sample/table-of-contents/</guid><description>&amp;nbsp;Note The TableOfContents field with true in your content’s front matter will render a table of contents.
-TableOfContents: true Setting the built-in .TableOfContents variables can configure what heading levels you want to include in TOC. See the built-in .TableOfContents variables settings
-Section 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</description></item><item><title>Creating a New Theme</title><link>https://thingsym.github.io/hugo-theme-techdoc/post/creating-a-new-theme/</link><pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/post/creating-a-new-theme/</guid><description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description></item><item><title>Migrate to Hugo from Jekyll</title><link>https://thingsym.github.io/hugo-theme-techdoc/post/migrate-from-jekyll/</link><pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/post/migrate-from-jekyll/</guid><description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description></item><item><title>Hello world!</title><link>https://thingsym.github.io/hugo-theme-techdoc/hello_world/</link><pubDate>Tue, 17 Oct 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/hello_world/</guid><description>Hello world!</description></item><item><title>Hello_world</title><link>https://thingsym.github.io/hugo-theme-techdoc/posts/hello_world/</link><pubDate>Tue, 17 Oct 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/posts/hello_world/</guid><description>aaaaaa
-vvvv
-aaa</description></item><item><title>Chapter 2-4 (weight: 20)</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter2/4/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter2/4/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Configuration</title><link>https://thingsym.github.io/hugo-theme-techdoc/getting-started/configuration/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/getting-started/configuration/</guid><description>You may specify options in hugo.toml (or hugo.yaml/hugo.json) of your site to make use of this theme’s features.
-For an example of hugo.toml, see hugo.toml in exampleSite.
-Params # Source Code repository section description = &amp;quot;put your description&amp;quot; github_repository = &amp;quot;https://github.com/thingsym/hugo-theme-techdoc&amp;quot; version = &amp;quot;1.0.2&amp;quot; # Documentation repository section # documentation repository (set edit link to documentation repository) github_doc_repository = &amp;quot;https://github.com/thingsym/hugo-theme-techdoc&amp;quot; github_doc_repository_branch = &amp;quot;master&amp;quot; github_doc_repository_path = &amp;quot;&amp;quot; # Analytic section google_analytics_id = &amp;quot;&amp;quot; # Your Google Analytics tracking id tag_manager_container_id = &amp;quot;&amp;quot; # Your Google Tag Manager container id google_site_verification = &amp;quot;&amp;quot; # Your Google Site Verification for Search Console # Open Graph and Twitter Cards settings section # Open Graph settings for each page are set on the front matter.</description></item><item><title>Screenshot</title><link>https://thingsym.github.io/hugo-theme-techdoc/getting-started/screenshot/</link><pubDate>Sat, 26 Oct 2019 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/getting-started/screenshot/</guid><description>Theme color Menu style Open Menu Slide Menu Edit link</description></item><item><title>Chapter 2-2 (weight: 30)</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter2/2/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter2/2/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Chapter 2-1 (weight: 40)</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter2/1/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter2/1/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Search Shortcode</title><link>https://thingsym.github.io/hugo-theme-techdoc/sample/search-shortcode/</link><pubDate>Mon, 30 Mar 2020 18:49:06 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/sample/search-shortcode/</guid><description>&amp;nbsp;Note Search Shortcode powered by Algolia
-You can create a search page just by adding search shortcode.</description></item><item><title>Hello_world2</title><link>https://thingsym.github.io/hugo-theme-techdoc/archives/hello_world2/</link><pubDate>Sun, 17 Dec 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/archives/hello_world2/</guid><description>aaaaaa
-vvvv
-aaa</description></item><item><title>Hello_world2</title><link>https://thingsym.github.io/hugo-theme-techdoc/blog/hello_world2/</link><pubDate>Sun, 17 Dec 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/blog/hello_world2/</guid><description>aaaaaa
-vvvv
-aaa</description></item><item><title>Hello_world2</title><link>https://thingsym.github.io/hugo-theme-techdoc/entry/hello_world2/</link><pubDate>Sun, 17 Dec 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/entry/hello_world2/</guid><description>aaaaaa
-vvvv
-aaa</description></item><item><title>Hello_world1</title><link>https://thingsym.github.io/hugo-theme-techdoc/archives/hello_world1/</link><pubDate>Fri, 17 Nov 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/archives/hello_world1/</guid><description>aaaaaa
-vvvv
-aaa</description></item><item><title>Hello_world1</title><link>https://thingsym.github.io/hugo-theme-techdoc/blog/hello_world1/</link><pubDate>Fri, 17 Nov 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/blog/hello_world1/</guid><description>aaaaaa
-vvvv
-aaa</description></item><item><title>Hello_world1</title><link>https://thingsym.github.io/hugo-theme-techdoc/entry/hello_world1/</link><pubDate>Fri, 17 Nov 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/entry/hello_world1/</guid><description>aaaaaa
-vvvv
-aaa</description></item><item><title>Chapter 1-1</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter1/1/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter1/1/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Chapter 1-2</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter1/2/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter1/2/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Chapter 1-3</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter1/3/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter1/3/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Chapter 1-4</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter1/4/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter1/4/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Chapter 2-0 (weight: no set)</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter2/5/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter2/5/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Chapter 3-1</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter3/1/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter3/1/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Chapter 3-2-1</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/1/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/1/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Chapter 3-2-2</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/2/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/2/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Chapter 3-2-3</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/3/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/3/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Chapter 3-2-4</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/4/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/4/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Chapter 3-3</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter3/3/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter3/3/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Chapter 3-4</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter3/4/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter3/4/</guid><description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description></item><item><title>Hello_world</title><link>https://thingsym.github.io/hugo-theme-techdoc/archives/hello_world/</link><pubDate>Tue, 17 Oct 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/archives/hello_world/</guid><description>aaaaaa
-vvvv
-aaa</description></item><item><title>Hello_world</title><link>https://thingsym.github.io/hugo-theme-techdoc/blog/hello_world/</link><pubDate>Tue, 17 Oct 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/blog/hello_world/</guid><description>aaaaaa
-vvvv
-aaa</description></item><item><title>Hello_world</title><link>https://thingsym.github.io/hugo-theme-techdoc/entry/hello_world/</link><pubDate>Tue, 17 Oct 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/entry/hello_world/</guid><description>aaaaaa
-vvvv
-aaa</description></item><item><title>About Hugo</title><link>https://thingsym.github.io/hugo-theme-techdoc/about/</link><pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/about/</guid><description>Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
-Cobra Viper J Walter Weatherman Cast Learn more and contribute on GitHub.</description></item><item><title>(Hu)go Template Primer</title><link>https://thingsym.github.io/hugo-theme-techdoc/post/goisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/post/goisforlovers/</guid><description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.</description></item><item><title>Getting Started with Hugo</title><link>https://thingsym.github.io/hugo-theme-techdoc/post/hugoisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/post/hugoisforlovers/</guid><description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
-Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313 Corresponding pseudo commands:</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home title on Hugo Techdoc Theme</title><link>https://thingsym.github.io/hugo-theme-techdoc/</link><description>Recent content in Home title on Hugo Techdoc Theme</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 17 Nov 2020 15:26:15 +0000</lastBuildDate><atom:link href="https://thingsym.github.io/hugo-theme-techdoc/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown Syntax</title><link>https://thingsym.github.io/hugo-theme-techdoc/sample/markdown-syntax/</link><pubDate>Tue, 17 Nov 2020 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/sample/markdown-syntax/</guid><description>&lt;h2 id="headings">Headings&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="gh"># Heading level 1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">&lt;/span>&lt;span class="gu">## Heading level 2
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">### Heading level 3
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">#### Heading level 4
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">##### Heading level 5
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">###### Heading level 6
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="emphasis">Emphasis&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">*Italic* 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gs">**Bold**&lt;/span> 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gd">~~Strikethrough~~&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="horizontal-rule">Horizontal Rule&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">---
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="lists">Lists&lt;/h2>
+&lt;h3 id="unordered-lists">Unordered Lists&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> First item
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> Second item
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> Third item
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> Fourth item
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>or&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> First item
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> Second item
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> Third item
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> Fourth item
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="ordered-lists">Ordered Lists&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="k">1.&lt;/span> First item
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">2.&lt;/span> Second item
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">3.&lt;/span> Third item
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">4.&lt;/span> Fourth item
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="code">Code&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="s">```ruby
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">&lt;/span>&lt;span class="nb">puts&lt;/span> &lt;span class="s1">&amp;#39;The best way to log and share programmers knowledge.&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">puts&lt;/span> &lt;span class="s1">&amp;#39;The best way to log and share programmers knowledge.&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">```&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="inline-code">Inline code&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="sb">`#ffce44`&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="blockquote">Blockquote&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="k">&amp;gt; &lt;/span>&lt;span class="ge">this is a blockquote. this is a blockquote. this is a blockquote. this is a blockquote. this is a blockquote. this is a blockquote.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="ge">&lt;/span>&lt;span class="k">&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">&lt;/span>&lt;span class="ge">&amp;gt; this is a blockquote.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="ge">&lt;/span>&lt;span class="k">&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">&lt;/span>&lt;span class="ge">&amp;gt; this is a blockquote.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="ge">&lt;/span>&lt;span class="k">&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">&lt;/span>&lt;span class="ge">&amp;gt; this is a blockquote
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="links">Links&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">[&lt;span class="nt">Hugo Techdoc Theme demo&lt;/span>](&lt;span class="na">https://themes.gohugo.io/theme/hugo-theme-techdoc/&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="table">Table&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">| header | header | header |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">|------------|-------------|--------------|
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| Lorem | Lorem | Lorem |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| ipsum | ipsum | ipsum |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| dolor | dolor | dolor |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| sit | sit | sit |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| amet | amet | amet |
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="images">Images&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">2 People Sitting With View of Yellow Flowers during Daytime&lt;/span>](&lt;span class="na">../images/pexels-photo-196666.jpeg &amp;#34;sample&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="image-with-link">Image with link&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">[&lt;span class="nt">![2 People Sitting With View of Yellow Flowers during Daytime&lt;/span>](&lt;span class="na">../images/pexels-photo-196666.jpeg&lt;/span>)](https://www.pexels.com/photo/2-people-sitting-with-view-of-yellow-flowers-during-daytime-196666/)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="definition-lists">Definition Lists&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">First Term
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">: This is the definition.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Second Term
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">: This is the definition.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">: This is the definition.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="task-lists">Task Lists&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="k">- [x]&lt;/span> to do task 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">- [ ]&lt;/span> to do task 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">- [ ]&lt;/span> to do task 3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="footnotes">Footnotes&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">this is a footnote,[^1] and this is the second footnote.[^2]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[^1]: This is the first footnote.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[^2]: This is the second footnote.
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Built-in Shortcodes</title><link>https://thingsym.github.io/hugo-theme-techdoc/sample/built-in-shortcodes/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/sample/built-in-shortcodes/</guid><description>&lt;p>See &lt;a href="https://gohugo.io/shortcodes/">https://gohugo.io/shortcodes/&lt;/a>&lt;/p>
+&lt;h2 id="details">Details&lt;/h2>
+
+&lt;details>
+ &lt;summary>See the details&lt;/summary>
+ &lt;p>This is a &lt;strong>bold&lt;/strong> word.&lt;/p>
+&lt;/details>
+
+&lt;h2 id="figure">Figure&lt;/h2>
+&lt;figure>&lt;img src="../../images/pexels-photo-196666.jpeg">&lt;figcaption>
+ &lt;h4>2 People Sitting With View of Yellow Flowers during Daytime&lt;/h4>
+ &lt;/figcaption>
+&lt;/figure>
+
+&lt;h2 id="highlight">Highlight&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="ln">3&lt;/span>&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">5&lt;/span>&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="ln">6&lt;/span>&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="p">&amp;lt;&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="ln">7&lt;/span>&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Value of i:&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line hl">&lt;span class="ln">8&lt;/span>&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">9&lt;/span>&lt;span class="cl">&lt;span class="p">}&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 id="instagram">Instagram&lt;/h2>
+&lt;blockquote
+ class="instagram-media"
+ data-instgrm-captioned
+ data-instgrm-permalink="https://www.instagram.com/p/CxOWiQNP2MO"
+ data-instgrm-version="14"
+ style="
+ background: #fff;
+ border: 0;
+ border-radius: 3px;
+ box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+ margin: 1px;
+ max-width: 540px;
+ min-width: 326px;
+ padding: 0;
+ width: 99.375%;
+ width: -webkit-calc(100% - 2px);
+ width: calc(100% - 2px);
+ "
+ >
+ &lt;div style="padding: 16px">
+ &lt;a
+ href="https://www.instagram.com/p/CxOWiQNP2MO"
+ style="
+ background: #ffffff;
+ line-height: 0;
+ padding: 0 0;
+ text-align: center;
+ text-decoration: none;
+ width: 100%;
+ "
+ target="_blank"
+ >
+ &lt;div style="display: flex; flex-direction: row; align-items: center">
+ &lt;div
+ style="
+ background-color: #f4f4f4;
+ border-radius: 50%;
+ flex-grow: 0;
+ height: 40px;
+ margin-right: 14px;
+ width: 40px;
+ "
+ >&lt;/div>
+ &lt;div
+ style="
+ display: flex;
+ flex-direction: column;
+ flex-grow: 1;
+ justify-content: center;
+ "
+ >
+ &lt;div
+ style="
+ background-color: #f4f4f4;
+ border-radius: 4px;
+ flex-grow: 0;
+ height: 14px;
+ margin-bottom: 6px;
+ width: 100px;
+ "
+ >&lt;/div>
+ &lt;div
+ style="
+ background-color: #f4f4f4;
+ border-radius: 4px;
+ flex-grow: 0;
+ height: 14px;
+ width: 60px;
+ "
+ >&lt;/div>
+ &lt;/div>
+ &lt;/div>
+ &lt;div style="padding: 19% 0">&lt;/div>
+ &lt;div
+ style="display: block; height: 50px; margin: 0 auto 12px; width: 50px"
+ >
+ &lt;svg
+ width="50px"
+ height="50px"
+ viewBox="0 0 60 60"
+ version="1.1"
+ xmlns="https://www.w3.org/2000/svg"
+ xmlns:xlink="https://www.w3.org/1999/xlink"
+ >
+ &lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+ &lt;g transform="translate(-511.000000, -20.000000)" fill="#000000">
+ &lt;g>
+ &lt;path
+ d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
+ >&lt;/path>
+ &lt;/g>
+ &lt;/g>
+ &lt;/g>
+ &lt;/svg>
+ &lt;/div>
+ &lt;div style="padding-top: 8px">
+ &lt;div
+ style="
+ color: #3897f0;
+ font-family: Arial, sans-serif;
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 550;
+ line-height: 18px;
+ "
+ >
+ View this post on Instagram
+ &lt;/div>
+ &lt;/div>
+ &lt;div style="padding: 12.5% 0">&lt;/div>
+ &lt;div
+ style="
+ display: flex;
+ flex-direction: row;
+ margin-bottom: 14px;
+ align-items: center;
+ "
+ >
+ &lt;div>
+ &lt;div
+ style="
+ background-color: #f4f4f4;
+ border-radius: 50%;
+ height: 12.5px;
+ width: 12.5px;
+ transform: translateX(0px) translateY(7px);
+ "
+ >&lt;/div>
+ &lt;div
+ style="
+ background-color: #f4f4f4;
+ height: 12.5px;
+ transform: rotate(-45deg) translateX(3px) translateY(1px);
+ width: 12.5px;
+ flex-grow: 0;
+ margin-right: 14px;
+ margin-left: 2px;
+ "
+ >&lt;/div>
+ &lt;div
+ style="
+ background-color: #f4f4f4;
+ border-radius: 50%;
+ height: 12.5px;
+ width: 12.5px;
+ transform: translateX(9px) translateY(-18px);
+ "
+ >&lt;/div>
+ &lt;/div>
+ &lt;div style="margin-left: 8px">
+ &lt;div
+ style="
+ background-color: #f4f4f4;
+ border-radius: 50%;
+ flex-grow: 0;
+ height: 20px;
+ width: 20px;
+ "
+ >&lt;/div>
+ &lt;div
+ style="
+ width: 0;
+ height: 0;
+ border-top: 2px solid transparent;
+ border-left: 6px solid #f4f4f4;
+ border-bottom: 2px solid transparent;
+ transform: translateX(16px) translateY(-4px) rotate(30deg);
+ "
+ >&lt;/div>
+ &lt;/div>
+ &lt;div style="margin-left: auto">
+ &lt;div
+ style="
+ width: 0px;
+ border-top: 8px solid #f4f4f4;
+ border-right: 8px solid transparent;
+ transform: translateY(16px);
+ "
+ >&lt;/div>
+ &lt;div
+ style="
+ background-color: #f4f4f4;
+ flex-grow: 0;
+ height: 12px;
+ width: 16px;
+ transform: translateY(-4px);
+ "
+ >&lt;/div>
+ &lt;div
+ style="
+ width: 0;
+ height: 0;
+ border-top: 8px solid #f4f4f4;
+ border-left: 8px solid transparent;
+ transform: translateY(-4px) translateX(8px);
+ "
+ >&lt;/div>
+ &lt;/div>
+ &lt;/div>
+ &lt;div
+ style="
+ display: flex;
+ flex-direction: column;
+ flex-grow: 1;
+ justify-content: center;
+ margin-bottom: 24px;
+ "
+ >
+ &lt;div
+ style="
+ background-color: #f4f4f4;
+ border-radius: 4px;
+ flex-grow: 0;
+ height: 14px;
+ margin-bottom: 6px;
+ width: 224px;
+ "
+ >&lt;/div>
+ &lt;div
+ style="
+ background-color: #f4f4f4;
+ border-radius: 4px;
+ flex-grow: 0;
+ height: 14px;
+ width: 144px;
+ "
+ >&lt;/div>&lt;/div
+ >&lt;/a>
+ &lt;/div>
+ &lt;/blockquote>&lt;script async src="https://www.instagram.com/embed.js">&lt;/script>
+&lt;h2 id="param">Param&lt;/h2>
+&lt;p>We found a red shirt.&lt;/p></description></item><item><title>Chapter 2-3 (weight: 10)</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter2/3/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter2/3/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Custom Shortcodes</title><link>https://thingsym.github.io/hugo-theme-techdoc/sample/custom-shortcodes/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/sample/custom-shortcodes/</guid><description>&lt;h2 id="code-highlight-with-clipboard">Code highlight with clipboard&lt;/h2>
+&lt;div class="code" id="sample/custom-shortcodes.html">&lt;div class="filename">sample/custom-shortcodes.html&lt;/div>&lt;button class="copy-btn copy" title="Copy this code to your clipboard." data-clipboard-action="copy" aria-label="Copy this code.">&lt;i class="fas fa-clipboard">&lt;/i> Copy&lt;/button>&lt;div class="code-content" >
+			&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">highlight&lt;/span> &lt;span class="na">html&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">section&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;main&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;title&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{{ .Title }}&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ range .Pages }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ .Render &amp;#34;summary&amp;#34;}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">section&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">highlight&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+	&lt;/div>
+&lt;/div>
+
+&lt;h2 id="alert-panel">Alert panel&lt;/h2>
+&lt;div class="panel panel-primary">&lt;div class="panel-body">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+&lt;/div>
+&lt;/div>
+
+&lt;h3 id="alert-panel-using-html">Alert panel using HTML&lt;/h3>
+&lt;div class="panel panel-primary">&lt;div class="panel-body">
+
+&lt;strong>Lorem ipsum dolor sit amet&lt;/strong>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;a href="https://github.com/thingsym/hugo-theme-techdoc">Ut enim ad minim veniam&lt;/a>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+&lt;strong>Lorem ipsum dolor sit amet&lt;/strong>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;a href="https://github.com/thingsym/hugo-theme-techdoc">Ut enim ad minim veniam&lt;/a>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+&lt;/div>
+&lt;/div>
+
+&lt;h3 id="alert-panel-using-markdown-use-the--character">Alert panel using Markdown (use the &lt;code>%&lt;/code> character)&lt;/h3>
+&lt;div class="panel panel-primary">&lt;div class="panel-header">
+&lt;h3>primary&lt;/h3>
+&lt;/div>&lt;div class="panel-body">
+&lt;p>&lt;a href="https://www.google.com" title="Google's Homepage">I&amp;rsquo;m an inline-style link with title&lt;/a>&lt;/p></description></item><item><title>Installation</title><link>https://thingsym.github.io/hugo-theme-techdoc/getting-started/installation/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/getting-started/installation/</guid><description>&lt;h2 id="install-hugo-theme-on-your-project">Install Hugo theme on your project&lt;/h2>
+&lt;p>If you have git installed, you can include hugo-theme-techdoc repository into your core repository as submodule using &lt;code>git submodule&lt;/code> within your project directory.&lt;/p>
+&lt;pre tabindex="0">&lt;code>cd your_project
+git submodule add https://github.com/thingsym/hugo-theme-techdoc.git themes/hugo-theme-techdoc
+&lt;/code>&lt;/pre>&lt;p>For more information read &lt;a href="https://gohugo.io/getting-started/quick-start/">the Hugo documentation&lt;/a>.&lt;/p>
+&lt;h2 id="or-download-hugo-theme-on-your-project">Or download Hugo theme on your project&lt;/h2>
+&lt;p>If you have git installed, you can do the following at the command-line-interface within your project directory.&lt;/p>
+&lt;pre tabindex="0">&lt;code>cd your_project/themes
+git clone https://github.com/thingsym/hugo-theme-techdoc.git
+&lt;/code>&lt;/pre>&lt;h2 id="configure">Configure&lt;/h2>
+&lt;p>You may specify options in hugo.toml (or hugo.yaml/hugo.json) of your site to make use of this theme&amp;rsquo;s features.&lt;/p></description></item><item><title>Table of Contents</title><link>https://thingsym.github.io/hugo-theme-techdoc/sample/table-of-contents/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/sample/table-of-contents/</guid><description>&lt;div class="panel panel-primary">&lt;div class="panel-header">
+&lt;h3>&lt;i class="far fa-lightbulb">&lt;/i>&amp;nbsp;Note&lt;/h3>
+&lt;/div>&lt;div class="panel-body">
+&lt;p>The &lt;code>TableOfContents&lt;/code> field with &lt;code>true&lt;/code> in your content’s front matter will render a table of contents.&lt;/p>
+&lt;pre tabindex="0">&lt;code>TableOfContents: true
+&lt;/code>&lt;/pre>&lt;p>Setting the built-in .TableOfContents variables can configure what heading levels you want to include in TOC. See &lt;a href="https://gohugo.io/getting-started/configuration-markup/#table-of-contents">the built-in .TableOfContents variables settings&lt;/a>&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="section-1">Section 1&lt;/h2>
+&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Creating a New Theme</title><link>https://thingsym.github.io/hugo-theme-techdoc/post/creating-a-new-theme/</link><pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/post/creating-a-new-theme/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;p>We&amp;rsquo;ll start with creating a new site with a very basic template. Then we&amp;rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.&lt;/p></description></item><item><title>Migrate to Hugo from Jekyll</title><link>https://thingsym.github.io/hugo-theme-techdoc/post/migrate-from-jekyll/</link><pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/post/migrate-from-jekyll/</guid><description>&lt;h2 id="move-static-content-to-static">Move static content to &lt;code>static&lt;/code>&lt;/h2>
+&lt;p>Jekyll has a rule that any directory not starting with &lt;code>_&lt;/code> will be copied as-is to the &lt;code>_site&lt;/code> output. Hugo keeps all static content under &lt;code>static&lt;/code>. You should therefore move it all there.
+With Jekyll, something that looked like&lt;/p>
+&lt;pre>&lt;code>▾ &amp;lt;root&amp;gt;/
+ ▾ images/
+ logo.png
+&lt;/code>&lt;/pre>
+&lt;p>should become&lt;/p>
+&lt;pre>&lt;code>▾ &amp;lt;root&amp;gt;/
+ ▾ static/
+ ▾ images/
+ logo.png
+&lt;/code>&lt;/pre>
+&lt;p>Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as &lt;code>CNAME&lt;/code>) to be moved to &lt;code>static&lt;/code>.&lt;/p></description></item><item><title>Hello world!</title><link>https://thingsym.github.io/hugo-theme-techdoc/hello_world/</link><pubDate>Tue, 17 Oct 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/hello_world/</guid><description>&lt;p>Hello world!&lt;/p></description></item><item><title>Hello_world</title><link>https://thingsym.github.io/hugo-theme-techdoc/posts/hello_world/</link><pubDate>Tue, 17 Oct 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/posts/hello_world/</guid><description>&lt;p>aaaaaa&lt;/p>
+&lt;p>vvvv&lt;/p>
+&lt;p>aaa&lt;/p></description></item><item><title>Chapter 2-4 (weight: 20)</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter2/4/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter2/4/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Configuration</title><link>https://thingsym.github.io/hugo-theme-techdoc/getting-started/configuration/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/getting-started/configuration/</guid><description>&lt;p>You may specify options in hugo.toml (or hugo.yaml/hugo.json) of your site to make use of this theme’s features.&lt;/p>
+&lt;p>For an example of &lt;code>hugo.toml&lt;/code>, see &lt;a href="https://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/hugo.toml">hugo.toml&lt;/a> in exampleSite.&lt;/p>
+&lt;h2 id="params">Params&lt;/h2>
+&lt;pre>&lt;code># Source Code repository section
+description = &amp;quot;put your description&amp;quot;
+github_repository = &amp;quot;https://github.com/thingsym/hugo-theme-techdoc&amp;quot;
+version = &amp;quot;1.1.0&amp;quot;
+
+# Documentation repository section
+# documentation repository (set edit link to documentation repository)
+github_doc_repository = &amp;quot;https://github.com/thingsym/hugo-theme-techdoc&amp;quot;
+github_doc_repository_branch = &amp;quot;master&amp;quot;
+github_doc_repository_path = &amp;quot;&amp;quot;
+
+# Analytic section
+google_analytics_id = &amp;quot;&amp;quot; # Your Google Analytics tracking id
+tag_manager_container_id = &amp;quot;&amp;quot; # Your Google Tag Manager container id
+google_site_verification = &amp;quot;&amp;quot; # Your Google Site Verification for Search Console
+
+# Open Graph and Twitter Cards settings section
+# Open Graph settings for each page are set on the front matter.
+# See https://gohugo.io/templates/internal/#open-graph
+# See https://gohugo.io/templates/internal/#twitter-cards
+title = &amp;quot;Hugo Techdoc Theme&amp;quot;
+images = [&amp;quot;images/og-image.png&amp;quot;] # Open graph images are placed in `static/images`
+
+# Theme settings section
+# Theme color
+# See color value reference https://developer.mozilla.org/en-US/docs/Web/CSS/color
+custom_font_color = &amp;quot;&amp;quot;
+custom_background_color = &amp;quot;&amp;quot;
+
+# Documentation Menu section
+# Menu style settings
+menu_style = &amp;quot;open-menu&amp;quot; # &amp;quot;open-menu&amp;quot; or &amp;quot;slide-menu&amp;quot; or &amp;quot;&amp;quot; blank is as no sidebar
+
+# Date format
+dateformat = &amp;quot;&amp;quot; # default &amp;quot;2 Jan 2006&amp;quot;
+# See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+
+# path name excluded from documentation menu
+menu_exclusion = [
+ &amp;quot;archives&amp;quot;,
+ &amp;quot;archive&amp;quot;,
+ &amp;quot;blog&amp;quot;,
+ &amp;quot;entry&amp;quot;,
+ &amp;quot;post&amp;quot;,
+ &amp;quot;posts&amp;quot;,
+]
+
+# Algolia site search section
+# See https://www.algolia.com/doc/
+algolia_search_enable = true
+algolia_indexName = &amp;quot;hugo-demo-techdoc&amp;quot;
+algolia_appId = &amp;quot;7W4SAN4PLK&amp;quot;
+algolia_apiKey = &amp;quot;cbf12a63ff72d9c5dc0c10c195cf9128&amp;quot; # Search-Only API Key
+&lt;/code>&lt;/pre>
+&lt;h4 id="description">&lt;code>description&lt;/code>&lt;/h4>
+&lt;p>The document summary&lt;/p></description></item><item><title>Screenshot</title><link>https://thingsym.github.io/hugo-theme-techdoc/getting-started/screenshot/</link><pubDate>Sat, 26 Oct 2019 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/getting-started/screenshot/</guid><description>&lt;h3 id="theme-color">Theme color&lt;/h3>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-theme-color.png" alt="Theme color">&lt;/p>
+&lt;h3 id="menu-style">Menu style&lt;/h3>
+&lt;h4 id="open-menu">Open Menu&lt;/h4>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-open-menu.png" alt="Open Menu">&lt;/p>
+&lt;h4 id="slide-menu">Slide Menu&lt;/h4>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-slide-menu.gif" alt="Slide Menu">&lt;/p>
+&lt;h3 id="edit-link">Edit link&lt;/h3>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/thingsym/hugo-theme-techdoc/master/images/screenshot-edit-link.png" alt="Edit link">&lt;/p></description></item><item><title>Chapter 2-2 (weight: 30)</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter2/2/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter2/2/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Chapter 2-1 (weight: 40)</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter2/1/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter2/1/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Search Shortcode</title><link>https://thingsym.github.io/hugo-theme-techdoc/sample/search-shortcode/</link><pubDate>Mon, 30 Mar 2020 18:49:06 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/sample/search-shortcode/</guid><description>&lt;div class="panel panel-primary">&lt;div class="panel-header">
+&lt;h3>&lt;i class="far fa-lightbulb">&lt;/i>&amp;nbsp;Note&lt;/h3>
+&lt;/div>&lt;div class="panel-body">
+&lt;p>Search Shortcode powered by &lt;a href="https://www.algolia.com/">Algolia&lt;/a>&lt;/p>
+&lt;p>You can create a search page just by adding &lt;code>search&lt;/code> shortcode.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js" integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous">&lt;/script>
+&lt;script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js" integrity="sha256-6S7q0JJs/Kx4kb/fv0oMjS855QTz5Rc2hh9AkIUjUsk=" crossorigin="anonymous">&lt;/script>
+&lt;script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous">&lt;/script>
+
+&lt;div id="searchbox">&lt;/div>
+&lt;div id="stats">&lt;/div>
+&lt;div id="hits">&lt;/div>
+&lt;div id="pagination">&lt;/div>
+
+&lt;script>
+var search = instantsearch({
+ indexName: 'hugo-demo-techdoc',
+ searchClient: algoliasearch(
+ '7W4SAN4PLK',
+ 'cbf12a63ff72d9c5dc0c10c195cf9128'
+ ),
+ routing: true,
+});
+
+const renderHits = (renderOptions, isFirstRender) => {
+ const { hits } = renderOptions;
+
+ document.querySelector('#hits').innerHTML = `
+ ${hits
+ .map(
+ item =>
+ `&lt;div class="ais-Hits-item">&lt;h3>&lt;a href="${ item.permalink }">${ item.title }&lt;/a>&lt;/h3>&lt;p>&lt;span class="lastmod">${ dayjs(item.lastmod).format("YYYY/MM/DD") }&lt;/span> - ${ item.description ? item.description : item.content.length > 200 ? item.content.substring( 0, 200 ) + '...' : item.content }&lt;/p></description></item><item><title>Hello_world2</title><link>https://thingsym.github.io/hugo-theme-techdoc/archives/hello_world2/</link><pubDate>Sun, 17 Dec 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/archives/hello_world2/</guid><description>&lt;p>aaaaaa&lt;/p>
+&lt;p>vvvv&lt;/p>
+&lt;p>aaa&lt;/p></description></item><item><title>Hello_world2</title><link>https://thingsym.github.io/hugo-theme-techdoc/blog/hello_world2/</link><pubDate>Sun, 17 Dec 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/blog/hello_world2/</guid><description>&lt;p>aaaaaa&lt;/p>
+&lt;p>vvvv&lt;/p>
+&lt;p>aaa&lt;/p></description></item><item><title>Hello_world2</title><link>https://thingsym.github.io/hugo-theme-techdoc/entry/hello_world2/</link><pubDate>Sun, 17 Dec 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/entry/hello_world2/</guid><description>&lt;p>aaaaaa&lt;/p>
+&lt;p>vvvv&lt;/p>
+&lt;p>aaa&lt;/p></description></item><item><title>Hello_world1</title><link>https://thingsym.github.io/hugo-theme-techdoc/archives/hello_world1/</link><pubDate>Fri, 17 Nov 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/archives/hello_world1/</guid><description>&lt;p>aaaaaa&lt;/p>
+&lt;p>vvvv&lt;/p>
+&lt;p>aaa&lt;/p></description></item><item><title>Hello_world1</title><link>https://thingsym.github.io/hugo-theme-techdoc/blog/hello_world1/</link><pubDate>Fri, 17 Nov 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/blog/hello_world1/</guid><description>&lt;p>aaaaaa&lt;/p>
+&lt;p>vvvv&lt;/p>
+&lt;p>aaa&lt;/p></description></item><item><title>Hello_world1</title><link>https://thingsym.github.io/hugo-theme-techdoc/entry/hello_world1/</link><pubDate>Fri, 17 Nov 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/entry/hello_world1/</guid><description>&lt;p>aaaaaa&lt;/p>
+&lt;p>vvvv&lt;/p>
+&lt;p>aaa&lt;/p></description></item><item><title>Chapter 1-1</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter1/1/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter1/1/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Chapter 1-2</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter1/2/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter1/2/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Chapter 1-3</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter1/3/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter1/3/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Chapter 1-4</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter1/4/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter1/4/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Chapter 2-0 (weight: no set)</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter2/5/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter2/5/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Chapter 3-1</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter3/1/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter3/1/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Chapter 3-2-1</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/1/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/1/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Chapter 3-2-2</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/2/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/2/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Chapter 3-2-3</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/3/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/3/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Chapter 3-2-4</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/4/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter3/chapter3-2/4/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Chapter 3-3</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter3/3/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter3/3/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Chapter 3-4</title><link>https://thingsym.github.io/hugo-theme-techdoc/chapter3/4/</link><pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/chapter3/4/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p></description></item><item><title>Hello_world</title><link>https://thingsym.github.io/hugo-theme-techdoc/archives/hello_world/</link><pubDate>Tue, 17 Oct 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/archives/hello_world/</guid><description>&lt;p>aaaaaa&lt;/p>
+&lt;p>vvvv&lt;/p>
+&lt;p>aaa&lt;/p></description></item><item><title>Hello_world</title><link>https://thingsym.github.io/hugo-theme-techdoc/blog/hello_world/</link><pubDate>Tue, 17 Oct 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/blog/hello_world/</guid><description>&lt;p>aaaaaa&lt;/p>
+&lt;p>vvvv&lt;/p>
+&lt;p>aaa&lt;/p></description></item><item><title>Hello_world</title><link>https://thingsym.github.io/hugo-theme-techdoc/entry/hello_world/</link><pubDate>Tue, 17 Oct 2017 14:00:45 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/entry/hello_world/</guid><description>&lt;p>aaaaaa&lt;/p>
+&lt;p>vvvv&lt;/p>
+&lt;p>aaa&lt;/p></description></item><item><title>About Hugo</title><link>https://thingsym.github.io/hugo-theme-techdoc/about/</link><pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/about/</guid><description>&lt;p>Hugo is a static site engine written in Go.&lt;/p>
+&lt;p>It makes use of a variety of open source projects including:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/spf13/cobra">Cobra&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/spf13/viper">Viper&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/spf13/jWalterWeatherman">J Walter Weatherman&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/spf13/cast">Cast&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Learn more and contribute on &lt;a href="https://github.com/gohugoio">GitHub&lt;/a>.&lt;/p></description></item><item><title>(Hu)go Template Primer</title><link>https://thingsym.github.io/hugo-theme-techdoc/post/goisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/post/goisforlovers/</guid><description>&lt;p>Hugo uses the excellent &lt;a href="https://golang.org/">Go&lt;/a> &lt;a href="https://golang.org/pkg/html/template/">html/template&lt;/a> library for
+its template engine. It is an extremely lightweight engine that provides a very
+small amount of logic. In our experience that it is just the right amount of
+logic to be able to create a good static website. If you have used other
+template systems from different languages or frameworks you will find a lot of
+similarities in Go templates.&lt;/p>
+&lt;p>This document is a brief primer on using Go templates. The &lt;a href="https://golang.org/pkg/html/template/">Go docs&lt;/a>
+provide more details.&lt;/p></description></item><item><title>Getting Started with Hugo</title><link>https://thingsym.github.io/hugo-theme-techdoc/post/hugoisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://thingsym.github.io/hugo-theme-techdoc/post/hugoisforlovers/</guid><description>&lt;h2 id="step-1-install-hugo">Step 1. Install Hugo&lt;/h2>
+&lt;p>Go to &lt;a href="https://github.com/spf13/hugo/releases">Hugo releases&lt;/a> and download the
+appropriate version for your OS and architecture.&lt;/p>
+&lt;p>Save it somewhere specific as we will be using it in the next step.&lt;/p>
+&lt;p>More complete instructions are available at &lt;a href="https://gohugo.io/getting-started/installing/">Install Hugo&lt;/a>&lt;/p>
+&lt;h2 id="step-2-build-the-docs">Step 2. Build the Docs&lt;/h2>
+&lt;p>Hugo has its own example site which happens to also be the documentation site
+you are reading right now.&lt;/p>
+&lt;p>Follow the following steps:&lt;/p>
+&lt;ol>
+&lt;li>Clone the &lt;a href="https://github.com/gohugoio/hugo">Hugo repository&lt;/a>&lt;/li>
+&lt;li>Go into the repo&lt;/li>
+&lt;li>Run hugo in server mode and build the docs&lt;/li>
+&lt;li>Open your browser to http://localhost:1313&lt;/li>
+&lt;/ol>
+&lt;p>Corresponding pseudo commands:&lt;/p></description></item></channel></rss>
