@@ -1,29 +1,35 @@
-baseURL = "https://example.com"
+# See https://gohugo.io/configuration/introduction/
 
+baseURL = "https://example.com/"
 languageCode = "en-us"
-DefaultContentLanguage = "en"
 title = "Hugo Techdoc Theme"
 theme = "hugo-theme-techdoc"
-
-hasCJKLanguage = true
-metaDataFormat = "yaml"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 
+hasCJKLanguage = true
+metaDataFormat = "yaml"
+
+pluralizeListTitles = false
+
+# Chroma - syntax highlighting
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
 [params]
 
     # Source Code repository section
     description = "put your description"
-    github_repository = "https://github.com/thingsym/hugo-theme-techdoc"
-    version = "1.0.2"
+    github_repository = "https://github.com/thingsym/hugo-theme-techdoc/"
+    version = "1.1.0"
 
     # Documentation repository section
     # documentation repository (set edit link to documentation repository)
-    github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc"
+    github_doc_repository = "https://github.com/thingsym/hugo-theme-techdoc/"
     github_doc_repository_branch = "master"
-    github_doc_repository_path = ""
+    github_doc_repository_path = "exampleSite/content/"
 
     # Analytic section
     google_analytics_id = "" # Your Google Analytics tracking id
@@ -35,7 +41,8 @@ enableMissingTranslationPlaceholders = false
     # See https://gohugo.io/templates/internal/#open-graph
     # See https://gohugo.io/templates/internal/#twitter-cards
     title = "Hugo Techdoc Theme"
-    images = ["images/og-image.png"] # Open graph images are placed in `static/images`
+    # Open graph images are placed in `static/images`
+    images = ["images/og-image.png"]
 
     # Theme settings section
     # Theme color
@@ -47,11 +54,16 @@ enableMissingTranslationPlaceholders = false
     # Menu style settings
     menu_style = "open-menu" # "open-menu" or "slide-menu" or "" blank is as no sidebar
 
-    # Date format
-    dateformat = "" # default "2 Jan 2006"
-    # See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+    # Documentation Menu in ascending order
+    # weight or title
+    ordersectionsby = "weight"
 
-    # path name excluded from documentation menu
+    # Date format
+    # See the format reference https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+    dateformat = "" # default "2 Jan 2006"
+
+    # exclude section (top-level directory) from documentation menu
+    # See https://gohugo.io/content-management/sections/
     menu_exclusion = [
         "archives",
         "archive",
@@ -73,7 +85,7 @@ enableMissingTranslationPlaceholders = false
 [menu]
     [[menu.main]]
         name = "Home"
-        url = "/"
+        url = "/index.html"
         weight = 1
         identifier = 'home'
         pre = "<i class='fa fa-heart'></i>&nbsp;"
