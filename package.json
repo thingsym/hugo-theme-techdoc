@@ -1,6 +1,6 @@
 {
   "name": "hugo-theme-techdoc",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "The Techdoc is a Hugo Theme for technical documentation.",
   "main": "compose.yml",
   "author": "Thingsym",

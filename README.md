@@ -49,7 +49,7 @@ The Techdoc is a Hugo Theme for technical documentation.
 
 ### Requirement
 
-Hugo minimum version: 0.120.0
+Hugo minimum version: 0.146.0
 
 Default Markdown parser library `Goldmark` compatible
 
@@ -293,6 +293,17 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 
 ## Changelog
 
+* Version 1.1.0 - 2026.03.12
+	* change Hugo minimum version 0.146.0
+	* fix hugo.toml
+	* fix scss to adjust the layout
+	* add eslint.config.js
+	* update npm dependencies
+	* remove gulp
+	* fix absURL
+	* change structure of layouts folder for New template system in Hugo v0.146.0
+	* update docker image
+	* fix Error: html/template:blog/list.html [ #74 ]
 * Version 1.0.2 - 2025.01.30
 	* bump up version jQuery Plugin Back to the Top
 * Version 1.0.1 - 2024.08.20
@@ -303,15 +314,15 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 	* fix hugo config
 	* rename docker-compose.yml to compose.yml
 	* change hugo docker image
-	* fix deprecation warning [#68]
-	* bring example site up to date [#66]
-	* fix typos [#65]
+	* fix deprecation warning [ #68 ]
+	* bring example site up to date [ #66 ]
+	* fix typos [ #65 ]
 	* fix github workflows
 * Version 1.0.0 - 2023.08.21
 	* update hugo docker image
 	* update npm dependencies
-	* allow to set branch of github documentation repository [#64]
-	* enable use as a Hugo module [#63]
+	* allow to set branch of github documentation repository [ #64 ]
+	* enable use as a Hugo module [ #63 ]
 * Version 0.9.9 - 2022.07.08
 	* fix scss
 	* bump up version on jquery, jquery.easing and clipboard
@@ -320,8 +331,8 @@ Small patches and bug reports can be submitted a issue tracker in Github. Forkin
 	* change fontawesome delivery from cdn to self-host
 	* fix config.toml
 	* id and class elements added to menu items
-	* pre and post elements added to menu items [#48]
-	* use SRI for CDN js sources [#45]
+	* pre and post elements added to menu items [ #48 ]
+	* use SRI for CDN js sources [ #45 ]
 	* fix heading styles
 	* change to using math.div for division
 * Version 0.9.8 - 2021.10.18
@@ -447,4 +458,4 @@ Techdoc bundles the following third-party resources:
 
 [thingsym](https://github.com/thingsym)
 
-Copyright (c) 2017-2020 by [thingsym](https://management.thingslabo.com/)
+Copyright (c) 2017-2026 by [thingsym](https://management.thingslabo.com/)
