@@ -9,7 +9,7 @@
 // ===================================================================
 
 @function contrast-color($color: null, $dark: #000, $light: #fff) {
-	@if $color == null {
+	@if not $color {
 		@return null;
 	}
 	@else {
