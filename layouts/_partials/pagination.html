@@ -1,6 +1,6 @@
 {{- $currentNode := . -}}
 <nav class="pagination">
-{{- template "pagination" dict "menu" .Site.Home "currentnode" $currentNode "menu_exclusion" .Site.Params.menu_exclusion -}}
+{{- template "pagination" (dict "menu" .Site.Home "currentnode" $currentNode "menu_exclusion" .Site.Params.menu_exclusion) -}}
 {{- with ($.Scratch.Get "prevPage") -}}
 <a class="nav nav-prev" href="{{ .Permalink }}" title="{{ .Title }}"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - {{ .Title }}</a>
 {{ end -}}
@@ -39,6 +39,6 @@
 {{- end -}}
 {{- $pages := ($currentNode.Scratch.Get "pages") -}}
 {{- range $pages.ByWeight -}}
-  {{- template "pagination" dict "menu" . "currentnode" $currentNode "menu_exclusion" $menu_exclusion -}}
+  {{- template "pagination" (dict "menu" . "currentnode" $currentNode "menu_exclusion" $menu_exclusion) -}}
 {{- end -}}
 {{- end -}}

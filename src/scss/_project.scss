@@ -52,7 +52,7 @@ header {
 		display: none;
 		margin: 0;
 		position: absolute;
-		top: 1.8rem;
+		top: 1.6rem;
 		left: 0;
 		z-index: 99999;
 
@@ -193,8 +193,9 @@ main {
 			top: 0;
 			right: 0;
 			display: inline-block;
-			height: 32px;
-			width: 32px;
+			height: 100%;
+			max-height: 38px;
+			aspect-ratio: 1 / 1;
 			line-height: 2;
 			text-align: center;
 			color: #979797;
