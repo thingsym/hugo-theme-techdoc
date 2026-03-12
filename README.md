@@ -259,6 +259,12 @@ docker compose up -d
 
 Browse site on http://localhost:1313
 
+### Deploy exampleSite to public_html directory
+
+```
+docker compose run --rm hugo -t hugo-theme-techdoc -d public_html --themesDir /hugo/themes
+```
+
 ### Stop container and remove container
 
 ```
